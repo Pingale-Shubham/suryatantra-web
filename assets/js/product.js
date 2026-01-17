@@ -58,7 +58,7 @@ const PRODUCTS = {
       },
       {
         name: "Aluminium Non Coated Drill",
-        image: "../assets/images/pcb-drill/aluminium-non-coated.png",
+        image: "assets/images/pcb-drill/aluminium-non-coated.png",
         parameters: {
           "Diameter Range": "0.50 – 3.20 mm",
           "Material": "Carbide",

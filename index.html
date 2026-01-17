@@ -50,6 +50,14 @@
 
     <!-- ================= NAVBAR ================= -->
     <div id="navbar-placeholder"></div>
+    <script>
+  fetch("./components/navbar.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("navbar-placeholder").innerHTML = html;
+      initNavbar();
+    });
+</script>
 
     <!-- ================= MAIN CONTENT ================= -->
     <main class="flex-grow pt-12">
@@ -177,16 +185,16 @@
     <!-- ================= SCRIPTS ================= -->
     <script>
         // Load Navbar
-        fetch('./components/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                // Initialize navbar after loading
-                if (window.initNavbar) {
-                    window.initNavbar();
-                }
-            })
-            .catch(err => console.error('Error loading navbar:', err));
+        // fetch('./components/navbar.html')
+        //     .then(res => res.text())
+        //     .then(data => {
+        //         document.getElementById('navbar-placeholder').innerHTML = data;
+        //         // Initialize navbar after loading
+        //         if (window.initNavbar) {
+        //             window.initNavbar();
+        //         }
+        //     })
+        //     .catch(err => console.error('Error loading navbar:', err));
 
         // Load Footer
         fetch('./components/footer.html')
