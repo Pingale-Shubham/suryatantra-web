@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Suryatantra Enterprises LLP</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <style>
+        /* Font Family Configuration */
+        body {
+            font-family: 'Manrope', system-ui, sans-serif;
+        }
+
+        .font-inter {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        /* Fade Up Animation */
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 antialiased font-inter">
+
+    <!-- ================= NAVBAR ================= -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow pt-12">
+        <!-- ================= HERO SECTION ================= -->
+        <section
+            class="relative min-h-screen flex items-center justify-center bg-cover bg-no-repeat bg-center md:bg-center bg-[position:50%_20%] bg-fixed" style="background-image: url('./assets/Images/about.png');">
+            <!-- Background Pattern -->
+            <!-- <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#6ee7b7 1px, transparent 1px); background-size: 30px 30px;"></div> -->
+            <div class="max-w-7xl mx-auto px-6 relative z-10 text-center fade-up">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-emerald-800/50 text-emerald-300 text-sm font-semibold mb-6 border border-emerald-700/50">
+                    EST. 2019
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
+                    Driving Excellence in <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">PCB
+                        Manufacturing</span>
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-emerald-100/80 leading-relaxed font-light">
+                    We combine two decades of expertise with modern automation to deliver precision consumables,
+                    drilling solutions, and turnkey support for manufacturers across Asia.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= VISION & MISSION ================= -->
+        <section class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                    <!-- Vision Card -->
+                    <div
+                        class="p-10 rounded-3xl bg-emerald-50 border border-emerald-100 relative group hover:shadow-xl transition-shadow duration-300 fade-up">
+                        <div
+                            class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-emerald-200">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To be the premier partner for PCB manufacturers globally, driving innovation through
+                            state-of-the-art automation and precision-engineered solutions that redefine quality
+                            standards.
+                        </p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div class="p-10 rounded-3xl bg-teal-50 border border-teal-100 relative group hover:shadow-xl transition-shadow duration-300 fade-up"
+                        style="animation-delay: 0.2s;">
+                        <div
+                            class="w-14 h-14 bg-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-200">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To utilize advanced drilling & routing processes to provide exceptionally high-quality,
+                            cost-effective products. We aim to be a one-stop solution for consumables and automation
+                            expertise.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OUR STORY ================= -->
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+                    <div class="lg:w-1/2 fade-up">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-4 -left-4 w-24 h-24 bg-emerald-200 rounded-full blur-3xl opacity-50">
+                            </div>
+                            <div
+                                class="absolute -bottom-4 -right-4 w-32 h-32 bg-teal-200 rounded-full blur-3xl opacity-50">
+                            </div>
+                            <img src="./assets/Images/pmt.jpg" alt="Our Story Image"
+                                class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 space-y-8 text-gray-600 text-lg leading-relaxed fade-up"
+                        style="animation-delay: 0.2s;">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-left">
+                            Our Journey <span class="block text-emerald-600">Since 2019</span>
+                        </h2>
+                        <p>
+                            Suryatantra was incorporated with a primary aim: to utilize state-of-the-art <strong>PCB
+                                Manufacturing, Drilling & Routing</strong> processes to provide exceptional quality to
+                            our customers.
+                        </p>
+                        <p>
+                            Backed by two decades of experience in the industry, we understand the unique challenges of
+                            small, medium, and large-scale units. This deep insight allows us to design custom solutions
+                            for better quality and profitability.
+                        </p>
+                        <p>
+                            Our founder's success with <em>'Surya Electronics'</em> laid the foundation. Today,
+                            combining Suryatantra's latest technologies with our legacy of trust, we serve reputed clients like
+                            <strong>India Circuit Limited, Signum Electrowave, and Shogini Techno Arts</strong>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= OUR TEAM ================= -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 fade-up">
+                    <span class="text-emerald-600 font-semibold tracking-wide uppercase text-sm">People Behind The
+                        Quality</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Meet Our Team</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Team Member 1 -->
+                    <div class="group fade-up" style="animation-delay: 0.1s;">
+                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
+                            <!-- Placeholder for Founder Image -->
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
+                                <i class="fas fa-user-tie text-6xl"></i>
+                            </div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <div class="flex gap-4 justify-center">
+                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fab fa-linkedin text-xl"></i></a>
+                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fas fa-envelope text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Leadership Team</h3>
+                        <p class="text-emerald-600 font-medium">Founder & Director</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="group fade-up" style="animation-delay: 0.2s;">
+                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
+                                <i class="fas fa-user-cog text-6xl"></i>
+                            </div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <div class="flex gap-4 justify-center">
+                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fab fa-linkedin text-xl"></i></a>
+                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fas fa-envelope text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Technical Heads</h3>
+                        <p class="text-emerald-600 font-medium">Operations & Production</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="group fade-up" style="animation-delay: 0.3s;">
+                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
+                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
+                                <i class="fas fa-users text-6xl"></i>
+                            </div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <div class="flex gap-4 justify-center">
+                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fab fa-linkedin text-xl"></i></a>
+                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
+                                            class="fas fa-envelope text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Support Team</h3>
+                        <p class="text-emerald-600 font-medium">Sales & Customer Relations</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA SECTION ================= -->
+        <section class="py-20 bg-emerald-900 text-center fade-up">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Optimize Your PCB Manufacturing?
+                </h2>
+                <p class="text-emerald-100 text-lg mb-10">Partner with us for reliable supplies, precision tools, and
+                    expert automation solutions.</p>
+                <a href="./contact.html"
+                    class="inline-block px-10 py-4 bg-white text-emerald-900 font-bold rounded-full hover:bg-emerald-50 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        // Load Navbar
+        fetch('./components/navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                // Initialize navbar after loading
+                if (window.initNavbar) {
+                    window.initNavbar();
+                }
+            })
+            .catch(err => console.error('Error loading navbar:', err));
+
+        // Load Footer
+        fetch('./components/footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(err => console.error('Error loading footer:', err));
+    </script>
+</body>
+
+</html>

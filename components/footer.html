@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Mobile Redirect Test</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#d4af37' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="min-h-screen flex flex-col bg-slate-100">
+<main class="flex-grow"></main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-slate-300">
+  <div class="mx-auto max-w-screen-xl px-6 py-14">
+
+    <div class="grid grid-cols-12 gap-y-12">
+
+      <div class="hidden md:block md:col-span-1"></div>
+
+      <!-- BRAND -->
+      <div class="col-span-12 md:col-span-5 space-y-5">
+        <img src="../assets/Images/Logo/Surytantra Logo-01.png"
+             alt="Suryatantra Logo"
+             class="h-9 drop-shadow-sm">
+
+        <p class="text-[13.5px] leading-relaxed text-slate-400 max-w-md">
+          S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel,<br />
+          Sinhagad Road, Dhayari, Pune – 411041, India.
+        </p>
+
+        <div class="text-[13.5px] space-y-1">
+          <p><span class="text-white font-semibold">Phone:</span> +91 9730429324</p>
+          <p>
+            <span class="text-white font-semibold">Email:</span>
+            <a href="mailto:suryatantraa@gmail.com" class="hover:text-gold">
+              suryatantraa@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="col-span-12 sm:col-span-4 md:col-span-2">
+        <!-- MOBILE: clickable -->
+        <a href="../index.html"
+           class="flex items-center justify-between md:pointer-events-none">
+          <h4 class="text-slate-100 text-sm font-bold tracking-wider uppercase">
+            Quick Links
+          </h4>
+          <!-- <i class="fas fa-chevron-right md:hidden text-emerald-400"></i> -->
+        </a>
+
+        <!-- DESKTOP ONLY -->
+        <ul class="hidden md:block mt-4 space-y-3 text-[13.5px]">
+          <li><a href="../index.html" class="hover:text-gold">Home</a></li>
+          <li><a href="../about.html" class="hover:text-gold">About Us</a></li>
+          <li><a href="../product.html" class="hover:text-gold">Products</a></li>
+          <li><a href="../contact.html" class="hover:text-gold">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="col-span-12 sm:col-span-4 md:col-span-2">
+        <!-- MOBILE -->
+        <a href="../product.html"
+           class="flex items-center justify-between md:pointer-events-none">
+          <h4 class="text-slate-100 text-sm font-bold tracking-wider uppercase">
+            Products
+          </h4>
+          <!-- <i class="fas fa-chevron-right md:hidden text-emerald-400"></i> -->
+        </a>
+
+        <!-- DESKTOP -->
+        <ul class="hidden md:block mt-4 space-y-3 text-[13.5px]">
+          <li><a href="#" class="hover:text-gold">Drills</a></li>
+          <li><a href="#" class="hover:text-gold">Routers</a></li>
+          <li><a href="#" class="hover:text-gold">V-Cut Blades</a></li>
+          <li><a href="#" class="hover:text-gold">Locating Pins</a></li>
+        </ul>
+      </div>
+
+      <!-- MORE -->
+      <div class="col-span-12 sm:col-span-4 md:col-span-2">
+        <!-- MOBILE -->
+        <a href="../product.html#more"
+           class="flex items-center justify-between md:pointer-events-none">
+          <h4 class="text-slate-100 text-sm font-bold tracking-wider uppercase">
+            More
+          </h4>
+          <!-- <i class="fas fa-chevron-right md:hidden text-emerald-400"></i> -->
+        </a>
+
+        <!-- DESKTOP -->
+        <ul class="hidden md:block mt-4 space-y-3 text-[13.5px]">
+          <li><a href="#" class="hover:text-gold">Carlson Pins</a></li>
+          <li><a href="#" class="hover:text-gold">Spindle & Spares</a></li>
+          <li><a href="#" class="hover:text-gold">Drill Rings</a></li>
+          <li><a href="#" class="hover:text-gold">Bearings</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-12"></div>
+
+    <!-- BOTTOM -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="text-sm font-semibold text-slate-400">
+        ©
+        <span class="font-extrabold uppercase tracking-wide
+                     bg-gradient-to-r from-[#f5d76e] to-[#d4af37]
+                     bg-clip-text text-transparent">
+          Suryatantra Enterprises LLP
+        </span>
+      </p>
+
+      <div class="flex gap-7 text-lg">
+        <a class="hover:text-gold"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:suryatantraa@gmail.com" class="hover:text-gold">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/919730429324" class="hover:text-emerald-400">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a class="hover:text-blue-400">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

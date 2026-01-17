@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Suryatantra Enterprises LLP</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800 font-[Manrope]">
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+  <div class="h-10 md:h-12"></div>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-5 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold">Our Product Categories</h1>
+    <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
+      Explore our comprehensive range of industrial PCB solutions
+    </p>
+  </section>
+
+  <!-- CATEGORY NAV -->
+  <div class="sticky top-14 bg-white shadow z-40">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex gap-3 justify-center overflow-x-auto">
+      <button class="cat-btn active" data-cat="pcb-drill">PCB Drill Tool</button>
+      <button class="cat-btn" data-cat="pcb-routing">PCB Routing Tool</button>
+      <button class="cat-btn" data-cat="spindle">Spindles & Spares</button>
+      <button class="cat-btn" data-cat="vcut">V-Cut Blades</button>
+      <button class="cat-btn" data-cat="more">More Tools</button>
+
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div id="category-container"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- PRODUCT MODAL -->
+  <div id="product-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50">
+    <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 shadow-2xl relative animate-scaleIn">
+
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-xl text-gray-500">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="grid md:grid-cols-2 gap-6 p-6 border-b">
+        <img id="modal-image" class="h-56 mx-auto object-contain">
+        <div>
+          <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+          <p id="modal-category" class="text-sm text-gray-500 mb-4"></p>
+          <ul id="modal-features" class="space-y-2 text-sm"></ul>
+        </div>
+      </div>
+
+      <div class="p-6">
+        <h4 class="font-bold mb-3">Technical Parameters</h4>
+        <table class="w-full text-sm border">
+          <tbody id="modal-params"></tbody>
+        </table>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-6">
+          <a id="whatsapp-btn" target="_blank"
+            class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold">
+            <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+          </a>
+
+          <a href="./contact.php"
+            class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold">
+            <i class="fas fa-phone"></i> Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STYLES -->
+<style>
+  .cat-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #374151;
+  }
+
+  .cat-btn:hover {
+    background: linear-gradient(to right, #10b981, #14b8a6);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+    transform: scale(1.05);
+  }
+
+  .cat-btn.active {
+    background: linear-gradient(to right, #10b981, #14b8a6);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.25s ease-out;
+  }
+</style>
+
+
+  <!-- MAIN JS -->
+  <script src="./assets/js/product.js"></script>
+
+</body>
+
+</html>

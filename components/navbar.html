@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Test | Suryatantra</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="font-[Manrope] bg-slate-100 text-gray-800 min-h-screen">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500" id="navbar">
+  <div class="max-w-7xl mx-auto px-5">
+    <div class="flex justify-between items-center py-3">
+
+      <!-- Logo -->
+      <a href="../index.html" class="group">
+        <img
+          src="../assets/Images/Logo/Surytantra Logo-01.png"
+          alt="Suryatantra Logo"
+          class="h-10 transition-transform duration-300 group-hover:scale-110"
+        />
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-3">
+        <li>
+          <a href="../index.html"
+             data-page="index"
+             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+                    bg-emerald-500/5 border border-emerald-500/20
+                    transition-all duration-300
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white hover:border-transparent hover:shadow-lg">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="../about.html"
+             data-page="about"
+             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+                    bg-emerald-500/5 border border-emerald-500/20
+                    transition-all duration-300
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white hover:border-transparent hover:shadow-lg">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="../product.html"
+             data-page="product"
+             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+                    bg-emerald-500/5 border border-emerald-500/20
+                    transition-all duration-300
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white hover:border-transparent hover:shadow-lg">
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="../contact.html"
+             data-page="contact"
+             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+                    bg-emerald-500/5 border border-emerald-500/20
+                    transition-all duration-300
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white hover:border-transparent hover:shadow-lg">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Toggle -->
+      <button
+        id="menuToggle"
+        class="md:hidden flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px]">
+        <span class="hamburger-line w-6 h-0.5 bg-slate-200 transition"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-slate-200 transition"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-slate-200 transition"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="md:hidden max-h-0 opacity-0 overflow-hidden
+                bg-slate-900/95 backdrop-blur-xl rounded-2xl
+                transition-all duration-300">
+      <ul class="flex flex-col gap-3 p-4">
+        <li>
+          <a href="../index.html" data-page="index"
+             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+                    bg-emerald-500/5 border border-emerald-500/20
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="../about.html" data-page="about"
+             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+                    bg-emerald-500/5 border border-emerald-500/20
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="../product.html" data-page="product"
+             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+                    bg-emerald-500/5 border border-emerald-500/20
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white">
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="../contact.html" data-page="contact"
+             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+                    bg-emerald-500/5 border border-emerald-500/20
+                    hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
+                    hover:text-white">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= STYLES ================= -->
+<style>
+  .navbar-link.active,
+  .navbar-mobile-link.active {
+    background: linear-gradient(to right, #10b981, #14b8a6);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.35);
+  }
+
+  #navbar {
+    background: linear-gradient(
+      to right,
+      rgb(15 23 42 / 0.65),
+      rgb(2 6 23 / 0.65)
+    );
+    backdrop-filter: blur(10px);
+  }
+
+  #navbar.scrolled {
+    background: linear-gradient(
+      to right,
+      rgb(15 23 42 / 0.95),
+      rgb(2 6 23 / 0.95)
+    );
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,.4);
+  }
+
+  #menuToggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(0.5rem);
+  }
+  #menuToggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #menuToggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-0.5rem);
+  }
+
+  #mobileMenu.open {
+    max-height: 24rem;
+    opacity: 1;
+  }
+</style>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const navbar = document.getElementById('navbar');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const navLinks = document.querySelectorAll('.navbar-link');
+  const mobileLinks = document.querySelectorAll('.navbar-mobile-link');
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+  });
+
+  function setActive() {
+    const page = location.pathname.split('/').pop().replace('.html','') || 'index';
+    [...navLinks, ...mobileLinks].forEach(l => {
+      l.classList.toggle('active', l.dataset.page === page);
+    });
+  }
+
+  setActive();
+</script>
+
+</body>
+</html>
