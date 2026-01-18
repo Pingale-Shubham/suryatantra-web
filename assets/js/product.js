@@ -25,7 +25,7 @@ const PRODUCTS = {
     items: [
       {
         name: "FR4 Drill",
-        image: "./assets/images/pcb-drill/fr4-drill.png",
+        image: "./assets/Images/pcb-drill/fr4-drill.png",
         parameters: {
           "Diameter Range": "0.20 – 3.20 mm",
           "Material": "Tungsten Carbide",
@@ -42,7 +42,7 @@ const PRODUCTS = {
       },
       {
         name: "Aluminium Coated Drill",
-        image: "./assets/images/pcb-drill/aluminium-coated.png",
+        image: "./assets/Images/pcb-drill/aluminium-coated.png",
         parameters: {
           "Diameter Range": "0.30 – 3.20 mm",
           "Material": "Carbide",
@@ -58,7 +58,7 @@ const PRODUCTS = {
       },
       {
         name: "Aluminium Non Coated Drill",
-        image: "./assets/images/pcb-drill/aluminium-non-coated.png",
+        image: "./assets/Images/pcb-drill/aluminium-non-coated.png",
         parameters: {
           "Diameter Range": "0.50 – 3.20 mm",
           "Material": "Carbide",
@@ -74,7 +74,7 @@ const PRODUCTS = {
       },
       {
         name: "Slot Drill",
-        image: "./assets/images/pcb-drill/slot-drill.png",
+        image: "./assets/Images/pcb-drill/slot-drill.png",
         parameters: {
           "Cutting Diameter": "0.8 – 2.5 mm",
           "Material": "Solid Carbide",
@@ -97,7 +97,7 @@ const PRODUCTS = {
     items: [
       {
         name: "FR4 Coated Router",
-        image: "./assets/images/pcb-routing/fr4-coated.png",
+        image: "./assets/Images/pcb-routing/fr4-coated.png",
         parameters: {
           "Diameter": "1.0 – 2.5 mm",
           "Coating": "TiAlN",
@@ -112,7 +112,7 @@ const PRODUCTS = {
       },
       {
         name: "FR4 Non Coated Router",
-        image: "./assets/images/pcb-routing/fr4-non-coated.png",
+        image: "./assets/Images/pcb-routing/fr4-non-coated.png",
         parameters: {
           "Diameter": "1.0 – 2.5 mm",
           "Coating": "Non-Coated",
@@ -127,7 +127,7 @@ const PRODUCTS = {
       },
       {
         name: "Aluminium Coated Router",
-        image: "./assets/images/pcb-routing/aluminium-coated.png",
+        image: "./assets/Images/pcb-routing/aluminium-coated.png",
         parameters: {
           "Diameter": "1.2 – 3.0 mm",
           "Coating": "Aluminium Coated",
@@ -142,7 +142,7 @@ const PRODUCTS = {
       },
       {
         name: "Aluminium Non Coated Router",
-        image: "./assets/images/pcb-routing/aluminium-non-coated.png",
+        image: "./assets/Images/pcb-routing/aluminium-non-coated.png",
         parameters: {
           "Diameter": "1.2 – 3.0 mm",
           "Coating": "Non-Coated",
@@ -166,7 +166,7 @@ const PRODUCTS = {
 
     {
       name: "39773",
-      image: "./assets/images/spindle/39773.png",
+      image: "./assets/Images/spindle/39773.png",
       parameters: {
         "Component Type": "Spindle Bearing",
         "Material": "High-grade alloy steel",
@@ -183,7 +183,7 @@ const PRODUCTS = {
 
     {
       name: "ST1001",
-      image: "./assets/images/spindle/st1001.png",
+      image: "./assets/Images/spindle/st1001.png",
       parameters: {
         "Spindle Speed": "60,000 RPM",
         "Voltage": "220V",
@@ -200,7 +200,7 @@ const PRODUCTS = {
 
     {
       name: "CR2000 / 820",
-      image: "./assets/images/spindle/cr2000-820.png",
+      image: "./assets/Images/spindle/cr2000-820.png",
       parameters: {
         "Spindle Speed": "80,000 RPM",
         "Cooling Type": "Air Cooled",
@@ -216,7 +216,7 @@ const PRODUCTS = {
 
     {
       name: "263504",
-      image: "./assets/images/spindle/263504.png",
+      image: "./assets/Images/spindle/263504.png",
       parameters: {
         "Component Type": "Spindle Shaft",
         "Material": "Hardened steel",
@@ -232,7 +232,7 @@ const PRODUCTS = {
 
     {
       name: "ST1011",
-      image: "./assets/images/spindle/st1011.png",
+      image: "./assets/Images/spindle/st1011.png",
       parameters: {
         "Spindle Speed": "60,000 RPM",
         "Voltage": "220V",
@@ -248,7 +248,7 @@ const PRODUCTS = {
 
     {
       name: "ST1021",
-      image: "./assets/images/spindle/st1021.png",
+      image: "./assets/Images/spindle/st1021.png",
       parameters: {
         "Spindle Speed": "60,000 RPM",
         "Voltage": "220V",
@@ -264,7 +264,7 @@ const PRODUCTS = {
 
     {
       name: "063503",
-      image: "./assets/images/spindle/063503.png",
+      image: "./assets/Images/spindle/063503.png",
       parameters: {
         "Component Type": "Spindle Collet",
         "Material": "Spring steel",
@@ -280,7 +280,7 @@ const PRODUCTS = {
 
     {
       name: "1769",
-      image: "./assets/images/spindle/1769.png",
+      image: "./assets/Images/spindle/1769.png",
       parameters: {
         "Component Type": "Spindle Nut",
         "Material": "Hardened alloy steel",
@@ -296,7 +296,7 @@ const PRODUCTS = {
 
     {
       name: "1722",
-      image: "./assets/images/spindle/1722.png",
+      image: "./assets/Images/spindle/1722.png",
       parameters: {
         "Component Type": "Spindle Housing",
         "Material": "Aluminium alloy",
@@ -312,7 +312,7 @@ const PRODUCTS = {
 
     {
       name: "H916",
-      image: "./assets/images/spindle/h916.png",
+      image: "./assets/Images/spindle/h916.png",
       parameters: {
         "Component Type": "Spindle Belt",
         "Material": "Reinforced rubber",
@@ -328,7 +328,7 @@ const PRODUCTS = {
 
     {
       name: "17593",
-      image: "./assets/images/spindle/17593.png",
+      image: "./assets/Images/spindle/17593.png",
       parameters: {
         "Component Type": "Spindle Seal",
         "Material": "Oil-resistant rubber",
@@ -344,7 +344,7 @@ const PRODUCTS = {
 
     {
       name: "40374",
-      image: "./assets/images/spindle/40374.png",
+      image: "./assets/Images/spindle/40374.png",
       parameters: {
         "Component Type": "Spindle Spacer",
         "Material": "Precision machined steel",
@@ -360,7 +360,7 @@ const PRODUCTS = {
 
     {
       name: "ST1031",
-      image: "./assets/images/spindle/st1031.png",
+      image: "./assets/Images/spindle/st1031.png",
       parameters: {
         "Spindle Speed": "70,000 RPM",
         "Voltage": "220V",
@@ -376,7 +376,7 @@ const PRODUCTS = {
 
     {
       name: "230505",
-      image: "./assets/images/spindle/230505.png",
+      image: "./assets/Images/spindle/230505.png",
       parameters: {
         "Component Type": "Spindle Pulley",
         "Material": "Hardened steel",
@@ -392,7 +392,7 @@ const PRODUCTS = {
 
     {
       name: "17508",
-      image: "./assets/images/spindle/17508.png",
+      image: "./assets/Images/spindle/17508.png",
       parameters: {
         "Component Type": "Spindle Bearing",
         "Material": "Ceramic hybrid",
@@ -408,7 +408,7 @@ const PRODUCTS = {
 
     {
       name: "ST1041",
-      image: "./assets/images/spindle/st1041.png",
+      image: "./assets/Images/spindle/st1041.png",
       parameters: {
         "Spindle Speed": "80,000 RPM",
         "Voltage": "220V",
@@ -424,7 +424,7 @@ const PRODUCTS = {
 
     {
       name: "ST1051",
-      image: "./assets/images/spindle/st1051.png",
+      image: "./assets/Images/spindle/st1051.png",
       parameters: {
         "Spindle Speed": "80,000 RPM",
         "Voltage": "220V",
@@ -440,7 +440,7 @@ const PRODUCTS = {
 
     {
       name: "ST1061",
-      image: "./assets/images/spindle/st1061.png",
+      image: "./assets/Images/spindle/st1061.png",
       parameters: {
         "Spindle Speed": "100,000 RPM",
         "Voltage": "220V",
@@ -456,7 +456,7 @@ const PRODUCTS = {
 
     {
       name: "Collet Remover",
-      image: "./assets/images/spindle/collet-remover.png",
+      image: "./assets/Images/spindle/collet-remover.png",
       parameters: {
         "Tool Type": "Maintenance Tool",
         "Material": "Hardened steel",
@@ -481,7 +481,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 82×35×60T×30° ×2.0",
-      image: "./assets/images/vcut/82x35-60t.png",
+      image: "./assets/Images/vcut/82x35-60t.png",
       parameters: {
         "Outer Diameter": "82 mm",
         "Inner Diameter": "35 mm",
@@ -500,7 +500,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 82×35×20T×30° ×2.0",
-      image: "./assets/images/vcut/82x35-20t.png",
+      image: "./assets/Images/vcut/82x35-20t.png",
       parameters: {
         "Outer Diameter": "82 mm",
         "Inner Diameter": "35 mm",
@@ -518,7 +518,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 51×48T×30° ×2.4H",
-      image: "./assets/images/vcut/51x48.png",
+      image: "./assets/Images/vcut/51x48.png",
       parameters: {
         "Outer Diameter": "51 mm",
         "Teeth Count": "48T",
@@ -535,7 +535,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 120×48T×30° ×2.4H",
-      image: "./assets/images/vcut/120x48.png",
+      image: "./assets/Images/vcut/120x48.png",
       parameters: {
         "Outer Diameter": "120 mm",
         "Teeth Count": "48T",
@@ -552,7 +552,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 51×30×18T×30° ×2.4",
-      image: "./assets/images/vcut/51x30.png",
+      image: "./assets/Images/vcut/51x30.png",
       parameters: {
         "Outer Diameter": "51 mm",
         "Inner Diameter": "30 mm",
@@ -570,7 +570,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 100×40×30T×30° ×2.0",
-      image: "./assets/images/vcut/100x40.png",
+      image: "./assets/Images/vcut/100x40.png",
       parameters: {
         "Outer Diameter": "100 mm",
         "Inner Diameter": "40 mm",
@@ -588,7 +588,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 103×6T",
-      image: "./assets/images/vcut/103x6t.png",
+      image: "./assets/Images/vcut/103x6t.png",
       parameters: {
         "Outer Diameter": "103 mm",
         "Teeth Count": "6T",
@@ -604,7 +604,7 @@ const PRODUCTS = {
 
     {
       name: "Ø 83×6.5/5.0×25.4×6Z",
-      image: "./assets/images/vcut/83x6-5.png",
+      image: "./assets/Images/vcut/83x6-5.png",
       parameters: {
         "Outer Diameter": "83 mm",
         "Blade Width": "6.5 / 5.0 mm",
@@ -629,7 +629,7 @@ const PRODUCTS = {
 
     {
       name: "Routing Brush",
-      image: "./assets/images/more/routing-brush.png",
+      image: "./assets/Images/more/routing-brush.png",
       parameters: {
         "Material": "Nylon / Anti-static fiber",
         "Application": "PCB dust & debris removal",
@@ -646,7 +646,7 @@ const PRODUCTS = {
 
     {
       name: "Locating Pins",
-      image: "./assets/images/more/locating-pins.png",
+      image: "./assets/Images/more/locating-pins.png",
       parameters: {
         "Material": "Hardened Steel",
         "Diameter": "3.0 / 3.175 mm",
@@ -663,7 +663,7 @@ const PRODUCTS = {
 
     {
       name: "Calson Pins",
-      image: "./assets/images/more/calson-pins.png",
+      image: "./assets/Images/more/calson-pins.png",
       parameters: {
         "Material": "Alloy Steel",
         "Application": "PCB fixing & alignment",
@@ -680,7 +680,7 @@ const PRODUCTS = {
 
     {
       name: "Drill Rings",
-      image: "./assets/images/more/drill-rings.png",
+      image: "./assets/Images/more/drill-rings.png",
       parameters: {
         "Material": "Stainless Steel",
         "Inner Diameter": "As per requirement",
@@ -697,7 +697,7 @@ const PRODUCTS = {
 
     {
       name: "Ring Setting Machine",
-      image: "./assets/images/more/ring-setting-machine.png",
+      image: "./assets/Images/more/ring-setting-machine.png",
       parameters: {
         "Operation Type": "Manual / Semi-automatic",
         "Application": "Drill ring fixing",
@@ -714,7 +714,7 @@ const PRODUCTS = {
 
     {
       name: "DLR",
-      image: "./assets/images/more/dlr.png",
+      image: "./assets/Images/more/dlr.png",
       parameters: {
         "Full Form": "Drill Length Regulator",
         "Application": "Drilling depth control",
@@ -731,7 +731,7 @@ const PRODUCTS = {
 
     {
       name: "Burr Remover",
-      image: "./assets/images/more/burr-remover.png",
+      image: "./assets/Images/more/burr-remover.png",
       parameters: {
         "Material": "Hardened Steel Blade",
         "Application": "PCB edge burr removal",
