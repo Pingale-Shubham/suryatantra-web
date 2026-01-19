@@ -12,11 +12,64 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
-  <!-- ================= NAVBAR ================= -->
-  <div id="navbar-placeholder"></div>
+<!-- ================= NAVBAR ================= -->
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50
+         bg-white/90 backdrop-blur-md
+         border-b border-gray-200">
+
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <div class="font-bold text-lg text-emerald-600">
+       <a href="./index.html" class="group">
+        <img
+          src="./assets/Images/Logo/Surytantra Logo-01.png"
+          alt="Suryatantra Logo"
+          class="h-10 transition-transform duration-300 group-hover:scale-110"
+        />
+      </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-2">
+        <li><a href="./index.html" data-page="home" class="navbar-link">Home</a></li>
+        <li><a href="./about.html" data-page="about" class="navbar-link">About</a></li>
+        <li><a href="./product.html" data-page="products" class="navbar-link">Products</a></li>
+        <li><a href="./contact.html" data-page="contact" class="navbar-link">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Toggle -->
+      <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="md:hidden overflow-hidden max-h-0 opacity-0
+             transition-all duration-300 ease-in-out">
+
+      <ul class="flex flex-col gap-3 py-4">
+        <li><a href="./index.html" class="navbar-link">Home</a></li>
+        <li><a href="./about.html" class="navbar-link">About</a></li>
+        <li><a href="./product.html" class="navbar-link">Products</a></li>
+        <li><a href="./product.html" class="navbar-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="./assets/js/script.js"></script>
 
   <!-- ================= MAIN CONTENT ================= -->
   <main class="flex-grow pt-12">
