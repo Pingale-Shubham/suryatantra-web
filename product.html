@@ -1,215 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Suryatantra Enterprises LLP</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | Suryatantra Enterprises LLP</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="./styles.css">
-</head>
-
-<body class="bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800 font-[Manrope]">
-<!-- ================= NAVBAR ================= -->
-<nav
-  id="navbar"
-  class="fixed top-0 left-0 w-full z-50
-         bg-white/90 backdrop-blur-md
-         border-b border-gray-200">
-
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
-
-      <!-- Logo -->
-      <div class="font-bold text-lg text-emerald-600">
-       <a href="./index.html" class="group">
-        <img
-          src="./assets/Images/Logo/Surytantra Logo-01.png"
-          alt="Suryatantra Logo"
-          class="h-10 transition-transform duration-300 group-hover:scale-110"
-        />
-      </a>
-      </div>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-2">
-        <li><a href="./index.html" data-page="home" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" data-page="about" class="navbar-link">About</a></li>
-        <li><a href="./product.html" data-page="products" class="navbar-link">Products</a></li>
-        <li><a href="./contact.html" data-page="contact" class="navbar-link">Contact</a></li>
-      </ul>
-
-      <!-- Mobile Toggle -->
-      <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="md:hidden overflow-hidden max-h-0 opacity-0
-             transition-all duration-300 ease-in-out">
-
-      <ul class="flex flex-col gap-3 py-4">
-        <li><a href="./index.html" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" class="navbar-link">About</a></li>
-        <li><a href="./product.html" class="navbar-link">Products</a></li>
-        <li><a href="./product.html" class="navbar-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<script src="./assets/js/script.js"></script>
-
-  <div class="h-20 md:h-12"></div>
-
-
-  <!-- HERO -->
-  <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-5 text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold">Our Product Categories</h1>
-    <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
-      Explore our comprehensive range of industrial PCB solutions
-    </p>
-  </section>
-
-<!-- CATEGORY NAV -->
-<div class="sticky top-14 z-40 bg-white border-b border-gray-200">
-  <div
-    class="max-w-7xl mx-auto px-3 py-2
-           flex gap-2 md:gap-3
-           justify-start md:justify-center
-           overflow-x-auto
-           scrollbar-hide
-           snap-x snap-mandatory"
+  <body
+    class="bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800 font-[Manrope]"
   >
-    <button class="cat-btn active snap-start" data-cat="pcb-drill">
-      PCB Drill Tool
-    </button>
-    <button class="cat-btn snap-start" data-cat="pcb-routing">
-      PCB Routing Tool
-    </button>
-    <button class="cat-btn snap-start" data-cat="spindle">
-      Spindles & Spares
-    </button>
-    <button class="cat-btn snap-start" data-cat="vcut">
-      V-Cut Blades
-    </button>
-    <button class="cat-btn snap-start" data-cat="more">
-      More Tools
-    </button>
-  </div>
-</div>
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="font-bold text-lg text-emerald-600">
+            <a href="./index.html" class="group">
+              <img
+                src="./assets/Images/Logo/Surytantra Logo-01.png"
+                alt="Suryatantra Logo"
+                class="h-10 transition-transform duration-300 group-hover:scale-110"
+              />
+            </a>
+          </div>
 
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex items-center gap-2">
+            <li>
+              <a href="./index.html" data-page="home" class="navbar-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./about.html" data-page="about" class="navbar-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="./product.html" data-page="products" class="navbar-link"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a href="./contact.html" data-page="contact" class="navbar-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
 
-  <!-- CONTENT -->
+          <!-- Mobile Toggle -->
+          <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
 
-  <main class="max-w-7xl mx-auto px-4 py-12">
-    <div id="category-container"></div>
-  </main>
-
-  <!-- FOOTER -->
-  <div id="footer-placeholder"></div>
-
-  <!-- PRODUCT MODAL -->
-  <div id="product-modal" class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50">
-    <div class="bg-white rounded-2xl max-w-2xl w-full mx-4 shadow-2xl relative animate-scaleIn">
-
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-xl text-gray-500">
-        <i class="fas fa-times"></i>
-      </button>
-
-      <div class="grid md:grid-cols-2 gap-6 p-6 border-b">
-        <img id="modal-image" class="h-56 mx-auto object-contain">
-        <div>
-          <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
-          <p id="modal-category" class="text-sm text-gray-500 mb-4"></p>
-          <ul id="modal-features" class="space-y-2 text-sm"></ul>
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
+        >
+          <ul class="flex flex-col gap-3 py-4">
+            <li><a href="./index.html" class="navbar-link">Home</a></li>
+            <li><a href="./about.html" class="navbar-link">About</a></li>
+            <li><a href="./product.html" class="navbar-link">Products</a></li>
+            <li><a href="./product.html" class="navbar-link">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <script src="./assets/js/script.js"></script>
 
-      <div class="p-6">
-        <h4 class="font-bold mb-3">Technical Parameters</h4>
-        <table class="w-full text-sm border">
-          <tbody id="modal-params"></tbody>
-        </table>
+    <div class="h-20 md:h-12"></div>
 
-        <div class="flex flex-col sm:flex-row gap-4 mt-6">
-          <a id="whatsapp-btn" target="_blank"
-            class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold">
-            <i class="fab fa-whatsapp text-xl"></i> WhatsApp
-          </a>
+    <!-- HERO -->
+    <section
+      class="bg-gradient-to-br from-blue-50 to-indigo-50 py-5 text-center"
+    >
+      <h1 class="text-4xl md:text-5xl font-extrabold">
+        Our Product Categories
+      </h1>
+      <p class="text-lg text-gray-600 mt-3 max-w-2xl mx-auto">
+        Explore our comprehensive range of industrial PCB solutions
+      </p>
+    </section>
 
-          <a href="./contact.php"
-            class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold">
-            <i class="fas fa-phone"></i> Contact Us
-          </a>
+    <!-- CATEGORY NAV -->
+    <div class="sticky top-14 z-40 bg-white border-b border-gray-200">
+      <div
+        class="max-w-7xl mx-auto px-3 py-2 flex gap-2 md:gap-3 justify-start md:justify-center overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+      >
+        <button class="cat-btn active snap-start" data-cat="pcb-drill">
+          PCB Drill Tool
+        </button>
+        <button class="cat-btn snap-start" data-cat="pcb-routing">
+          PCB Routing Tool
+        </button>
+        <button class="cat-btn snap-start" data-cat="spindle">
+          Spindles & Spares
+        </button>
+        <button class="cat-btn snap-start" data-cat="vcut">V-Cut Blades</button>
+        <button class="cat-btn snap-start" data-cat="more">More Tools</button>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+      <div id="category-container"></div>
+    </main>
+
+    
+    <!-- ================= Enquiry Button ================= -->
+    <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14 bg-emerald-600 text-white rounded-full shadow-xl overflow-hidden transition-all duration-300 ease-out hover:w-40 hover:bg-emerald-500">
+      <!-- Icon -->
+      <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
+        <i class="fa-solid fa-envelope"></i>
+      </span>
+      <!-- Text -->
+      <span class="ml-1 pr-5 text-sm font-semibold tracking-wide whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75">
+        Send Enquiry
+      </span>
+    </a>
+    <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
+      <iframe src="../components/enquiry.html" class="w-full h-full border-none" ></iframe>
+    </div>
+    <script>
+      const openBtn = document.getElementById("openEnquiry");
+      const wrapper = document.getElementById("enquiryWrapper");
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        wrapper.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+      window.closeEnquiry = () => {
+        wrapper.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
+    </script>
+
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- PRODUCT MODAL -->
+    <div
+      id="product-modal"
+      class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-2xl w-full mx-4 shadow-2xl relative animate-scaleIn"
+      >
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-xl text-gray-500"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="grid md:grid-cols-2 gap-6 p-6 border-b">
+          <img id="modal-image" class="h-56 mx-auto object-contain" />
+          <div>
+            <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+            <p id="modal-category" class="text-sm text-gray-500 mb-4"></p>
+            <ul id="modal-features" class="space-y-2 text-sm"></ul>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <h4 class="font-bold mb-3">Technical Parameters</h4>
+          <table class="w-full text-sm border">
+            <tbody id="modal-params"></tbody>
+          </table>
+
+          <div class="flex flex-col sm:flex-row gap-4 mt-6">
+            <a
+              id="whatsapp-btn"
+              target="_blank"
+              class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold"
+            >
+              <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+            </a>
+
+            <a
+              href="#"
+              id="openEnquiry"
+              class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold"
+            >
+              Send Enquiry
+            </a>
+            <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
+              <iframe
+                src="./components/enquiry.html"
+                class="w-full h-full border-none"
+              ></iframe>
+            </div>
+            <script>
+              const openBtn = document.getElementById("openEnquiry");
+              const wrapper = document.getElementById("enquiryWrapper");
+
+              openBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                wrapper.classList.remove("hidden");
+                document.body.classList.add("overflow-hidden");
+              });
+
+              window.closeEnquiry = () => {
+                wrapper.classList.add("hidden");
+                document.body.classList.remove("overflow-hidden");
+              };
+            </script>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- STYLES -->
-<style>
-  .cat-btn {
-    padding: 0.5rem 1.25rem;
-    border-radius: 9999px;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    background: rgba(16, 185, 129, 0.05);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    color: #374151;
-  }
+    <!-- STYLES -->
+    <style>
+      .cat-btn {
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        background: rgba(16, 185, 129, 0.05);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+        color: #374151;
+      }
 
-  .cat-btn:hover {
-    background: linear-gradient(to right, #10b981, #14b8a6);
-    color: #ffffff;
-    border-color: transparent;
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
-    transform: scale(1.05);
-  }
+      .cat-btn:hover {
+        background: linear-gradient(to right, #10b981, #14b8a6);
+        color: #ffffff;
+        border-color: transparent;
+        box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+        transform: scale(1.05);
+      }
 
-  .cat-btn.active {
-    background: linear-gradient(to right, #10b981, #14b8a6);
-    color: #ffffff;
-    border-color: transparent;
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
-  }
+      .cat-btn.active {
+        background: linear-gradient(to right, #10b981, #14b8a6);
+        color: #ffffff;
+        border-color: transparent;
+        box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+      }
 
-  @keyframes scaleIn {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
 
-  .animate-scaleIn {
-    animation: scaleIn 0.25s ease-out;
-  }
-</style>
+      .animate-scaleIn {
+        animation: scaleIn 0.25s ease-out;
+      }
+    </style>
 
-
-  <!-- MAIN JS -->
-  <script src="./assets/js/product.js"></script>
-
-</body>
-
+    <!-- MAIN JS -->
+    <script src="./assets/js/product.js"></script>
+  </body>
 </html>

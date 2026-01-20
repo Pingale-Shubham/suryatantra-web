@@ -750,7 +750,7 @@ const PRODUCTS = {
 }
 
 };
-
+ 
 /* ================= RENDER CATEGORY ================= */
 const container = document.getElementById("category-container");
 
@@ -789,7 +789,11 @@ function renderCategory(key) {
 document.querySelectorAll(".cat-btn").forEach(btn =>
   btn.addEventListener("click", () => renderCategory(btn.dataset.cat))
 );
-
+/* ================= HASH CHANGE SUPPORT ================= */
+window.addEventListener("hashchange", () => {
+  const hash = window.location.hash.replace("#", "");
+  if (hash) renderCategory(hash);
+});
 /* ================= MODAL ================= */
 function openModal(product, category) {
   document.getElementById("modal-image").src = product.image;

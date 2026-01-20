@@ -1,399 +1,538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Suryatantra Enterprises LLP</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Suryatantra Enterprises LLP</title>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  
-  <link rel="stylesheet" href="./styles.css">
-</head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<body class="flex flex-col min-h-screen bg-white text-gray-800">
-<!-- ================= NAVBAR ================= -->
-<nav
-  id="navbar"
-  class="fixed top-0 left-0 w-full z-50
-         bg-white/90 backdrop-blur-md
-         border-b border-gray-200">
-
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
-
-      <!-- Logo -->
-      <div class="font-bold text-lg text-emerald-600">
-       <a href="./index.html" class="group">
-        <img
-          src="./assets/Images/Logo/Surytantra Logo-01.png"
-          alt="Suryatantra Logo"
-          class="h-10 transition-transform duration-300 group-hover:scale-110"
-        />
-      </a>
-      </div>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-2">
-        <li><a href="./index.html" data-page="home" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" data-page="about" class="navbar-link">About</a></li>
-        <li><a href="./product.html" data-page="products" class="navbar-link">Products</a></li>
-        <li><a href="./contact.html" data-page="contact" class="navbar-link">Contact</a></li>
-      </ul>
-
-      <!-- Mobile Toggle -->
-      <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="md:hidden overflow-hidden max-h-0 opacity-0
-             transition-all duration-300 ease-in-out">
-
-      <ul class="flex flex-col gap-3 py-4">
-        <li><a href="./index.html" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" class="navbar-link">About</a></li>
-        <li><a href="./product.html" class="navbar-link">Products</a></li>
-        <li><a href="./product.html" class="navbar-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<script src="./assets/js/script.js"></script>
-
-  <!-- ================= MAIN CONTENT ================= -->
-  <main class="flex-grow pt-12">
-    <!-- ================= CONTACT SECTION ================= -->
-    <section class="min-h-screen pt-20 pb-10 bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center">
-      <div class="max-w-7xl mx-auto px-6 w-full">
-
-        <div class="text-center mb-16 fade-up">
-          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
-            Get In Touch
-          </h1>
-          <div class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-6"></div>
-          <p class="max-w-2xl mx-auto text-lg text-gray-600">
-            Have questions or need PCB manufacturing solutions? Our team is ready to help you with expert advice
-            and precision engineering.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
-          <!-- Google Maps -->
-          <div class="rounded-2xl overflow-hidden shadow-2xl border-8 border-white h-[450px] fade-up"
-            style="animation-delay: 0.2s;">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.661649422301!2d73.8055606759247!3d18.453621471209594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295982823675d%3A0xc3f9a72c439f0f63!2sDhayari%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              class="w-full h-full border-0" allowfullscreen="" loading="lazy">
-            </iframe>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="space-y-8 fade-up" style="animation-delay: 0.4s;">
-            <!-- Address -->
-            <div class="flex items-start gap-5 group">
-              <div
-                class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
-                <i class="fas fa-map-marker-alt text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1">Visit Us</h4>
-                <p class="text-gray-700 leading-relaxed">
-                  <strong class="text-gray-900">Suryatantra Enterprises LLP</strong><br>
-                  S.no. 143, Milkat No. 1094/3, Opp. Green-Field Hotel,<br>
-                  Sinhagad Road, Dhayari, Pune – 411041 (India)
-                </p>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="flex items-start gap-5 group">
-              <div
-                class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
-                <i class="fas fa-phone-alt text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1">Call Us</h4>
-                <a href="tel:+919730429324" class="text-gray-700 text-lg hover:text-emerald-600 transition-colors">
-                  +91 97304 29324
-                </a>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="flex items-start gap-5 group">
-              <div
-                class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
-                <i class="fas fa-envelope text-2xl"></i>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1">Email Us</h4>
-                <a href="mailto:suryatantraa@gmail.com"
-                  class="text-gray-700 text-lg hover:text-emerald-600 transition-colors">
-                  suryatantraa@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <hr class="border-gray-200">
-
-            <!-- Social Media & Enquiry Button -->
-            <div class="flex flex-wrap items-center gap-6">
-              <div class="flex gap-3">
-                <a href="#"
-                  class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#1877F2] hover:-translate-y-1">
-                  <i class="fab fa-facebook-f text-lg"></i>
-                </a>
-                <a href="#"
-                  class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#0A66C2] hover:-translate-y-1">
-                  <i class="fab fa-linkedin-in text-lg"></i>
-                </a>
-                <a href="https://wa.me/919730429324"
-                  class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#25D366] hover:-translate-y-1">
-                  <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-              </div>
-
-              <a href="./enquiry.php"
-  class="w-full sm:w-auto inline-flex items-center justify-center gap-3
-         px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-500
-         text-white rounded-full font-bold tracking-wide uppercase
-         shadow-xl shadow-emerald-200
-         hover:shadow-emerald-400/40 hover:-translate-y-1
-         active:scale-95 transition-all duration-300 group">
-  
-  <span>Send Enquiry</span>
-  <i class="fas fa-paper-plane text-xs transition-transform
-             group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FAQ SECTION ================= -->
-    <section class="py-20 bg-white">
+  <body class="flex flex-col min-h-screen bg-white text-gray-800">
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200"
+    >
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Frequently Asked Questions</h2>
-          <div class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-6"></div>
-          <p class="text-gray-600">Common queries about our products and services.</p>
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="font-bold text-lg text-emerald-600">
+            <a href="./index.html" class="group">
+              <img
+                src="./assets/Images/Logo/Surytantra Logo-01.png"
+                alt="Suryatantra Logo"
+                class="h-10 transition-transform duration-300 group-hover:scale-110"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex items-center gap-2">
+            <li>
+              <a href="./index.html" data-page="home" class="navbar-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./about.html" data-page="about" class="navbar-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="./product.html" data-page="products" class="navbar-link"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a href="./contact.html" data-page="contact" class="navbar-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Mobile Toggle -->
+          <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
 
-        <!-- FAQ Container with Hidden Scroll -->
-        <div class="max-h-[600px] overflow-y-auto pr-2 faq-scroll-container">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <!-- Column 1 - Left Side -->
-            <div class="space-y-4">
-              <!-- FAQ Item 1 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">What types of PCB tools do you supply?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  We supply a wide range of precision tools including drilling bits, routing blades, V-cut blades, and other
-                  specialized consumables tailored for high-quality PCB manufacturing.
-                </div>
-              </div>
-
-              <!-- FAQ Item 2 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">Do you offer custom automation solutions?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  Yes! We design custom automation roadmaps to streamline your PCB workflows, improving efficiency and
-                  reducing manual errors in your production line.
-                </div>
-              </div>
-
-              <!-- FAQ Item 3 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">What is your delivery timeline?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  Our standard delivery timeline is 3-5 business days for items in stock. For custom orders or bulk purchases, delivery may take 7-14 business days depending on specifications.
-                </div>
-              </div>
-
-              <!-- FAQ Item 5 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">Do you provide technical support?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  Absolutely! Our technical team provides comprehensive support including installation guidance, troubleshooting, and maintenance advice for all our products.
-                </div>
-              </div>
-            </div>
-
-            <!-- Column 2 - Right Side -->
-            <div class="space-y-4">
-              <!-- FAQ Item 4 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">How can I place an order?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  You can place an order by contacting us directly via the enquiry form above, emailing us at
-                  suryatantraa@gmail.com, or calling our sales team. We will guide you through the process.
-                </div>
-              </div>
-
-              <!-- FAQ Item 6 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">Where are you located?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  Our headquarters are located at Sinhagad Road, Dhayari, Pune – 411041, India.
-                </div>
-              </div>
-
-              <!-- FAQ Item 7 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">Do you ship internationally?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  Yes, we offer international shipping to select countries. Please contact our sales team for shipping rates and availability to your location.
-                </div>
-              </div>
-
-              <!-- FAQ Item 8 -->
-              <div class="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn">
-                  <span class="font-semibold text-gray-800">What payment methods do you accept?</span>
-                  <i class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"></i>
-                </button>
-                <div class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content">
-                  We accept various payment methods including bank transfers, credit/debit cards, and online payment gateways. For bulk orders, we also offer flexible payment terms.
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
+        >
+          <ul class="flex flex-col gap-3 py-4">
+            <li><a href="./index.html" class="navbar-link">Home</a></li>
+            <li><a href="./about.html" class="navbar-link">About</a></li>
+            <li><a href="./product.html" class="navbar-link">Products</a></li>
+            <li><a href="./product.html" class="navbar-link">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
+    <script src="./assets/js/script.js"></script>
 
-    <style>
-      /* Custom scrollbar styling for FAQ section */
-      .faq-scroll-container {
-        scrollbar-width: thin;
-        scrollbar-color: rgba(16, 185, 129, 0.3) transparent;
-      }
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow pt-12">
+      <!-- ================= CONTACT SECTION ================= -->
+      <section
+        class="min-h-screen pt-20 pb-10 bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center"
+      >
+        <div class="max-w-7xl mx-auto px-6 w-full">
+          <div class="text-center mb-4 fade-up">
+            <h1
+              class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 tracking-tight"
+            >
+              Get In Touch
+            </h1>
+            <div
+              class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-2"
+            ></div>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600">
+              Have questions or need PCB manufacturing solutions? Our team is
+              ready to help you with expert advice and precision engineering.
+            </p>
+          </div>
 
-      .faq-scroll-container::-webkit-scrollbar {
-        width: 6px;
-      }
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Google Maps -->
+            <div
+              class="rounded-2xl overflow-hidden shadow-2xl border-8 border-white h-[450px] fade-up"
+              style="animation-delay: 0.2s"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.661649422301!2d73.8055606759247!3d18.453621471209594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295982823675d%3A0xc3f9a72c439f0f63!2sDhayari%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                class="w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
 
-      .faq-scroll-container::-webkit-scrollbar-track {
-        background: transparent;
-      }
+            <!-- Contact Info -->
+            <div class="space-y-8 fade-up" style="animation-delay: 0.4s">
+              <!-- Address -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
+                >
+                  <i class="fas fa-map-marker-alt text-2xl"></i>
+                </div>
+                <div>
+                  <h4
+                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
+                  >
+                    Visit Us
+                  </h4>
+                  <p class="text-gray-700 leading-relaxed">
+                    <strong class="text-gray-900"
+                      >Suryatantra Enterprises LLP</strong
+                    ><br />
+                    S.no. 143, Milkat No. 1094/3, Opp. Green-Field Hotel,<br />
+                    Sinhagad Road, Dhayari, Pune – 411041 (India)
+                  </p>
+                </div>
+              </div>
 
-      .faq-scroll-container::-webkit-scrollbar-thumb {
-        background-color: rgba(16, 185, 129, 0.3);
-        border-radius: 10px;
-      }
+              <!-- Phone -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
+                >
+                  <i class="fas fa-phone-alt text-2xl"></i>
+                </div>
+                <div>
+                  <h4
+                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
+                  >
+                    Call Us
+                  </h4>
+                  <a
+                    href="tel:+919730429324"
+                    class="text-gray-700 text-lg hover:text-emerald-600 transition-colors"
+                  >
+                    +91 97304 29324
+                  </a>
+                </div>
+              </div>
 
-      .faq-scroll-container::-webkit-scrollbar-thumb:hover {
-        background-color: rgba(16, 185, 129, 0.5);
-      }
+              <!-- Email -->
+              <div class="flex items-start gap-5 group">
+                <div
+                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
+                >
+                  <i class="fas fa-envelope text-2xl"></i>
+                </div>
+                <div>
+                  <h4
+                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
+                  >
+                    Email Us
+                  </h4>
+                  <a
+                    href="mailto:suryatantraa@gmail.com"
+                    class="text-gray-700 text-lg hover:text-emerald-600 transition-colors"
+                  >
+                    suryatantraa@gmail.com
+                  </a>
+                </div>
+              </div>
 
-      /* Hide scrollbar but keep functionality */
-      .faq-scroll-container {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+              <hr class="border-gray-200" />
 
-      .faq-scroll-container::-webkit-scrollbar {
-        display: none;  /* Chrome, Safari and Opera */
-      }
-    </style>
+              <!-- Social Media & Enquiry Button -->
+              <div class="flex flex-wrap items-center gap-6">
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#1877F2] hover:-translate-y-1"
+                  >
+                    <i class="fab fa-facebook-f text-lg"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#0A66C2] hover:-translate-y-1"
+                  >
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                  </a>
+                  <a
+                    href="https://wa.me/919730429324"
+                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#25D366] hover:-translate-y-1"
+                  >
+                    <i class="fab fa-whatsapp text-xl"></i>
+                  </a>
+                </div>
 
-  </main>
+                <a href="#" id="openEnquiry"
+  class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white rounded-full font-bold uppercase">
+  Send Enquiry
+</a>
+<div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
+  <iframe
+    src="./components/enquiry.html"
+    class="w-full h-full border-none"
+  ></iframe>
+</div>
+<script>
+  const openBtn = document.getElementById("openEnquiry");
+  const wrapper = document.getElementById("enquiryWrapper");
 
-  <!-- ================= FOOTER ================= -->
-  <div id="footer-placeholder"></div>
+  openBtn.addEventListener("click", e => {
+    e.preventDefault();
+    wrapper.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  });
 
-  <!-- ================= SCRIPTS ================= -->
-  <script>
-    // Load Navbar
-    fetch('./components/navbar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-        // Initialize navbar after loading
-        if (window.initNavbar) {
-          window.initNavbar();
+  window.closeEnquiry = () => {
+    wrapper.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  };
+</script>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ SECTION ================= -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">
+              Frequently Asked Questions
+            </h2>
+            <div
+              class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-6"
+            ></div>
+            <p class="text-gray-600">
+              Common queries about our products and services.
+            </p>
+          </div>
+
+          <!-- FAQ Container with Hidden Scroll -->
+          <div class="max-h-[600px] overflow-y-auto pr-2 faq-scroll-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Column 1 - Left Side -->
+              <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >What types of PCB tools do you supply?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    We supply a wide range of precision tools including drilling
+                    bits, routing blades, V-cut blades, and other specialized
+                    consumables tailored for high-quality PCB manufacturing.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >Do you offer custom automation solutions?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    Yes! We design custom automation roadmaps to streamline your
+                    PCB workflows, improving efficiency and reducing manual
+                    errors in your production line.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >What is your delivery timeline?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    Our standard delivery timeline is 3-5 business days for
+                    items in stock. For custom orders or bulk purchases,
+                    delivery may take 7-14 business days depending on
+                    specifications.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >Do you provide technical support?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    Absolutely! Our technical team provides comprehensive
+                    support including installation guidance, troubleshooting,
+                    and maintenance advice for all our products.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 2 - Right Side -->
+              <div class="space-y-4">
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >How can I place an order?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    You can place an order by contacting us directly via the
+                    enquiry form above, emailing us at suryatantraa@gmail.com,
+                    or calling our sales team. We will guide you through the
+                    process.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >Where are you located?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    Our headquarters are located at Sinhagad Road, Dhayari, Pune
+                    – 411041, India.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >Do you ship internationally?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    Yes, we offer international shipping to select countries.
+                    Please contact our sales team for shipping rates and
+                    availability to your location.
+                  </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
+                  >
+                    <span class="font-semibold text-gray-800"
+                      >What payment methods do you accept?</span
+                    >
+                    <i
+                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
+                    ></i>
+                  </button>
+                  <div
+                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
+                  >
+                    We accept various payment methods including bank transfers,
+                    credit/debit cards, and online payment gateways. For bulk
+                    orders, we also offer flexible payment terms.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        /* Custom scrollbar styling for FAQ section */
+        .faq-scroll-container {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(16, 185, 129, 0.3) transparent;
         }
-      })
-      .catch(err => console.error('Error loading navbar:', err));
 
-    // Load Footer
-    fetch('./components/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      })
-      .catch(err => console.error('Error loading footer:', err));
+        .faq-scroll-container::-webkit-scrollbar {
+          width: 6px;
+        }
 
-    // FAQ Accordion
-    document.addEventListener('DOMContentLoaded', () => {
-      const faqBtns = document.querySelectorAll('.faq-btn');
-      faqBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const content = btn.nextElementSibling;
-          const icon = btn.querySelector('i');
+        .faq-scroll-container::-webkit-scrollbar-track {
+          background: transparent;
+        }
 
-          // Toggle current
-          content.classList.toggle('hidden');
-          icon.classList.toggle('fa-plus');
-          icon.classList.toggle('fa-minus');
+        .faq-scroll-container::-webkit-scrollbar-thumb {
+          background-color: rgba(16, 185, 129, 0.3);
+          border-radius: 10px;
+        }
 
-          // Close others
-          faqBtns.forEach(otherBtn => {
-            if (otherBtn !== btn) {
-              otherBtn.nextElementSibling.classList.add('hidden');
-              otherBtn.querySelector('i').classList.add('fa-plus');
-              otherBtn.querySelector('i').classList.remove('fa-minus');
-            }
+        .faq-scroll-container::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(16, 185, 129, 0.5);
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .faq-scroll-container {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+
+        .faq-scroll-container::-webkit-scrollbar {
+          display: none; /* Chrome, Safari and Opera */
+        }
+      </style>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+      // Load Navbar
+      fetch("./components/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+          // Initialize navbar after loading
+          if (window.initNavbar) {
+            window.initNavbar();
+          }
+        })
+        .catch((err) => console.error("Error loading navbar:", err));
+
+      // Load Footer
+      fetch("./components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading footer:", err));
+
+      // FAQ Accordion
+      document.addEventListener("DOMContentLoaded", () => {
+        const faqBtns = document.querySelectorAll(".faq-btn");
+        faqBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("i");
+
+            // Toggle current
+            content.classList.toggle("hidden");
+            icon.classList.toggle("fa-plus");
+            icon.classList.toggle("fa-minus");
+
+            // Close others
+            faqBtns.forEach((otherBtn) => {
+              if (otherBtn !== btn) {
+                otherBtn.nextElementSibling.classList.add("hidden");
+                otherBtn.querySelector("i").classList.add("fa-plus");
+                otherBtn.querySelector("i").classList.remove("fa-minus");
+              }
+            });
           });
         });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

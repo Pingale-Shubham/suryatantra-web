@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiry</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("nafRyrWhypRdV_Zy-");
+    })();
+  </script>
+</head>
+
+<body class="bg-transparent">
+
+  <!-- OVERLAY -->
+  <div id="enquiryPopup"
+     class="fixed inset-0 flex items-end justify-end p-4 sm:p-6 bg-black/30 z-50" onclick="closePopup(event)">
+
+    <!-- RIGHT PANEL -->
+    <div
+      class="sm:w-[400px] max-h-[70vh] overflow-y-20% bg-transparent backdrop-blur
+             shadow-2xl p-6 relative animate-slideIn"
+      onclick="event.stopPropagation()"
+    >
+
+      <!-- CLOSE -->
+      <button
+        onclick="parent.closeEnquiry()"
+        class="absolute top-4 right-4 text-gray-500 hover:text-red-600 text-xl"
+        aria-label="Close enquiry"
+      >
+        &times;
+      </button>
+
+      <h2 class="text-xl font-bold text-emerald-600 mb-6">Enquiry</h2>
+
+      <form id="enquiryForm" class="space-y-4">
+
+        <div class="relative">
+          <input name="name" placeholder="Your Name" required
+            class="w-full px-4 py-3 pr-10 rounded-lg border-2 border-emerald-500" />
+          <i class="fa-solid fa-user absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <div class="relative">
+          <input name="phone" placeholder="Phone No." required
+            class="w-full px-4 py-3 pr-10 rounded-lg border border-gray-200 focus:border-emerald-500" />
+          <i class="fa-solid fa-phone absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <div class="relative">
+          <input name="email" placeholder="Your Email" required
+            class="w-full px-4 py-3 pr-10 rounded-lg border border-gray-200 focus:border-emerald-500" />
+          <i class="fa-solid fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <div class="relative">
+          <textarea name="message" rows="4" placeholder="Message" required
+            class="w-full px-4 py-3 pr-10 rounded-lg border border-gray-200 resize-none"></textarea>
+          <i class="fa-solid fa-comment absolute right-4 top-4 text-gray-400"></i>
+        </div>
+
+        <p id="formStatus" class="hidden text-sm font-semibold text-center"></p>
+
+        <button id="submitBtn" type="submit"
+          class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-lg flex justify-center gap-2">
+          Send Message <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ANIMATION -->
+  <style>
+    @keyframes slideIn {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
+    .animate-slideIn {
+      animation: slideIn 0.35s ease-out;
+    }
+  </style>
+
+  <!-- JS -->
+  <script>
+    const form = document.getElementById("enquiryForm");
+    const status = document.getElementById("formStatus");
+    const btn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const { name, phone, email, message } = form;
+
+      if (name.value.trim().length < 2)
+        return showError("Enter your name");
+
+      if (!/^(?:\+91|91)?[6-9]\d{9}$/.test(phone.value.trim()))
+        return showError("Enter valid mobile number");
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()))
+        return showError("Enter valid email");
+
+      if (message.value.trim().length < 5)
+        return showError("Message too short");
+
+      btn.disabled = true;
+      btn.innerText = "Sending...";
+      status.classList.add("hidden");
+
+      emailjs.send(
+        "service_krjc8ra",
+        "template_ow3end7",
+        {
+          name: name.value,
+          phone: phone.value,
+          email: email.value,
+          message: message.value,
+          from_name: name.value,
+          reply_to: email.value
+        }
+      )
+      .then(() => {
+        showSuccess("✅ Enquiry sent successfully!");
+        form.reset();
+      })
+      .catch(err => {
+        console.error(err);
+        showError("❌ Failed to send enquiry");
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
+      });
+    });
+
+    function showError(msg) {
+      status.textContent = msg;
+      status.className = "text-sm font-semibold text-red-600 text-center";
+      status.classList.remove("hidden");
+    }
+
+    function showSuccess(msg) {
+      status.textContent = msg;
+      status.className = "text-sm font-semibold text-emerald-600 text-center";
+      status.classList.remove("hidden");
+    }
+
+    function closePopup(e) {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

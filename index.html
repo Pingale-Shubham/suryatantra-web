@@ -1,224 +1,425 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suryatantra Enterprises LLP</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suryatantra Enterprises LLP</title>
 
-  <meta name="description"
-    content="Suryatantra Enterprises LLP - Empowering PCB Manufacturers with Top-Quality Supplies, Precision Machining Tools, and Components." />
+    <meta
+      name="description"
+      content="Suryatantra Enterprises LLP - Empowering PCB Manufacturers with Top-Quality Supplies, Precision Machining Tools, and Components."
+    />
 
-  <meta name="keywords"
-    content="PCB Manufacturing, Precision Tools, Drilling Bits, Routing Blades, Suryatantra Enterprises, PCB Supplies" />
+    <meta
+      name="keywords"
+      content="PCB Manufacturing, Precision Tools, Drilling Bits, Routing Blades, Suryatantra Enterprises, PCB Supplies"
+    />
 
-  <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="./styles.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-
-    <link rel="stylesheet" href="./styles.css">
-  <style>
-    body {
-      font-family: "Inter", system-ui, sans-serif;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    .fade-up {
-      animation: fadeUp 0.8s ease-out forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", system-ui, sans-serif;
       }
-    }
-  </style>
-</head>
+      html {
+        scroll-behavior: smooth;
+      }
+      .fade-up {
+        animation: fadeUp 0.8s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
 
-<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 antialiased">
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 antialiased">
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="font-bold text-lg text-emerald-600">
+            <a href="./index.html" class="group">
+              <img
+                src="./assets/Images/Logo/Surytantra Logo-01.png"
+                alt="Suryatantra Logo"
+                class="h-10 transition-transform duration-300 group-hover:scale-110"
+              />
+            </a>
+          </div>
 
-<!-- ================= NAVBAR ================= -->
-<nav
-  id="navbar"
-  class="fixed top-0 left-0 w-full z-50
-         bg-white/90 backdrop-blur-md
-         border-b border-gray-200">
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex items-center gap-2">
+            <li>
+              <a
+                href="./index.html"
+                data-page="home"
+                class="navbar-link active-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./about.html" data-page="about" class="navbar-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="./product.html" data-page="products" class="navbar-link"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a href="./contact.html" data-page="contact" class="navbar-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
 
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
+          <!-- Mobile Toggle -->
+          <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
 
-      <!-- Logo -->
-      <div class="font-bold text-lg text-emerald-600">
-       <a href="./index.html" class="group">
-        <img
-          src="./assets/Images/Logo/Surytantra Logo-01.png"
-          alt="Suryatantra Logo"
-          class="h-10 transition-transform duration-300 group-hover:scale-110"
-        />
-      </a>
-      </div>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-2">
-        <li><a href="./index.html" data-page="home" class="navbar-link active-link">Home</a></li>
-        <li><a href="./about.html" data-page="about" class="navbar-link">About</a></li>
-        <li><a href="./product.html" data-page="products" class="navbar-link">Products</a></li>
-        <li><a href="./contact.html" data-page="contact" class="navbar-link">Contact</a></li>
-      </ul>
-
-      <!-- Mobile Toggle -->
-      <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="md:hidden overflow-hidden max-h-0 opacity-0
-             transition-all duration-300 ease-in-out">
-
-      <ul class="flex flex-col gap-3 py-4">
-        <li><a href="./index.html" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" class="navbar-link">About</a></li>
-        <li><a href="./product.html" class="navbar-link">Products</a></li>
-        <li><a href="./product.html" class="navbar-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<script src="./assets/js/script.js"></script>
-
-  <!-- ================= MAIN ================= -->
-  <main class="flex-grow pt-12">
-
-    <!-- ================= HERO ================= -->
-    <section
-      class="relative min-h-screen flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
-      style="background-image: url('./assets/Images/bg.png')">
-
-      <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/60 via-emerald-900/20 to-emerald-900/70"></div>
-
-      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <div class="space-y-8">
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white ">
-            Suryatantra
-            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-200">
-              Enterprises LLP
-            </span>
-          </h1>
-
-          <p class="text-xl md:text-2xl text-emerald-100 font-medium max-w-3xl mx-auto">
-            Empowering PCB Manufacturers with Top-Quality Supplies
-          </p>
-
-          <p class="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">
-  Explore our comprehensive range of precision machining tools and components
-  for PCB manufacturing.
-</p>
-
-
-          <a href="./product.html"
-            class="inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-900 font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
-            Explore More
-            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
-          </a>
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
+        >
+          <ul class="flex flex-col gap-3 py-4">
+            <li><a href="./index.html" class="navbar-link">Home</a></li>
+            <li><a href="./about.html" class="navbar-link">About</a></li>
+            <li><a href="./product.html" class="navbar-link">Products</a></li>
+            <li><a href="./product.html" class="navbar-link">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </nav>
+    <script src="./assets/js/script.js"></script>
 
-    <!-- ================= PRODUCTS ================= -->
-    <section class="max-w-7xl mx-auto px-4 py-16">
-      <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">
-        Our Key Products
-      </h2>
+    <!-- ================= MAIN ================= -->
+    <main class="flex-grow pt-12">
+      <!-- ================= HERO ================= -->
+      <section
+        class="relative min-h-screen flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
+        style="background-image: url(&quot;./assets/Images/bg.png&quot;)"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-emerald-900/60 via-emerald-900/20 to-emerald-900/70"
+        ></div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <div class="space-y-8">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white"
+            >
+              Suryatantra
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-200"
+              >
+                Enterprises LLP
+              </span>
+            </h1>
 
-        <!-- Card 1 -->
-        <a href="./product.html#pcb-drill"
-          class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-          <img src="./assets/Images/pcb-drill/slot-drill.png" alt="PCB Drill Tools"
-            class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="p-5 text-center">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">PCB Drill Tool</h3>
-            <p class="text-sm text-gray-600">Industrial-grade PCB drilling solution</p>
+            <p
+              class="text-xl md:text-2xl text-emerald-100 font-medium max-w-3xl mx-auto"
+            >
+              Empowering PCB Manufacturers with Top-Quality Supplies
+            </p>
+
+            <p
+              class="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto"
+            >
+              Explore our comprehensive range of precision machining tools and
+              components for PCB manufacturing.
+            </p>
+
+            <a
+              href="./product.html"
+              class="inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-900 font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+            >
+              Explore More
+              <i
+                class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"
+              ></i>
+            </a>
           </div>
-        </a>
+        </div>
+      </section>
 
-        <!-- Card 2 -->
-        <a href="./product.html#pcb-routing"
-          class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-          <img src="./assets/Images/pcb-routing/aluminium-coated.png" alt="PCB Routing Tools"
-            class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="p-5 text-center">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">PCB Routing Tool</h3>
-            <p class="text-sm text-gray-600">Precision routing tools for PCB profiling</p>
+      <!-- ================= PRODUCTS ================= -->
+      <section class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">
+          Our Key Products
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- Card 1 -->
+          <a
+            href="./product.html#pcb-drill"
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            <img
+              src="./assets/Images/pcb-drill/slot-drill.png"
+              class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                PCB Drill Tool
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Industrial-grade PCB drilling solution
+              </p>
+
+              <span
+                class="inline-block px-4 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg group-hover:bg-emerald-700 transition"
+              >
+                View More
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a
+            href="./product.html#pcb-routing"
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            <img
+              src="./assets/Images/pcb-routing/aluminium-coated.png"
+              class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                PCB Routing Tool
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Precision routing tools for PCB profiling
+              </p>
+
+              <span
+                class="inline-block px-4 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg group-hover:bg-emerald-700 transition"
+              >
+                View More
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a
+            href="./product.html#spindle"
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            <img
+              src="./assets/Images/spindle/230505.png"
+              class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">
+                Spindles & Spares
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                High-performance spindles for PCB machinery
+              </p>
+
+              <span
+                class="inline-block px-4 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg group-hover:bg-emerald-700 transition"
+              >
+                View More
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a
+            href="./product.html#vcut"
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            <img
+              src="./assets/Images/vcut/51x48.png"
+              class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">V-Cut Blades</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Precision blades for PCB depaneling
+              </p>
+
+              <span
+                class="inline-block px-4 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg group-hover:bg-emerald-700 transition"
+              >
+                View More
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a
+            href="./product.html#more"
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+          >
+            <img
+              src="./assets/Images/more/routing-brush.png"
+              class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            <div class="p-5 text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">More Tools</h3>
+              <p class="text-sm text-gray-600 mb-4">
+                Additional PCB manufacturing accessories
+              </p>
+
+              <span
+                class="inline-block px-4 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg group-hover:bg-emerald-700 transition"
+              >
+                View More
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <script src="./assets/js/product.js"></script>
+
+      <!-- ================= COMPONENTS SECTION ================= -->
+      <section class="py-28 bg-gradient-to-br from-gray-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16 fade-up">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900"
+            >
+              Precision Machining Tools & Components
+            </h2>
           </div>
-        </a>
-
-        <!-- Card 3 -->
-        <a href="./product.html#spindle"
-          class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-          <img src="./assets/Images/spindle/230505.png" alt="PCB Spindles"
-            class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="p-5 text-center">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Spindles & Spares</h3>
-            <p class="text-sm text-gray-600">High-performance spindles for PCB machinery</p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <div
+              class="space-y-6 text-lg text-gray-700 leading-relaxed fade-up"
+            >
+              <p>
+                At Suryatantra, we utilize a wide range of advanced machining
+                tools to ensure precision and efficiency in our PCB
+                manufacturing process. This collection of high-quality tools
+                includes specialized drilling bits, routing blades, and cutting
+                components designed to handle the intricacies of PCB
+                fabrication.
+              </p>
+              <p>
+                These tools enable accurate drilling, cutting, and shaping of
+                circuit boards, ensuring top-notch quality and performance for
+                our clients. Our state-of-the-art equipment is sourced from
+                trusted partners and optimized for both small-scale and
+                large-scale production needs, maintaining consistency and
+                precision across all projects.
+              </p>
+            </div>
+            <div
+              class="relative rounded-3xl overflow-hidden shadow-2xl group fade-up"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 group-hover:from-emerald-400/30 group-hover:to-teal-400/30 transition-all duration-500"
+              ></div>
+              <img
+                src="./assets/Images/pmt.jpg"
+                alt="Precision Machining Tools"
+                class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
           </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="./product.html#vcut"
-          class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-          <img src="./assets/Images/vcut/51x48.png" alt="V-Cut Blades"
-            class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="p-5 text-center">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">V-Cut Blades</h3>
-            <p class="text-sm text-gray-600">Precision blades for PCB depaneling</p>
+          <div
+            class="mt-16 flex flex-wrap justify-center gap-8 text-gray-700 fade-up"
+            style="animation-delay: 0.4s"
+          >
+            <span
+              class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md"
+            >
+              <i class="fas fa-check-circle text-emerald-600 text-xl"></i>
+              <span class="font-semibold">High Precision</span>
+            </span>
+            <span
+              class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md"
+            >
+              <i class="fas fa-check-circle text-emerald-600 text-xl"></i>
+              <span class="font-semibold">Quality Assured</span>
+            </span>
+            <span
+              class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md"
+            >
+              <i class="fas fa-check-circle text-emerald-600 text-xl"></i>
+              <span class="font-semibold">Cost Effective</span>
+            </span>
           </div>
-        </a>
+        </div>
+      </section>
+    </main>
 
-        <!-- Card 5 -->
-        <a href="./product.html#more"
-          class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-          <img src="./assets/Images/more/routing-brush.png" alt="More PCB Tools"
-            class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="p-5 text-center">
-            <h3 class="text-lg font-bold text-gray-900 mb-2">More Tools</h3>
-            <p class="text-sm text-gray-600">Additional PCB manufacturing accessories</p>
-          </div>
-        </a>
+    <!-- ================= Enquiry Button ================= -->
+    <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14 bg-emerald-600 text-white rounded-full shadow-xl overflow-hidden transition-all duration-300 ease-out hover:w-40 hover:bg-emerald-500">
+      <!-- Icon -->
+      <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
+        <i class="fa-solid fa-envelope"></i>
+      </span>
+      <!-- Text -->
+      <span class="ml-1 pr-5 text-sm font-semibold tracking-wide whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75">
+        Send Enquiry
+      </span>
+    </a>
+    <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
+      <iframe src="../components/enquiry.html" class="w-full h-full border-none" ></iframe>
+    </div>
+    <script>
+      const openBtn = document.getElementById("openEnquiry");
+      const wrapper = document.getElementById("enquiryWrapper");
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        wrapper.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+      window.closeEnquiry = () => {
+        wrapper.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
+    </script>
 
-      </div>
-    </section>
-
-    <!-- ================= COMPONENTS SECTION ================= --> <section class="py-28 bg-gradient-to-br from-gray-50 to-emerald-50"> <div class="max-w-7xl mx-auto px-6"> <div class="text-center mb-16 fade-up"> <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900" > Precision Machining Tools & Components </h2> </div> <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"> <div class="space-y-6 text-lg text-gray-700 leading-relaxed fade-up" > <p> At Suryatantra, we utilize a wide range of advanced machining tools to ensure precision and efficiency in our PCB manufacturing process. This collection of high-quality tools includes specialized drilling bits, routing blades, and cutting components designed to handle the intricacies of PCB fabrication. </p> <p> These tools enable accurate drilling, cutting, and shaping of circuit boards, ensuring top-notch quality and performance for our clients. Our state-of-the-art equipment is sourced from trusted partners and optimized for both small-scale and large-scale production needs, maintaining consistency and precision across all projects. </p> </div> <div class="relative rounded-3xl overflow-hidden shadow-2xl group fade-up" style="animation-delay: 0.2s" > <div class="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 group-hover:from-emerald-400/30 group-hover:to-teal-400/30 transition-all duration-500" ></div> <img src="./assets/Images/pmt.jpg" alt="Precision Machining Tools" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700" /> </div> </div> <div class="mt-16 flex flex-wrap justify-center gap-8 text-gray-700 fade-up" style="animation-delay: 0.4s" > <span class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md" > <i class="fas fa-check-circle text-emerald-600 text-xl"></i> <span class="font-semibold">High Precision</span> </span> <span class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md" > <i class="fas fa-check-circle text-emerald-600 text-xl"></i> <span class="font-semibold">Quality Assured</span> </span> <span class="flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-md" > <i class="fas fa-check-circle text-emerald-600 text-xl"></i> <span class="font-semibold">Cost Effective</span> </span> </div> </div> </section>
-
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <div id="footer-placeholder"></div>
-  <script>
-    fetch("./components/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
-      .catch(err => console.error("Footer load error:", err));
-  </script>
-  <script src="./assets/js/product.js"></script>
-
-</body>
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("./components/footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data),
+        )
+        .catch((err) => console.error("Footer load error:", err));
+    </script>
+  </body>
 </html>
