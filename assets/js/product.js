@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(r => r.text())
     .then(h => document.getElementById("footer-placeholder").innerHTML = h);
 
-  renderCategory("pcb-drill");
+  // Check for initial hash, default to pcb-drill
+  const initialHash = window.location.hash.replace("#", "");
+  renderCategory(initialHash || "pcb-drill");
 });
 
 /* ================= PRODUCT DATA ================= */
@@ -20,18 +22,18 @@ const PRODUCTS = {
 
   /* ================= PCB DRILL ================= */
   "pcb-drill": {
-    title: "PCB Drill Tool",
+    title: "PCB Drills ",
     desc: "Industrial-grade PCB drilling solutions",
     items: [
       {
-        name: "FR4 Drill",
+        name: "FR4 Drills",
         image: "./assets/Images/pcb-drill/fr4-drill.png",
         parameters: {
-          "Diameter Range": "0.20 – 3.20 mm",
+          "Diameter Range": "0.1 – 6.5 mm",
           "Material": "Tungsten Carbide",
           "Application": "FR4 / Multilayer PCB",
           "Coating": "Non-Coated",
-          "Tolerance": "±0.02 mm"
+          // "Tolerance": "±0.02 mm"
         },
         features: [
           "High precision hole accuracy",
@@ -41,14 +43,14 @@ const PRODUCTS = {
         ]
       },
       {
-        name: "Aluminium Coated Drill",
+        name: "Aluminium Coated Drills",
         image: "./assets/Images/pcb-drill/aluminium-coated.png",
         parameters: {
-          "Diameter Range": "0.30 – 3.20 mm",
+          "Diameter Range": "1.0 – 6.5 mm",
           "Material": "Carbide",
           "Coating": "Aluminium Coated",
           "Application": "Metal & PCB",
-          "Max RPM": "80,000"
+          // "Max RPM": "80,000"
         },
         features: [
           "Reduced heat generation",
@@ -57,14 +59,14 @@ const PRODUCTS = {
         ]
       },
       {
-        name: "Aluminium Non Coated Drill",
+        name: "Aluminium Non Coated Drills",
         image: "./assets/Images/pcb-drill/aluminium-non-coated.png",
         parameters: {
-          "Diameter Range": "0.50 – 3.20 mm",
+          // "Diameter Range": "0.50 – 3.20 mm",
           "Material": "Carbide",
           "Coating": "Non-Coated",
           "Application": "Aluminium PCB",
-          "Tolerance": "±0.03 mm"
+          // "Tolerance": "±0.03 mm"
         },
         features: [
           "Sharp cutting edges",
@@ -73,13 +75,13 @@ const PRODUCTS = {
         ]
       },
       {
-        name: "Slot Drill",
+        name: "Slot Drills",
         image: "./assets/Images/pcb-drill/slot-drill.png",
         parameters: {
-          "Cutting Diameter": "0.8 – 2.5 mm",
+          "Cutting Diameter": "0.5 – 3.0 mm",
           "Material": "Solid Carbide",
           "Application": "PCB slotting",
-          "Shank": "3.175 mm"
+          // "Shank": "3.175 mm"
         },
         features: [
           "Clean slot edges",
@@ -92,17 +94,17 @@ const PRODUCTS = {
 
   /* ================= PCB ROUTING ================= */
   "pcb-routing": {
-    title: "PCB Routing Tool",
+    title: "PCB Routers",
     desc: "Precision routing tools for PCB profiling",
     items: [
       {
         name: "FR4 Coated Router",
         image: "./assets/Images/pcb-routing/fr4-coated.png",
         parameters: {
-          "Diameter": "1.0 – 2.5 mm",
+          "Diameter": "0.8 – 3.0 mm",
           "Coating": "TiAlN",
           "Application": "FR4 PCB routing",
-          "Max RPM": "60,000"
+          // "Max RPM": "60,000"
         },
         features: [
           "Smooth board edges",
@@ -129,10 +131,10 @@ const PRODUCTS = {
         name: "Aluminium Coated Router",
         image: "./assets/Images/pcb-routing/aluminium-coated.png",
         parameters: {
-          "Diameter": "1.2 – 3.0 mm",
+          "Diameter": "1.0 – 2.4 mm",
           "Coating": "Aluminium Coated",
           "Application": "Metal core PCB",
-          "Max RPM": "50,000"
+          // "Max RPM": "50,000"
         },
         features: [
           "Reduced heat build-up",
@@ -144,10 +146,10 @@ const PRODUCTS = {
         name: "Aluminium Non Coated Router",
         image: "./assets/Images/pcb-routing/aluminium-non-coated.png",
         parameters: {
-          "Diameter": "1.2 – 3.0 mm",
+          "Diameter": "1.0 – 2.4 mm",
           "Coating": "Non-Coated",
           "Application": "Aluminium PCB",
-          "Tolerance": "±0.05 mm"
+          // "Tolerance": "±0.05 mm"
         },
         features: [
           "Sharp cutting geometry",
@@ -649,7 +651,7 @@ const PRODUCTS = {
       image: "./assets/Images/more/locating-pins.png",
       parameters: {
         "Material": "Hardened Steel",
-        "Diameter": "3.0 / 3.175 mm",
+        "Diameter": "1.0 / 6.0 mm",
         "Application": "PCB alignment & positioning",
         "Tolerance": "High precision"
       },

@@ -85,7 +85,7 @@
             <li><a href="./index.html" class="navbar-link">Home</a></li>
             <li><a href="./about.html" class="navbar-link">About</a></li>
             <li><a href="./product.html" class="navbar-link">Products</a></li>
-            <li><a href="./product.html" class="navbar-link">Contact</a></li>
+            <li><a href="./contact.html" class="navbar-link">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -107,15 +107,15 @@
     </section>
 
     <!-- CATEGORY NAV -->
-    <div class="sticky top-14 z-40 bg-white border-b border-gray-200">
+    <div class="sticky top-16 z-40 bg-white border-b border-gray-200">
       <div
         class="max-w-7xl mx-auto px-3 py-2 flex gap-2 md:gap-3 justify-start md:justify-center overflow-x-auto scrollbar-hide snap-x snap-mandatory"
       >
         <button class="cat-btn active snap-start" data-cat="pcb-drill">
-          PCB Drill Tool
+          PCB Drils 
         </button>
         <button class="cat-btn snap-start" data-cat="pcb-routing">
-          PCB Routing Tool
+          PCB Routers 
         </button>
         <button class="cat-btn snap-start" data-cat="spindle">
           Spindles & Spares
@@ -131,110 +131,83 @@
       <div id="category-container"></div>
     </main>
 
-    
-    <!-- ================= Enquiry Button ================= -->
-    <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14 bg-emerald-600 text-white rounded-full shadow-xl overflow-hidden transition-all duration-300 ease-out hover:w-40 hover:bg-emerald-500">
-      <!-- Icon -->
-      <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
-        <i class="fa-solid fa-envelope"></i>
-      </span>
-      <!-- Text -->
-      <span class="ml-1 pr-5 text-sm font-semibold tracking-wide whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75">
-        Send Enquiry
-      </span>
-    </a>
-    <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-      <iframe src="./components/enquiry.html" class="w-full h-full border-none" ></iframe>
-    </div>
-    <script>
-      const openBtn = document.getElementById("openEnquiry");
-      const wrapper = document.getElementById("enquiryWrapper");
-      openBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        wrapper.classList.remove("hidden");
-        document.body.classList.add("overflow-hidden");
-      });
-      window.closeEnquiry = () => {
-        wrapper.classList.add("hidden");
-        document.body.classList.remove("overflow-hidden");
-      };
-    </script>
-
-
-    <!-- FOOTER -->
-    <div id="footer-placeholder"></div>
-
     <!-- PRODUCT MODAL -->
     <div
       id="product-modal"
       class="fixed inset-0 hidden items-center justify-center bg-black/60 z-50"
     >
       <div
-        class="bg-white rounded-2xl max-w-2xl w-full mx-4 shadow-2xl relative animate-scaleIn"
+        class="bg-white rounded-2xl max-w-2xl w-full mx-4 shadow-2xl relative"
       >
-        <button
-          onclick="closeModal()"
-          class="absolute top-4 right-4 text-xl text-gray-500"
-        >
-          <i class="fas fa-times"></i>
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-xl">
+          <i class="fa fa-times"></i>
         </button>
-
         <div class="grid md:grid-cols-2 gap-6 p-6 border-b">
           <img id="modal-image" class="h-56 mx-auto object-contain" />
           <div>
-            <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+            <h3 id="modal-title" class="text-2xl font-bold"></h3>
             <p id="modal-category" class="text-sm text-gray-500 mb-4"></p>
             <ul id="modal-features" class="space-y-2 text-sm"></ul>
           </div>
         </div>
 
         <div class="p-6">
-          <h4 class="font-bold mb-3">Technical Parameters</h4>
           <table class="w-full text-sm border">
             <tbody id="modal-params"></tbody>
           </table>
 
-          <div class="flex flex-col sm:flex-row gap-4 mt-6">
+          <div class="flex gap-4 mt-6">
             <a
               id="whatsapp-btn"
               target="_blank"
-              class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold"
+              class="flex-1 bg-green-600 text-white py-3 rounded-lg text-center font-semibold"
             >
-              <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-
-            <a
-              href="#"
-              id="openEnquiry"
-              class="flex-1 flex items-center justify-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold"
+            <button
+              onclick="openEnquiryWithMessage(event)"
+              class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold"
             >
-              Send Enquiry
-            </a>
-            <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-              <iframe
-                src="./components/enquiry.html"
-                class="w-full h-full border-none"
-              ></iframe>
-            </div>
-            <script>
-              const openBtn = document.getElementById("openEnquiry");
-              const wrapper = document.getElementById("enquiryWrapper");
-
-              openBtn.addEventListener("click", (e) => {
-                e.preventDefault();
-                wrapper.classList.remove("hidden");
-                document.body.classList.add("overflow-hidden");
-              });
-
-              window.closeEnquiry = () => {
-                wrapper.classList.add("hidden");
-                document.body.classList.remove("overflow-hidden");
-              };
-            </script>
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
     </div>
+    <script src="./assets/js/product.js"></script>
+    <script>
+      const enquiryWrapper = document.getElementById("enquiryWrapper");
+      document.getElementById("openEnquiryFloating").onclick = (e) => {
+        e.preventDefault();
+        openEnquiry();
+      };
+      function openEnquiry() {
+        enquiryWrapper.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+      function openEnquiryWithMessage(e) {
+        e.preventDefault();
+        const title = document.getElementById("modal-title").innerText;
+        const category = document.getElementById("modal-category").innerText;
+        openEnquiry();
+        const iframe = enquiryWrapper.querySelector("iframe");
+
+iframe.contentWindow.postMessage(
+  {
+    type: "SET_MESSAGE",
+    message: `Product: ${title}\nCategory: ${category}`,
+  },
+  "*"
+);
+      }
+      window.closeEnquiry = () => {
+        enquiryWrapper.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
+    </script>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
 
     <!-- STYLES -->
     <style>
@@ -281,8 +254,5 @@
         animation: scaleIn 0.25s ease-out;
       }
     </style>
-
-    <!-- MAIN JS -->
-    <script src="./assets/js/product.js"></script>
-  </body>
+</body>
 </html>
