@@ -174,6 +174,25 @@
         </div>
       </div>
     </div>
+
+    <!-- ENQUIRY WRAPPER -->
+    <div id="enquiryWrapper" class="hidden fixed inset-0 z-50">
+      <iframe
+        src="./components/enquiry.html"
+        class="w-full h-full border-none"
+        allow="clipboard-write"
+      ></iframe>
+    </div>
+
+    <!-- FLOATING ENQUIRY BUTTON -->
+    <button
+      id="openEnquiryFloating"
+      class="fixed bottom-6 right-6 bg-emerald-600 text-white p-4 rounded-full shadow-lg hover:bg-emerald-700 transition z-40"
+      title="Open Enquiry"
+    >
+      <i class="fas fa-envelope text-xl"></i>
+    </button>
+
     <script src="./assets/js/product.js"></script>
     <script>
       const enquiryWrapper = document.getElementById("enquiryWrapper");
