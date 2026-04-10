@@ -1,365 +1,578 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Suryatantra Enterprises LLP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
+  <title>Suryatantra Enterprises LLP | About Us</title>
+  <meta name="description"
+        content="Suryatantra Enterprises LLP — Empowering PCB Manufacturers with top-quality supplies, precision machining tools, and components." />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ── Tailwind CDN ── -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          /* Fonts */
+          fontFamily: {
+            display: ['"Syne"', 'sans-serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+          },
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+          /* Brand palette */
+          colors: {
+            navy:   { DEFAULT: '#071428', 90: 'rgba(7,20,40,0.90)', 97: 'rgba(7,20,40,0.97)' },
+            mid:    '#0b1f3a',
+            deep:   '#0e2a4f',
+            card:   '#0f1e30',
+            surface:'#162436',
+            brand:  {
+              DEFAULT: '#f97316',
+              light:   '#fb923c',
+              gold:    '#fbbf24',
+            },
+          },
 
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+          /* Custom gradients */
+          backgroundImage: {
+            'hero':          'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
+            'section-dark':  'linear-gradient(180deg,#09192f 0%,#071428 100%)',
+            'brand-gradient':'linear-gradient(135deg,#f97316 0%,#fbbf24 100%)',
+            'grid-lines':    'linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px)',
+            'dots':          'radial-gradient(rgba(249,115,22,.07) 1px,transparent 1px)',
+          },
+          backgroundSize: {
+            'grid-60': '60px 60px',
+            'dots-28': '28px 28px',
+          },
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles.css">
+          /* Custom shadows */
+          boxShadow: {
+            'brand':    '0 8px 32px rgba(249,115,22,0.35)',
+            'brand-lg': '0 16px 48px rgba(249,115,22,0.50)',
+            'card':     '0 24px 64px rgba(0,0,0,0.40)',
+          },
 
-    <style>
-        /* Font Family Configuration */
-        body {
-            font-family: 'Manrope', system-ui, sans-serif;
-        }
+          /* Keyframes */
+          keyframes: {
+            'slide-up': {
+              '0%':   { opacity: '0', transform: 'translateY(28px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'ring-pulse': {
+              '0%,100%': { opacity: '0.20' },
+              '50%':     { opacity: '0.55' },
+            },
+          },
+          animation: {
+            'slide-up':    'slide-up .65s ease both',
+            'ring-pulse':  'ring-pulse 4s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
 
-        .font-inter {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-        /* Fade Up Animation */
-        .fade-up {
-            animation: fadeUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
+  <!-- ── Font Awesome ── -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <style>
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(135deg, #f97316, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Scroll-reveal — JS toggles .visible */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* Nav link underline */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px; left: 0;
+      width: 0; height: 2px;
+      background: #f97316;
+      border-radius: 2px;
+      transition: width .3s ease;
+    }
+    .nav-link:hover { color: #fff !important; }
+    .nav-link:hover::after,
+    .nav-active::after { width: 100%; }
+    .nav-active { color: #f97316 !important; }
+
+    /* Scrolled navbar */
+    #navbar { transition: background .3s, backdrop-filter .3s, border-color .3s; }
+    #navbar.nav-scrolled { background: rgba(7,20,40,.97) !important; }
+
+    /* Mobile menu height animation */
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .38s cubic-bezier(.4,0,.2,1),
+                  opacity .28s ease;
+    }
+    #mobileMenu.menu-open { max-height: 380px; opacity: 1; }
+
+    /* Hamburger transitions */
+    .hb { transition: transform .3s ease, opacity .3s ease; }
+
+    /* Strength card hover */
+    .strength-card {
+      transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
+    }
+    .strength-card:hover { transform: translateY(-6px); }
+
+    /* Card icon glow on card hover */
+    .strength-card:hover .card-icon {
+      background: rgba(249,115,22,.18);
+      border-color: #f97316;
+      box-shadow: 0 0 24px rgba(249,115,22,.28);
+    }
+    .card-icon { transition: background .3s, border-color .3s, box-shadow .3s; }
+  </style>
 </head>
 
-<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 antialiased font-inter">
+<body class="font-body bg-navy text-slate-200 overflow-x-hidden antialiased">
 
-<!-- ================= NAVBAR ================= -->
-<nav
-  id="navbar"
-  class="fixed top-0 left-0 w-full z-50
-         bg-white/90 backdrop-blur-md
-         border-b border-gray-200">
+<!-- ════════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<header id="navbar"
+        class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
 
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-16">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
 
-      <!-- Logo -->
-      <div class="font-bold text-lg text-emerald-600">
-       <a href="./index.html" class="group">
-        <img
-          src="./assets/Images/Logo/Surytantra Logo-01.png"
-          alt="Suryatantra Logo"
-          class="h-10 transition-transform duration-300 group-hover:scale-110"
-        />
-      </a>
+    <!-- Logo -->
+    <a href="./index.html" class="shrink-0 flex items-center">
+      <img src="./assets/Images/Logo/Surytantra Logo-01.png"
+           alt="Suryatantra Enterprises LLP" class="h-10 object-contain" />
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:block" aria-label="Primary">
+      <ul class="flex items-center gap-9">
+
+        <li>
+          <a href="./index.html" data-page="index"
+             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="./about.html" data-page="about"
+             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+            About
+          </a>
+        </li>
+
+        <!-- Products mega-dropdown -->
+        <li class="relative group">
+          <button type="button"
+                  class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors hover:text-white flex items-center gap-1.5 cursor-pointer bg-transparent border-0">
+            Products
+            <i class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-300 group-hover:rotate-180"></i>
+          </button>
+
+          <!-- Dropdown panel -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)]
+                      w-52 bg-card border border-brand/20 rounded-2xl p-2.5 shadow-2xl
+                      opacity-0 invisible translate-y-2 pointer-events-none
+                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                      transition-all duration-300">
+            <a href="./product.html#pcb-drill"   class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Drills</a>
+            <a href="./product.html#pcb-routing" class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Routers</a>
+            <a href="./product.html#spindle"     class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Spindles &amp; Spares</a>
+            <a href="./product.html#vcut"        class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">V-Cut Blades</a>
+            <a href="./product.html#more"        class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">More Tools</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="./blog.html" data-page="blog"
+             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+            Blogs
+          </a>
+        </li>
+
+        <li>
+          <a href="./contact.html" data-page="contact"
+             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
+            class="md:hidden flex flex-col gap-[5px] p-1.5 bg-transparent border-0 cursor-pointer">
+      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="mobileMenu" class="md:hidden bg-card border-t border-brand/10">
+    <ul class="flex flex-col px-6 py-6 gap-5">
+      <li><a href="./index.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Home</a></li>
+      <li><a href="./about.html"   class="font-display font-semibold text-sm text-brand">About</a></li>
+      <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Products</a></li>
+      <li><a href="./blog.html"    class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Blogs</a></li>
+      <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Contact</a></li>
+    </ul>
+  </div>
+
+</header>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO BANNER
+════════════════════════════════════════════════════════════ -->
+<section class="relative pt-[72px] min-h-[380px] flex items-center overflow-hidden bg-hero">
+
+  <!-- Grid texture -->
+  <div class="absolute inset-0 bg-grid-lines bg-grid-60 pointer-events-none"></div>
+
+  <!-- Glow orbs -->
+  <div class="absolute -top-48 -right-24 w-[600px] h-[600px] rounded-full bg-brand/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-36 -left-20 w-96 h-96 rounded-full bg-mid/60 blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-16">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[11px] text-slate-500 mb-6 font-body tracking-wide">
+      <a href="./index.html" class="hover:text-brand transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-brand font-medium">About Us</span>
+    </nav>
+
+    <h1 class="font-display font-extrabold text-[clamp(2.5rem,6vw,4.25rem)] leading-[1.08] text-white">
+      Engineering <span class="text-gradient">Precision.</span><br>
+      Building Trust.
+    </h1>
+
+    <p class="mt-5 text-slate-400 text-lg max-w-[520px] leading-relaxed">
+      Two decades of powering PCB manufacturers with advanced tooling, consumables,
+      and technical expertise that keep production lines moving.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     STATS BAR
+════════════════════════════════════════════════════════════ -->
+<div class="bg-card border-y border-brand/10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[.06]">
+
+    <div class="fade-up flex flex-col items-center justify-center py-7 px-4
+                hover:bg-brand/[.04] transition-colors duration-300 group">
+      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
+            data-count="20" data-suffix="+">0+</span>
+      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Years Experience</span>
+    </div>
+
+    <div class="fade-up flex flex-col items-center justify-center py-7 px-4
+                hover:bg-brand/[.04] transition-colors duration-300">
+      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
+            data-count="500" data-suffix="+">0+</span>
+      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Clients Served</span>
+    </div>
+
+    <div class="fade-up flex flex-col items-center justify-center py-7 px-4
+                hover:bg-brand/[.04] transition-colors duration-300">
+      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
+            data-count="1200" data-suffix="+">0+</span>
+      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Products Supplied</span>
+    </div>
+
+    <div class="fade-up flex flex-col items-center justify-center py-7 px-4
+                hover:bg-brand/[.04] transition-colors duration-300">
+      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
+            data-count="99" data-suffix="%">0%</span>
+      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Client Retention</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     WHO WE ARE
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 bg-section-dark">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Image column -->
+    <div class="fade-up relative">
+      <div class="absolute -top-4 -left-4 w-20 h-20 border-2 border-brand/35 rounded-2xl pointer-events-none"></div>
+
+      <img src="./assets/Images/pmt.jpg" alt="Suryatantra precision PCB manufacturing facility"
+           class="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl block" />
+
+      <div class="absolute -bottom-6 -right-6 hidden sm:block
+                  bg-brand-gradient rounded-2xl px-6 py-5 text-center shadow-brand">
+        <strong class="font-display font-black text-[2rem] text-white leading-none block">20+</strong>
+        <span class="text-[10px] text-white/80 font-semibold uppercase tracking-[.12em]">Years of Excellence</span>
+      </div>
+    </div>
+
+    <!-- Text column -->
+    <div class="fade-up space-y-7">
+
+      <span class="inline-flex items-center gap-2 bg-brand/10 border border-brand/25
+                   rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em]">
+        <i class="fa fa-circle text-[4px]"></i> Our Story
+      </span>
+
+      <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] leading-[1.12] text-white">
+        Who We <span class="text-gradient">Are</span>
+      </h2>
+
+      <div class="space-y-4 text-slate-400 text-[15px] leading-[1.85]">
+        <p>Suryatantra Enterprises LLP delivers advanced PCB drilling and routing solutions engineered to meet global manufacturing standards. Every tool we supply is a commitment to quality, precision, and reliability.</p>
+        <p>With over two decades of industry experience, we understand the operational demands of PCB manufacturers across all production scales — from prototype shops to high-volume factories.</p>
+        <p>Our expertise in precision tooling and automation support increases yield while minimising downtime, giving our clients a measurable competitive edge.</p>
       </div>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-2">
-        <li><a href="./index.html" data-page="home" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" data-page="about" class="navbar-link">About</a></li>
-        <li><a href="./product.html" data-page="products" class="navbar-link">Products</a></li>
-        <li><a href="./contact.html" data-page="contact" class="navbar-link">Contact</a></li>
+      <ul class="space-y-3.5">
+        <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+          <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
+          ISO-grade precision drill bits and routing tools
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+          <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
+          End-to-end technical support and after-sales service
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+          <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
+          Serving leading PCB manufacturers across India
+        </li>
+        <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+          <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
+          Complete range: Drills, Routers, V-Cut, Spindles &amp; more
+        </li>
       </ul>
 
-      <!-- Mobile Toggle -->
-      <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+      <div class="flex flex-wrap gap-4 pt-1">
+        <a href="./contact.html"
+           class="inline-flex items-center gap-2.5 px-7 py-3.5
+                  bg-brand-gradient text-white font-display font-bold text-[13px] rounded-full
+                  shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+          <i class="fa fa-arrow-right text-xs"></i> Get in Touch
+        </a>
+        <a href="./product.html"
+           class="inline-flex items-center gap-2.5 px-7 py-3.5
+                  border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full
+                  hover:border-brand hover:text-brand transition-all duration-300">
+          View Products
+        </a>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="md:hidden overflow-hidden max-h-0 opacity-0
-             transition-all duration-300 ease-in-out">
-
-      <ul class="flex flex-col gap-3 py-4">
-        <li><a href="./index.html" class="navbar-link">Home</a></li>
-        <li><a href="./about.html" class="navbar-link">About</a></li>
-        <li><a href="./product.html" class="navbar-link">Products</a></li>
-        <li><a href="./contact.html" class="navbar-link">Contact</a></li>
-      </ul>
     </div>
   </div>
-</nav>
-<script src="./assets/js/script.js"></script>
-    <!-- ================= MAIN CONTENT ================= -->
-    <main class="flex-grow pt-12">
-        <!-- ================= HERO SECTION ================= -->
-        <section
-            class="relative min-h-screen flex items-center justify-center bg-cover bg-no-repeat bg-center md:bg-center bg-[position:50%_20%] bg-fixed" style="background-image: url('');">
-            <!-- ./assets/Images/about.png -->
-            <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-100" style="background-image: radial-gradient(#6ee7b7 1px, transparent 1px); background-size: 30px 30px;"></div>
-            <div class="max-w-7xl mx-auto px-6 relative z-10 text-center fade-up">
-                <span
-                    class="inline-block py-1 px-3 rounded-full bg-emerald-800/50 text-emerald-300 text-sm font-semibold mb-6 border border-emerald-700/50">
-                    EST. 2019
-                </span>
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-500 mb-8 tracking-tight leading-tight">
-                    Driving Excellence in <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">PCB
-                        Manufacturing</span>
-                </h1>
-                <p class="max-w-4xl mx-auto
-          text-xl md:text-2xl lg:text-3xl
-          font-light
-          text-emerald-800
-          leading-relaxed">
-  We combine two decades of expertise with modern automation to deliver precision
-  consumables, drilling solutions, and turnkey support for manufacturers across Asia.
-</p>
+</section>
 
-            </div>
-        </section>
 
-        <!-- ================= VISION & MISSION ================= -->
-        <section class="py-24 bg-white relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- ════════════════════════════════════════════════════════════
+     CORE STRENGTHS
+════════════════════════════════════════════════════════════ -->
+<section class="py-16 bg-navy relative overflow-hidden">
 
-                    <!-- Vision Card -->
-                    <div
-                        class="p-10 rounded-3xl bg-emerald-50 border border-emerald-100 relative group hover:shadow-xl transition-shadow duration-300 fade-up">
-                        <div
-                            class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-emerald-200">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            To be the premier partner for PCB manufacturers globally, driving innovation through
-                            state-of-the-art automation and precision-engineered solutions that redefine quality
-                            standards.
-                        </p>
-                    </div>
+  <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
 
-                    <!-- Mission Card -->
-                    <div class="p-10 rounded-3xl bg-teal-50 border border-teal-100 relative group hover:shadow-xl transition-shadow duration-300 fade-up"
-                        style="animation-delay: 0.2s;">
-                        <div
-                            class="w-14 h-14 bg-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-teal-200">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            To utilize advanced drilling & routing processes to provide exceptionally high-quality,
-                            cost-effective products. We aim to be a one-stop solution for consumables and automation
-                            expertise.
-                        </p>
-                    </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
 
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= OUR STORY ================= -->
-        <section class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-
-                    <div class="lg:w-1/2 fade-up">
-                        <div class="relative">
-                            <div
-                                class="absolute -top-4 -left-4 w-24 h-24 bg-emerald-200 rounded-full blur-3xl opacity-50">
-                            </div>
-                            <div
-                                class="absolute -bottom-4 -right-4 w-32 h-32 bg-teal-200 rounded-full blur-3xl opacity-50">
-                            </div>
-                            <img src="./assets/Images/pmt.jpg" alt="Our Story Image"
-                                class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
-                        </div>
-                    </div>
-
-                    <div class="lg:w-1/2 space-y-8 text-gray-600 text-lg leading-relaxed fade-up"
-                        style="animation-delay: 0.2s;">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-left">
-                            Our Journey <span class="block text-emerald-600">Since 2019</span>
-                        </h2>
-                        <p>
-                            Suryatantra was incorporated with a primary aim: to utilize state-of-the-art <strong>PCB
-                                Manufacturing, Drilling & Routing</strong> processes to provide exceptional quality to
-                            our customers.
-                        </p>
-                        <p>
-                            Backed by two decades of experience in the industry, we understand the unique challenges of
-                            small, medium, and large-scale units. This deep insight allows us to design custom solutions
-                            for better quality and profitability.
-                        </p>
-                        <p>
-                            Our founder's success with <em>'Surya Electronics'</em> laid the foundation. Today,
-                            combining Suryatantra's latest technologies with our legacy of trust, we serve reputed clients like
-                            <strong>India Circuit Limited, Signum Electrowave, and Shogini Techno Arts</strong>.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= OUR TEAM ================= -->
-        <section class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 fade-up">
-                    <span class="text-emerald-600 font-semibold tracking-wide uppercase text-sm">People Behind The
-                        Quality</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Meet Our Team</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                    <!-- Team Member 1 -->
-                    <div class="group fade-up" style="animation-delay: 0.1s;">
-                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
-                            <!-- Placeholder for Founder Image -->
-                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                                <i class="fas fa-user-tie text-6xl"></i>
-                            </div>
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <div class="flex gap-4 justify-center">
-                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fab fa-linkedin text-xl"></i></a>
-                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fas fa-envelope text-xl"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">Leadership Team</h3>
-                        <p class="text-emerald-600 font-medium">Founder & Director</p>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="group fade-up" style="animation-delay: 0.2s;">
-                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
-                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                                <i class="fas fa-user-cog text-6xl"></i>
-                            </div>
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <div class="flex gap-4 justify-center">
-                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fab fa-linkedin text-xl"></i></a>
-                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fas fa-envelope text-xl"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">Technical Heads</h3>
-                        <p class="text-emerald-600 font-medium">Operations & Production</p>
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="group fade-up" style="animation-delay: 0.3s;">
-                        <div class="relative overflow-hidden rounded-2xl mb-6 bg-gray-100 h-80">
-                            <div class="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                                <i class="fas fa-users text-6xl"></i>
-                            </div>
-                            <div
-                                class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <div class="flex gap-4 justify-center">
-                                    <a href="#" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fab fa-linkedin text-xl"></i></a>
-                                    <a href="mailto:suryatantraa@gmail.com" class="text-white hover:text-emerald-400 transition-colors"><i
-                                            class="fas fa-envelope text-xl"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">Support Team</h3>
-                        <p class="text-emerald-600 font-medium">Sales & Customer Relations</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= CTA SECTION ================= -->
-        <section class="py-20 bg-emerald-900 text-center fade-up">
-            <div class="max-w-4xl mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Optimize Your PCB Manufacturing?
-                </h2>
-                <p class="text-emerald-100 text-lg mb-10">Partner with us for reliable supplies, precision tools, and
-                    expert automation solutions.</p>
-                <a href="./contact.html"
-                    class="inline-block px-10 py-4 bg-white text-emerald-900 font-bold rounded-full hover:bg-emerald-50 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
-                    Get in Touch
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    
-    <!-- ================= Enquiry Button ================= -->
-    <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14 bg-emerald-600 text-white rounded-full shadow-xl overflow-hidden transition-all duration-300 ease-out hover:w-40 hover:bg-emerald-500">
-      <!-- Icon -->
-      <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
-        <i class="fa-solid fa-envelope"></i>
+    <div class="text-center mb-12 fade-up">
+      <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25
+                   rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-5">
+        <i class="fa fa-circle text-[4px]"></i> What Sets Us Apart
       </span>
-      <!-- Text -->
-      <span class="ml-1 pr-5 text-sm font-semibold tracking-wide whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75">
-        Send Enquiry
-      </span>
-    </a>
-    <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-      <iframe src="./components/enquiry.html" class="w-full h-full border-none" ></iframe>
+      <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight">
+        Our Core <span class="text-gradient">Strengths</span>
+      </h2>
+      <p class="mt-4 text-slate-400 max-w-md mx-auto leading-relaxed text-[15px]">
+        Built on experience, driven by precision, and focused on long-term partnerships
+        that deliver real manufacturing value.
+      </p>
     </div>
-    <script>
-      const openBtn = document.getElementById("openEnquiry");
-      const wrapper = document.getElementById("enquiryWrapper");
-      openBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        wrapper.classList.remove("hidden");
-        document.body.classList.add("overflow-hidden");
-      });
-      window.closeEnquiry = () => {
-        wrapper.classList.add("hidden");
-        document.body.classList.remove("overflow-hidden");
-      };
-    </script>
 
-    <!-- ================= FOOTER ================= -->
-    <div id="footer-placeholder"></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- ================= SCRIPTS ================= -->
-    <script>
-        // Load Navbar
-        fetch('./components/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                // Initialize navbar after loading
-                if (window.initNavbar) {
-                    window.initNavbar();
-                }
-            })
-            .catch(err => console.error('Error loading navbar:', err));
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">01</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Precision Engineering</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          High-accuracy drill bits and routing tools designed for consistent performance,
+          tight tolerances, and long tool life — even in demanding production environments.
+        </p>
+      </div>
 
-        // Load Footer
-        fetch('./components/footer.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(err => console.error('Error loading footer:', err));
-    </script>
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">02</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-industry"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Manufacturing Expertise</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          Deep understanding of PCB workflows — from single-layer prototypes to multi-layer
+          HDI boards — helping you optimise efficiency and maximise production yield.
+        </p>
+      </div>
+
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">03</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Reliable Partnership</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          Long-term client relationships built on trust, consistent quality, proactive
+          communication, and dedicated technical support whenever you need it.
+        </p>
+      </div>
+
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">04</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-boxes"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Wide Product Range</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          From micro-drills and routing blades to V-cut tools, spindles, and automation
+          accessories — a complete one-stop supply chain for your PCB facility.
+        </p>
+      </div>
+
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">05</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Fast &amp; Reliable Supply</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          Efficient logistics and strong inventory management ensure your production line
+          never faces unnecessary delays due to tooling shortages.
+        </p>
+      </div>
+
+      <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
+                  hover:border-brand/40 hover:shadow-card">
+        <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
+                     text-brand/[.06] select-none pointer-events-none">06</span>
+        <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
+                    flex items-center justify-center text-brand text-2xl mb-7">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Dedicated Support</h3>
+        <p class="text-slate-400 text-sm leading-[1.8]">
+          Our technical team is always on hand to advise on tool selection, troubleshoot
+          performance issues, and help you get the most from every product.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════════ -->
+<section class="relative py-20 bg-mid overflow-hidden">
+
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-[720px] h-[720px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-[500px] h-[500px] rounded-full border border-brand/[.11] pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-72 h-72 rounded-full bg-brand/[.05] blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
+
+    <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25
+                 rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-6">
+      <i class="fa fa-circle text-[4px]"></i> Let's Work Together
+    </span>
+
+    <h2 class="font-display font-extrabold text-[clamp(2rem,4.5vw,3.25rem)] text-white leading-tight mb-5">
+      Partner With Us for<br>
+      <span class="text-gradient">High-Precision</span> PCB Solutions
+    </h2>
+
+    <p class="text-slate-400 text-[1.05rem] leading-relaxed mb-10">
+      Enhance your manufacturing efficiency with reliable tools, consumables, and automation
+      support backed by two decades of industry expertise.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="./contact.html"
+         class="inline-flex items-center gap-2.5 px-8 py-3.5
+                bg-brand-gradient text-white font-display font-bold text-[13px] rounded-full
+                shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+        <i class="fa fa-envelope text-xs"></i> Contact Our Team
+      </a>
+      <a href="./product.html"
+         class="inline-flex items-center gap-2.5 px-8 py-3.5
+                border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full
+                hover:border-brand hover:text-brand transition-all duration-300">
+        <i class="fa fa-layer-group text-xs"></i> Browse Products
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER PLACEHOLDER
+════════════════════════════════════════════════════════════ -->
+<div id="footer-placeholder"></div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════════════════ -->
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/about.js"></script>
+
 </body>
-
 </html>

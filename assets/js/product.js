@@ -457,6 +457,54 @@ const PRODUCTS = {
     },
 
     {
+      name: "Front Air Bearing",
+      image: "./assets/Images/spindle/FRONT AIR BEARING.png",
+      parameters: {
+        "Spindle Speed": "100,000 RPM",
+        "Voltage": "220V",
+        "Cooling Type": "Air",
+        "Collet Size": "3.175 mm"
+      },
+      features: [
+        "Ultra high-speed operation",
+        "Precision engineered",
+        "Maximum productivity"
+      ]
+    },
+    
+    {
+      name: "ROTOR SHAFT",
+      image: "./assets/Images/spindle/ROTOR SHAFT.png",
+      parameters: {
+        "Spindle Speed": "100,000 RPM",
+        "Voltage": "220V",
+        "Cooling Type": "Air",
+        "Collet Size": "3.175 mm"
+      },
+      features: [
+        "Ultra high-speed operation",
+        "Precision engineered",
+        "Maximum productivity"
+      ]
+    },
+    
+    {
+      name: "THURST AIR BEARING",
+      image: "./assets/Images/spindle/THURST AIR BEARING.png",
+      parameters: {
+        "Spindle Speed": "100,000 RPM",
+        "Voltage": "220V",
+        "Cooling Type": "Air",
+        "Collet Size": "3.175 mm"
+      },
+      features: [
+        "Ultra high-speed operation",
+        "Precision engineered",
+        "Maximum productivity"
+      ]
+    },
+
+    {
       name: "Collet Remover",
       image: "./assets/Images/spindle/collet-remover.png",
       parameters: {
@@ -490,7 +538,7 @@ const PRODUCTS = {
         "Teeth Count": "60T",
         "Cut Angle": "30°",
         "Thickness": "2.0 mm",
-        "Material": "High-speed steel (HSS)"
+        "Material": "Tungsten Carbide Steel"
       },
       features: [
         "Clean and burr-free PCB depaneling",
@@ -519,14 +567,14 @@ const PRODUCTS = {
     },
 
     {
-      name: "Ø 51×48T×30° ×2.4H",
-      image: "./assets/Images/vcut/51x48.png",
+      name: "Ø 51×48T×30° ×2.4H COATED",
+      image: "./assets/Images/vcut/51X25X48TX30D COATED.png",
       parameters: {
         "Outer Diameter": "51 mm",
         "Teeth Count": "48T",
         "Cut Angle": "30°",
         "Thickness": "2.4H",
-        "Material": "Carbide steel"
+        "Material": "Tungsten Carbide Steel"
       },
       features: [
         "Compact blade design",
@@ -543,7 +591,7 @@ const PRODUCTS = {
         "Teeth Count": "48T",
         "Cut Angle": "30°",
         "Thickness": "2.4H",
-        "Material": "Carbide steel"
+        "Material": "Tungsten Carbide Steel"
       },
       features: [
         "Large diameter for heavy-duty depaneling",
@@ -681,6 +729,23 @@ const PRODUCTS = {
     },
 
     {
+      name: "SILSKSCREEN CARLSON PIN BRASS",
+      image: "./assets/Images/more/SILSKSCREEN PIN.png",
+      parameters: {
+        "Material": "BRASS",
+        "Application": "PCB fixing & alignment",
+        "Surface Finish": "Polished",
+        "Compatibility": "Standard PCB machines"
+      },
+      features: [
+        "High dimensional accuracy",
+        "Strong holding strength",
+        "Long service life",
+        "Easy installation"
+      ]
+    },
+    
+    {
       name: "Drill Rings",
       image: "./assets/Images/more/drill-rings.png",
       parameters: {
@@ -716,7 +781,7 @@ const PRODUCTS = {
 
     {
       name: "DLR",
-      image: "./assets/Images/more/dlr.png",
+      image: "./assets/Images/more/DLR-Y-TEK-2.png",
       parameters: {
         "Full Form": "Drill Length Regulator",
         "Application": "Drilling depth control",
@@ -771,13 +836,13 @@ function renderCategory(key) {
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       ${cat.items.map(item => `
         <div class="bg-white rounded-xl shadow border flex flex-col">
-          <div class="h-60 flex items-center justify-center p-4">
-            <img src="${item.image}" class="h-full object-contain">
+          <div class="h-60 flex items-center justify-center p-4 overflow-hidden">
+            <img src="${item.image}" class="h-full object-contain product-image-hover">
           </div>
           <div class="p-5 text-center flex flex-col flex-grow">
             <h3 class="font-bold mb-4">${item.name}</h3>
             <button onclick='openModal(${JSON.stringify(item)}, "${cat.title}")'
-              class="mt-auto bg-blue-600 text-white py-2 rounded-lg">
+              class="inline-block px-6 py-2 font-medium text-white bg-[#c48a1a] border-2 border-[#c48a1a] rounded-md transition-all duration-300 hover:bg-[#a87114] hover:border-[#a87114]">
               View Details
             </button>
           </div>

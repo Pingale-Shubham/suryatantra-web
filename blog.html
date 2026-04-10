@@ -1,250 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Suryatantra Enterprises LLP</title>
-  <!-- Tailwind -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suryatantra Enterprises LLP | Blogs</title>
+  <meta name="description" content="Industry insights, expert knowledge on PCB tools, precision manufacturing, and production optimisation from Suryatantra Enterprises LLP." />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            dm:   ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            navy:   '#071428',
+            mid:    '#0b1f3a',
+            deep:   '#0e2a4f',
+            card:   '#111f33',
+            orange: '#f97316',
+            amber:  '#fbbf24',
+          },
+          backgroundImage: {
+            'hero-gradient':    'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
+            'section-gradient': 'linear-gradient(180deg,#09192f 0%,#071428 100%)',
+            'orange-gold':      'linear-gradient(135deg,#f97316,#fbbf24)',
+          },
+          boxShadow: {
+            'orange-glow': '0 8px 30px rgba(249,115,22,0.35)',
+            'orange-lg':   '0 14px 40px rgba(249,115,22,0.5)',
+            'card-lift':   '0 24px 60px rgba(0,0,0,0.35)',
+          },
+          keyframes: {
+            'pulse-ring': {
+              '0%,100%': { opacity: '0.2' },
+              '50%':     { opacity: '0.5' },
+            },
+            'float': {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%':     { transform: 'translateY(-8px)' },
+            }
+          },
+          animation: {
+            'pulse-ring': 'pulse-ring 4s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* ── Tokens ── */
+    :root {
+      --orange: #f97316;
+      --amber: #fbbf24;
+    }
+
+    .grad-text {
+      background: linear-gradient(135deg,#f97316,#fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .grid-texture {
+      background-image:
+        linear-gradient(rgba(249,115,22,.04) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(249,115,22,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .dot-texture {
+      background-image: radial-gradient(rgba(249,115,22,.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* ── Scroll reveal ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ── Nav ── */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 2px;
+      background: var(--orange);
+      transition: width .25s ease;
+    }
+    .nav-link:hover { color: #fff !important; }
+    .nav-link:hover::after,
+    .nav-active::after { width: 100%; }
+    .nav-active { color: var(--orange) !important; }
+    .nav-scrolled { background: rgba(7,20,40,.97) !important; }
+
+    /* ── Mobile menu ── */
+    #mobileMenu {
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease, opacity .25s ease;
+      opacity: 0;
+    }
+    #mobileMenu.menu-open { max-height: 320px; opacity: 1; }
+    .hb { transition: transform .3s ease, opacity .3s ease; }
+
+    /* ── Blog cards ── */
+    .blog-card {
+      transition: transform .3s ease, box-shadow .3s ease, border-color .25s ease;
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
+      border-color: rgba(249,115,22,.4) !important;
+    }
+    .blog-card .card-thumb { transition: transform .45s ease; }
+    .blog-card:hover .card-thumb { transform: scale(1.05); }
+
+    /* read-more arrow */
+    .read-more { transition: gap .2s ease, color .2s ease; }
+    .blog-card:hover .read-more { gap: 10px; color: #fbbf24; }
+
+    /* ── Filter active ── */
+    .filter-btn {
+      transition: all .2s ease;
+    }
+    .filter-active {
+      background: linear-gradient(135deg,#f97316,#fbbf24) !important;
+      color: #fff !important;
+      border-color: transparent !important;
+      box-shadow: 0 4px 15px rgba(249,115,22,.35);
+    }
+
+    /* ── Featured card (first/large) ── */
+    .card-featured { grid-column: span 2; }
+    @media (max-width: 1024px) { .card-featured { grid-column: span 1; } }
+
+    /* ── Modal ── */
+    #blogModal {
+      transition: opacity .25s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #blogModal.modal-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #blogModal .modal-panel {
+      transition: transform .3s cubic-bezier(.34,1.4,.64,1), opacity .25s ease;
+      transform: translateY(20px) scale(0.98);
+      opacity: 0;
+    }
+    #blogModal.modal-open .modal-panel {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    /* Modal typography */
+    #modalBody h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f1f5f9;
+      margin: 1.25rem 0 .5rem;
+    }
+    #modalBody p {
+      color: #94a3b8;
+      line-height: 1.75;
+      margin-bottom: .6rem;
+      font-size: .9rem;
+    }
+    #modalBody ul {
+      list-style: none;
+      margin: .4rem 0 .9rem;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    #modalBody ul li {
+      color: #94a3b8;
+      font-size: .875rem;
+      line-height: 1.6;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    #modalBody ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+    #modalBody strong { color: #e2e8f0; }
+
+    /* ── Search ── */
+    #blogSearch::placeholder { color: #3b4d63; }
+    #blogSearch:focus { outline: none; }
+
+    /* ── Category badge chip ── */
+    .cat-chip {
+      font-size: 10px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(249,115,22,.9);
+      color: #fff;
+    }
+
+    /* ── Scrollbar ── */
+    .modal-panel::-webkit-scrollbar { width: 5px; }
+    .modal-panel::-webkit-scrollbar-track { background: #0b1f3a; }
+    .modal-panel::-webkit-scrollbar-thumb { background: #f97316; border-radius: 4px; }
+
+    /* ── Counter badge ── */
+    .result-badge {
+      background: rgba(249,115,22,.12);
+      border: 1px solid rgba(249,115,22,.2);
+      color: var(--orange);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .06em;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+  </style>
 </head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar-container">
-      <div class="navbar-content">
-        <a href="/" class="navbar-logo-link">
-          <img src="/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Logo" class="navbar-logo" />
-        </a>
+<body class="font-dm bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
 
-        <ul class="navbar-menu">
-          <li>
-            <a href="/" class="navbar-link" data-page="home">Home</a>
-          </li>
-          <li>
-            <a href="/about" class="navbar-link" data-page="about">About</a>
-          </li>
-          <li>
-            <a href="/products" class="navbar-link" data-page="products">Products</a>
-          </li>
-          <li>
-            <button class="navbar-link navbar-contact-btn" id="contactBtn">Contact</button>
-          </li>
-        </ul>
+<!-- ══════════════ NAVBAR ══════════════ -->
+<header id="navbar"
+        class="fixed top-0 left-0 w-full z-50 bg-navy/90 backdrop-blur-xl border-b border-orange/10 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="./index.html" class="flex-shrink-0">
+      <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 object-contain">
+    </a>
 
-        <button class="navbar-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8">
+        <li><a href="./index.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
+        <li><a href="./about.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
 
-      <div class="navbar-mobile-menu" id="mobileMenu">
-        <ul class="navbar-mobile-list">
-          <li>
-            <a href="/" class="navbar-mobile-link" data-page="home">Home</a>
-          </li>
-          <li>
-            <a href="/about" class="navbar-mobile-link" data-page="about">About</a>
-          </li>
-          <li>
-            <a href="/products" class="navbar-mobile-link" data-page="products">Products</a>
-          </li>
-          <li>
-            <button class="navbar-mobile-link navbar-mobile-contact-btn" id="mobileContactBtn">Contact</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <li class="relative group">
+          <button class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 flex items-center gap-1.5 bg-transparent border-none cursor-pointer hover:text-white transition-colors">
+            Products <i class="fa fa-chevron-down text-[8px]"></i>
+          </button>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-48
+                      bg-card border border-orange/20 rounded-xl p-2.5 shadow-2xl
+                      opacity-0 invisible translate-y-2
+                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                      transition-all duration-250 pointer-events-none group-hover:pointer-events-auto">
+            <a href="./product.html#pcb-drill"   class="block px-3 py-2 rounded-lg text-slate-400 text-[13px] font-medium hover:bg-orange/10 hover:text-orange hover:pl-4 transition-all duration-200">Drills</a>
+            <a href="./product.html#pcb-routing" class="block px-3 py-2 rounded-lg text-slate-400 text-[13px] font-medium hover:bg-orange/10 hover:text-orange hover:pl-4 transition-all duration-200">Routers</a>
+            <a href="./product.html#spindle"     class="block px-3 py-2 rounded-lg text-slate-400 text-[13px] font-medium hover:bg-orange/10 hover:text-orange hover:pl-4 transition-all duration-200">Spindles &amp; Spares</a>
+            <a href="./product.html#vcut"        class="block px-3 py-2 rounded-lg text-slate-400 text-[13px] font-medium hover:bg-orange/10 hover:text-orange hover:pl-4 transition-all duration-200">V-Cut Blades</a>
+            <a href="./product.html#more"        class="block px-3 py-2 rounded-lg text-slate-400 text-[13px] font-medium hover:bg-orange/10 hover:text-orange hover:pl-4 transition-all duration-200">More Tools</a>
+          </div>
+        </li>
 
-  <script src="navbar.js"></script>
+        <li><a href="./blog.html" class="nav-link nav-active font-syne font-semibold text-[12px] uppercase tracking-widest transition-colors">Blogs</a></li>
+        <li><a href="./contact.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Page Hero -->
-  <header class="page-hero">
-    <div class="container">
-      <p class="eyebrow">About Suryatantra</p>
-      <h1>Driving Excellence in PCB Manufacturing</h1>
-      <p class="hero-summary">
-        We combine two decades of PCB expertise with modern automation to deliver precision consumables, drilling
-        solutions, routing tooling, and turnkey support for manufacturers across Asia.
-      </p>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <span class="stat-value">2019</span>
-          <span class="stat-label">Year Established</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">20+</span>
-          <span class="stat-label">Years of Experience</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value">50+</span>
-          <span class="stat-label">Trusted Partners</span>
-        </div>
-      </div>
-    </div>
-  </header>
+    <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu"
+            class="md:hidden flex flex-col gap-1.5 p-1.5 bg-transparent border-none cursor-pointer">
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+    </button>
+  </div>
 
-  <!-- About Section -->
-  <header class="hero">
-    <div class="container">
-      <p class="hero-subtitle">WelCome to Suryatantra</p>
-      <h1 class="hero-title">
-        Driving Excellence in PCB Manufacturing
-      </h1>
-      <p class="hero-description">
-        We combine two decades of PCB expertise with modern automation to deliver precision consumables, drilling
-        solutions, routing tooling, and turnkey support for manufacturers across Asia.
-      </p>
-    </div>
-  </header>
+  <div id="mobileMenu" class="md:hidden bg-card border-t border-orange/10">
+    <ul class="flex flex-col px-6 py-4 gap-4">
+      <li><a href="./index.html"   class="font-syne font-semibold text-[13px] text-slate-300 hover:text-orange transition-colors">Home</a></li>
+      <li><a href="./about.html"   class="font-syne font-semibold text-[13px] text-slate-300 hover:text-orange transition-colors">About</a></li>
+      <li><a href="./product.html" class="font-syne font-semibold text-[13px] text-slate-300 hover:text-orange transition-colors">Products</a></li>
+      <li><a href="./blog.html"    class="font-syne font-semibold text-[13px] text-orange">Blogs</a></li>
+      <li><a href="./contact.html" class="font-syne font-semibold text-[13px] text-slate-300 hover:text-orange transition-colors">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Who We Are</h2>
-        <p class="section-subtitle">Empowering PCB manufacturers with dependable supplies and automation expertise.</p>
-      </div>
 
+<!-- ══════════════ PAGE HERO ══════════════ -->
+<section class="relative pt-16 min-h-[280px] flex items-center overflow-hidden bg-hero-gradient">
+  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
+  <div class="absolute -top-32 -right-16 w-[420px] h-[420px] rounded-full bg-orange/8 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-24 -left-12 w-72 h-72 rounded-full bg-mid/60 blur-3xl pointer-events-none"></div>
+
+  <!-- Floating decorative chips -->
+  <div class="absolute top-12 right-24 opacity-20 animate-float hidden lg:block">
+    <i class="fa fa-microchip text-orange text-5xl"></i>
+  </div>
+  <div class="absolute bottom-8 right-48 opacity-10 animate-float hidden lg:block" style="animation-delay:2s">
+    <i class="fa fa-cpu text-amber text-3xl"></i>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-4 tracking-wider" aria-label="Breadcrumb">
+      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
+      <span class="opacity-40">/</span>
+      <span class="text-orange font-semibold">Blogs</span>
+    </nav>
+
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div>
-        <div>
-          <p class="content-paragraph">
-            Incorporated in March 2019, Suryatantra Enterprises LLP was founded with the vision of delivering
-            exceptionally high-quality and cost-effective solutions to the professional Printed Circuit Boards (PCB)
-            industry. Leveraging state-of-the-art PCB manufacturing technologies, along with advanced drilling and
-            routing capabilities, we support our customers with reliable products and services that meet today's
-            demanding standards.
-          </p>
-          <p class="content-paragraph">
-            Backed by over two decades of combined experience in PCB fabrication, services, and supply chain operations,
-            our team understands the practical challenges faced on modern manufacturing floors. This deep industry
-            knowledge enables us to design and deliver complete solutions for PCB drilling, routing, film plotting,
-            automation, and overall production optimization.
-          </p>
-          <p class="content-paragraph">
-            Through strong strategic partnerships across Asia, we source high-quality consumables and customized raw
-            materials tailored to the needs of small, medium, and large-scale manufacturing units. By aligning the right
-            materials with the right processes, we help customers achieve consistent quality, improved profitability,
-            and dependable production outcomes.
-          </p>
-          <p class="content-paragraph">
-            With a well-maintained stockpile of consumables and a one-stop service approach, we ensure uninterrupted
-            supply at competitive pricing. Building on the founders' successful legacy under Surya Electronics, and
-            combining it with Suryatantra's latest technologies and optimized processes, we continue to strengthen our
-            position as a trusted service provider in the professional-grade PCB market.
-          </p>
-          <p class="content-paragraph">
-            Our growing customer base includes reputed names such as India Circuit Limited, Signum Electrowave, Shogini
-            Techno Arts, and many more. With a strong foundation built on experience, innovation, and customer trust, we
-            aspire to grow further and deliver lasting value to the PCB industry.
-          </p>
-        </div>
-
-        <div class="feature-cards">
-          <div class="feature-card">
-            <i class="fas fa-cogs feature-icon"></i>
-            <h3 class="feature-title">Automation Solutions</h3>
-            <p class="feature-description">Custom automation roadmaps to streamline drilling, routing, and finishing
-              workflows.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-handshake feature-icon"></i>
-            <h3 class="feature-title">Partnership Network</h3>
-            <p class="feature-description">Robust supplier ecosystem delivering consistent quality across Asia.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-award feature-icon"></i>
-            <h3 class="feature-title">Quality Assurance</h3>
-            <p class="feature-description">20+ years of process knowledge embedded into every consumable and service.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Components Section -->
-  <section class="components-section">
-    <div class="container">
-      <div class="components-grid">
-        <div class="components-content">
-          <h2>
-            Precision Machining Tools & Components for PCB Manufacturing
-          </h2>
-          <p class="components-text">
-            At Suryatantra, we utilize a wide range of advanced machining tools to ensure precision and
-            efficiency in our PCB manufacturing process. This collection of high-quality tools includes
-            specialized drilling bits, routing blades, and cutting components designed to handle the
-            intricacies of PCB fabrication.
-          </p>
-          <p class="components-text">
-            These tools enable accurate drilling, cutting, and shaping of circuit boards, ensuring
-            top-notch quality and performance for our clients. Our state-of-the-art equipment is sourced
-            from trusted partners and optimized for both small-scale and large-scale production needs,
-            maintaining consistency and precision across all projects.
-          </p>
-        </div>
-        <div class="components-image">
-          <img src="/Images/SELECTED/pmt.jpg" alt="Precision Machining Tools">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-pattern"></div>
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-column">
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul class="footer-list">
-            <li><a href="/" class="footer-link">Home</a></li>
-            <li><a href="/about" class="footer-link">About Us</a></li>
-            <li><a href="/products" class="footer-link">Products</a></li>
-            <li><a href="#contact" class="footer-link">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">Products</h3>
-          <ul class="footer-list">
-            <li><a href="/products" class="footer-link">Drills</a></li>
-            <li><a href="/products" class="footer-link">Routers</a></li>
-            <li><a href="/products" class="footer-link">V Cut Blades</a></li>
-            <li><a href="/products" class="footer-link">Routing Brushes</a></li>
-            <li><a href="/products" class="footer-link">Locating Pins</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">More Products</h3>
-          <ul class="footer-list">
-            <li><a href="/products" class="footer-link">Carlson Pins</a></li>
-            <li><a href="/products" class="footer-link">Spindle and Spares</a></li>
-            <li><a href="/products" class="footer-link">Rings Setting Machine</a></li>
-            <li><a href="/products" class="footer-link">DLR</a></li>
-            <li><a href="/products" class="footer-link">Drill Rings</a></li>
-            <li><a href="/products" class="footer-link">Bearing</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; <span class="footer-brand">SURYATANTRA</span>, All Right Reserved.
+        <h1 class="font-syne font-extrabold text-4xl md:text-5xl leading-tight text-white">
+          Industry <span class="grad-text">Insights</span>
+        </h1>
+        <p class="mt-2 text-slate-400 text-[15px] max-w-lg leading-relaxed">
+          Expert knowledge on PCB tools, precision manufacturing &amp; production optimisation — straight from the field.
         </p>
       </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <span id="heroCount" class="result-badge">6 Articles</span>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+
+<!-- ══════════════ FILTER + SEARCH BAR ══════════════ -->
+<div class="bg-card/95 border-b border-white/[0.06] sticky top-16 z-40 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+
+    <!-- Category filters -->
+    <div class="flex items-center gap-2 flex-wrap">
+      <button data-filter="All"
+              class="filter-btn filter-active font-syne font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/10 text-slate-300">
+        All
+      </button>
+      <button data-filter="Drilling"
+              class="filter-btn font-syne font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/10 text-slate-400 hover:border-orange/40 hover:text-white">
+        Drilling
+      </button>
+      <button data-filter="Routing"
+              class="filter-btn font-syne font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/10 text-slate-400 hover:border-orange/40 hover:text-white">
+        Routing
+      </button>
+      <button data-filter="Spindles"
+              class="filter-btn font-syne font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/10 text-slate-400 hover:border-orange/40 hover:text-white">
+        Spindles
+      </button>
+      <button data-filter="V-Cut"
+              class="filter-btn font-syne font-bold text-[11px] uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/10 text-slate-400 hover:border-orange/40 hover:text-white">
+        V-Cut
+      </button>
+
+      <!-- Live result count -->
+      <span id="resultCount" class="result-badge ml-1 hidden">0</span>
+    </div>
+
+    <!-- Search -->
+    <div class="relative">
+      <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none"></i>
+      <input id="blogSearch" type="text" placeholder="Search articles…"
+             class="bg-navy/70 border border-white/10 rounded-full pl-8 pr-4 py-1.5 text-[13px] text-slate-300 focus:border-orange/50 transition-colors duration-200 w-44">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════ BLOG GRID ══════════════ -->
+<section class="py-12 bg-section-gradient relative">
+  <div class="absolute inset-0 dot-texture pointer-events-none opacity-60"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="blogGrid">
+
+      <!-- Card 1 – Featured (spans 2 cols on lg) -->
+      <article class="blog-card card-featured fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="Drilling" data-title="choosing the right pcb drill bits">
+        <div class="relative overflow-hidden h-52 lg:h-64">
+          <img src="https://images.unsplash.com/photo-1581093588401-16f2c1b2f7b3?w=900&q=80"
+               alt="PCB Drill Bits" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/30 to-transparent"></div>
+          <span class="cat-chip absolute top-4 left-4">Drilling</span>
+          <span class="absolute top-4 right-4 bg-amber/15 border border-amber/30 text-amber font-syne font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">Featured</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2.5 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">Drill Bits</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">4 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[18px] text-white leading-snug mb-2">Choosing the Right PCB Drill Bits</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">Selecting the correct drill bit improves hole precision, extends tool life, and keeps your production line running smoothly.</p>
+          <button data-blog-id="1"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="blog-card fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="Spindles" data-title="high-speed spindles in pcb production">
+        <div class="relative overflow-hidden h-44">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+               alt="PCB Spindles" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/20 to-transparent"></div>
+          <span class="cat-chip absolute top-3 left-3">Spindles</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">High-Speed</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">5 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[16px] text-white leading-snug mb-2">High-Speed Spindles in PCB Production</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">High RPM spindles above 60,000 RPM deliver smoother drilling, reduced vibration, and measurably better hole quality.</p>
+          <button data-blog-id="2"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="blog-card fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="Routing" data-title="pcb routing tools explained">
+        <div class="relative overflow-hidden h-44">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c3f6e7a3d52?w=800&q=80"
+               alt="PCB Routing Tools" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/20 to-transparent"></div>
+          <span class="cat-chip absolute top-3 left-3">Routing</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">Routing Tools</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">4 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[16px] text-white leading-snug mb-2">PCB Routing Tools Explained</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">Advanced routing blades define edge finish, dimensional stability, and ultimately the assembly quality of your final PCB.</p>
+          <button data-blog-id="3"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="blog-card fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="V-Cut" data-title="v-cut scoring precision panel separation">
+        <div class="relative overflow-hidden h-44">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+               alt="V-Cut Scoring" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/20 to-transparent"></div>
+          <span class="cat-chip absolute top-3 left-3">V-Cut</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">V-Cut Blades</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">3 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[16px] text-white leading-snug mb-2">V-Cut Scoring: Precision Panel Separation</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">V-cut scoring allows clean, repeatable panel depanelization without the mechanical stress of routing.</p>
+          <button data-blog-id="4"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="blog-card fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="Drilling" data-title="optimising drill stack-up for multilayer pcbs">
+        <div class="relative overflow-hidden h-44">
+          <img src="https://images.unsplash.com/photo-1581093588401-16f2c1b2f7b3?w=800&q=80"
+               alt="Multilayer Drilling" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/20 to-transparent"></div>
+          <span class="cat-chip absolute top-3 left-3">Drilling</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">Process</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">6 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[16px] text-white leading-snug mb-2">Optimising Drill Stack-Up for Multilayer PCBs</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">Correct stack-up reduces drill wander, improves hole cylindricity, and extends bit life on complex multilayer boards.</p>
+          <button data-blog-id="5"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="blog-card fade-up bg-card border border-white/[0.07] rounded-2xl overflow-hidden"
+               data-blog-card data-category="Routing" data-title="automating pcb depanelization for high-volume lines">
+        <div class="relative overflow-hidden h-44">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c3f6e7a3d52?w=800&q=80"
+               alt="PCB Automation" class="card-thumb w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-card/20 to-transparent"></div>
+          <span class="cat-chip absolute top-3 left-3">Routing</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-orange text-[11px] font-semibold uppercase tracking-widest">Automation</span>
+            <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+            <span class="text-slate-500 text-[11px]">5 min read</span>
+          </div>
+          <h2 class="font-syne font-bold text-[16px] text-white leading-snug mb-2">Automating PCB Depanelization for High-Volume Lines</h2>
+          <p class="text-slate-400 text-[13px] leading-relaxed mb-4">Inline automated routing improves throughput, reduces operator handling damage, and delivers consistent edge quality at scale.</p>
+          <button data-blog-id="6"
+                  class="read-more inline-flex items-center gap-2 text-orange font-syne font-semibold text-[13px]">
+            Read Article <i class="fa fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="hidden text-center py-20">
+      <div class="w-16 h-16 rounded-2xl bg-card border border-white/10 flex items-center justify-center mx-auto mb-4">
+        <i class="fa fa-search text-2xl text-slate-600"></i>
+      </div>
+      <p class="font-syne font-bold text-slate-400 text-lg">No articles match your search.</p>
+      <p class="text-slate-500 text-sm mt-1">Try a different keyword or category.</p>
+      <button onclick="resetFilters()" class="mt-5 inline-flex items-center gap-2 px-5 py-2 bg-orange/10 border border-orange/20 text-orange font-syne font-bold text-[12px] uppercase tracking-widest rounded-full hover:bg-orange/20 transition-colors">
+        <i class="fa fa-rotate-left text-xs"></i> Reset Filters
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════ CTA ══════════════ -->
+<section class="relative py-16 bg-mid overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-orange/[0.07] animate-pulse-ring pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-orange/[0.1] pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-orange/[0.04] blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
+    <span class="inline-flex items-center gap-1.5 bg-orange/10 border border-orange/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-orange uppercase tracking-[0.1em] mb-5">
+      <i class="fa fa-circle text-[4px]"></i> Need Expert Advice?
+    </span>
+    <h2 class="font-syne font-extrabold text-3xl md:text-4xl text-white leading-tight mb-3">
+      Talk to Our <span class="grad-text">PCB Tooling</span> Specialists
+    </h2>
+    <p class="text-slate-400 text-[15px] leading-relaxed mb-8">
+      Our team helps you select the right tools, optimise process parameters, and reduce your cost per board.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <a href="./contact.html"
+         class="inline-flex items-center gap-2 px-7 py-3 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-300">
+        <i class="fa fa-envelope text-[11px]"></i> Contact Our Team
+      </a>
+      <a href="./product.html"
+         class="inline-flex items-center gap-2 px-7 py-3 border border-white/15 text-slate-300 font-syne font-bold text-[13px] rounded-full hover:border-orange hover:text-orange transition-all duration-300">
+        <i class="fa fa-layer-group text-[11px]"></i> Browse Products
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ BLOG MODAL ══════════════ -->
+<div id="blogModal" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+
+  <!-- Overlay -->
+  <div id="modalOverlay" class="absolute inset-0 bg-navy/85 backdrop-blur-sm"></div>
+
+  <!-- Panel -->
+  <div class="modal-panel relative bg-card border border-white/[0.08] rounded-2xl w-full max-w-xl max-h-[85vh] overflow-y-auto shadow-card-lift">
+
+    <!-- Hero image -->
+    <div class="relative h-48 overflow-hidden rounded-t-2xl flex-shrink-0">
+      <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent"></div>
+
+      <!-- Close button -->
+      <button id="modalClose" aria-label="Close modal"
+              class="absolute top-3 right-3 w-8 h-8 rounded-full bg-navy/70 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-navy transition-all duration-200">
+        <i class="fa fa-times text-xs"></i>
+      </button>
+
+      <span id="modalTag" class="cat-chip absolute bottom-3 left-5"></span>
+    </div>
+
+    <!-- Body -->
+    <div class="p-6">
+      <div class="flex items-center gap-2 mb-3">
+        <i class="fa fa-clock text-orange text-[11px]"></i>
+        <span id="modalReadTime" class="text-slate-500 text-[11px] font-medium"></span>
+      </div>
+      <h2 id="modalTitle" class="font-syne font-extrabold text-xl text-white leading-snug mb-5"></h2>
+      <div id="modalBody" class="space-y-1"></div>
+
+      <!-- Footer -->
+      <div class="mt-6 pt-5 border-t border-white/[0.07] flex items-center justify-between">
+        <a href="./contact.html"
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-300">
+          Get a Quote <i class="fa fa-arrow-right text-[11px]"></i>
+        </a>
+        <button id="modalClose2"
+                class="text-slate-400 hover:text-orange font-syne font-semibold text-[13px] transition-colors">
+          Close ✕
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════ FOOTER PLACEHOLDER ══════════════ -->
+<div id="footer-placeholder"></div>
+
+
+<!-- ══════════════ SCRIPTS ══════════════ -->
+<!-- Shared components (navbar active state, footer loader, etc.) -->
+<script src="./assets/js/script.js"></script>
+<!-- Blog-specific logic -->
+<script src="./assets/js/blog.js"></script>
+
 </body>
-
 </html>

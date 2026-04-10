@@ -1,538 +1,566 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | Suryatantra Enterprises LLP</title>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
+  <title>Suryatantra Enterprises LLP | Contact</title>
+  <meta name="description" content="Suryatantra Enterprises LLP — Contact us for PCB manufacturing tools, precision machining, and technical support." />
 
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { syne: ['Syne','sans-serif'], dm: ['DM Sans','sans-serif'] },
+          colors: { navy:'#071428', mid:'#0b1f3a', deep:'#0e2a4f', card:'#111f33', orange:'#f97316', amber:'#fbbf24' },
+          backgroundImage: {
+            'hero-gradient':    'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
+            'section-gradient': 'linear-gradient(180deg,#09192f 0%,#071428 100%)',
+            'orange-gold':      'linear-gradient(135deg,#f97316,#fbbf24)',
+          },
+          boxShadow: {
+            'orange-glow': '0 6px 24px rgba(249,115,22,0.35)',
+            'orange-lg':   '0 10px 32px rgba(249,115,22,0.5)',
+            'card-lift':   '0 16px 40px rgba(0,0,0,0.28)',
+          },
+          keyframes: { 'pulse-ring': { '0%,100%': {opacity:'0.15'}, '50%': {opacity:'0.4'} } },
+          animation: { 'pulse-ring': 'pulse-ring 4s ease-in-out infinite' },
+        },
+      },
+    };
+  </script>
 
-  <body class="flex flex-col min-h-screen bg-white text-gray-800">
-    <!-- ================= NAVBAR ================= -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200"
-    >
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
-          <div class="font-bold text-lg text-emerald-600">
-            <a href="./index.html" class="group">
-              <img
-                src="./assets/Images/Logo/Surytantra Logo-01.png"
-                alt="Suryatantra Logo"
-                class="h-10 transition-transform duration-300 group-hover:scale-110"
-              />
-            </a>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>(function(){ emailjs.init("nafRyrWhypRdV_Zy-"); })();</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+    .grad-text {
+      background: linear-gradient(135deg,#f97316,#fbbf24);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grid-texture {
+      background-image:
+        linear-gradient(rgba(249,115,22,.04) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(249,115,22,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .dot-texture {
+      background-image: radial-gradient(rgba(249,115,22,.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    /* Scroll-reveal */
+    .fade-up { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
+    .fade-up.visible { opacity:1; transform:none; }
+
+    /* Navbar */
+    .nav-link { position:relative; }
+    .nav-link::after {
+      content:''; position:absolute; bottom:-3px; left:0;
+      width:0; height:2px; background:#f97316; transition:width .25s ease;
+    }
+    .nav-link:hover { color:#fff !important; }
+    .nav-link:hover::after { width:100%; }
+    .nav-active { color:#f97316 !important; }
+    .nav-active::after { width:100% !important; }
+    .nav-scrolled { background:rgba(7,20,40,.98) !important; }
+
+    /* Mobile menu */
+    #mobileMenu { max-height:0; overflow:hidden; opacity:0; transition:max-height .3s ease, opacity .25s ease; }
+    #mobileMenu.menu-open { max-height:320px; opacity:1; }
+    .hb { transition:transform .3s ease, opacity .3s ease; }
+
+    /* Badge */
+    .badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(249,115,22,.1); border:1px solid rgba(249,115,22,.28);
+      border-radius:999px; padding:4px 12px;
+      font-size:10px; font-weight:700; color:#f97316;
+      text-transform:uppercase; letter-spacing:.1em;
+    }
+
+    /* Floating-label form */
+    .field { position:relative; }
+    .field input, .field textarea {
+      width:100%; background:rgba(255,255,255,.03);
+      border:1.5px solid rgba(255,255,255,.1); border-radius:10px;
+      outline:none; padding:.85rem 1rem .45rem;
+      color:#e2e8f0; font-family:'DM Sans',sans-serif; font-size:.9rem;
+      transition:border-color .2s, background .2s;
+    }
+    .field textarea { resize:none; }
+    .field input::placeholder, .field textarea::placeholder { color:transparent; }
+    .field input:focus, .field textarea:focus {
+      border-color:#f97316; background:rgba(249,115,22,.04);
+    }
+    .field label {
+      position:absolute; left:1rem; top:.8rem;
+      color:#64748b; font-size:.85rem; font-family:'DM Sans',sans-serif;
+      pointer-events:none; transition:top .18s ease, font-size .18s ease, color .18s ease;
+    }
+    .field input:focus ~ label,
+    .field input:not(:placeholder-shown) ~ label,
+    .field textarea:focus ~ label,
+    .field textarea:not(:placeholder-shown) ~ label {
+      top:.28rem; font-size:.67rem; color:#f97316; letter-spacing:.04em;
+    }
+
+    /* FAQ */
+    .faq-content { max-height:0; overflow:hidden; transition:max-height .36s cubic-bezier(.4,0,.2,1); }
+    .faq-btn i.fa-plus { transition:transform .28s ease; }
+    .faq-btn.faq-open i.fa-plus { transform:rotate(45deg); }
+    .faq-item { transition:border-color .2s; }
+
+    /* Info card */
+    .info-card { transition:transform .22s ease, border-color .22s ease; }
+    .info-card:hover { transform:translateY(-2px); }
+
+    /* Social icon */
+    .social-btn {
+      width:36px; height:36px; border-radius:50%;
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      display:flex; align-items:center; justify-content:center;
+      color:#94a3b8; font-size:13px;
+      transition:background .2s, border-color .2s, color .2s, transform .2s;
+    }
+    .social-btn:hover { background:rgba(249,115,22,.12); border-color:#f97316; color:#f97316; transform:translateY(-2px); }
+
+    /* Map border glow */
+    .map-wrap { position:relative; border-radius:16px; overflow:hidden; }
+    .map-wrap::before {
+      content:''; position:absolute; inset:-1px; border-radius:16px;
+      background:linear-gradient(135deg,rgba(249,115,22,.2),transparent 60%);
+      z-index:0; pointer-events:none;
+    }
+    .map-wrap iframe { position:relative; z-index:1; display:block; }
+  </style>
+</head>
+
+<body class="font-dm bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-navy/90 backdrop-blur-xl border-b border-orange/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+    <a href="./index.html" class="flex-shrink-0">
+      <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 object-contain">
+    </a>
+
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8">
+        <li><a href="./index.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
+        <li><a href="./about.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
+        <li class="relative group">
+          <button class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 flex items-center gap-1 bg-transparent border-none cursor-pointer hover:text-white transition-colors">
+            Products <i class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+10px)] w-44
+                      bg-card border border-orange/20 rounded-xl p-2 shadow-2xl
+                      opacity-0 invisible translate-y-1
+                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                      transition-all duration-200 pointer-events-none group-hover:pointer-events-auto">
+            <a href="./product.html#pcb-drill"   class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Drills</a>
+            <a href="./product.html#pcb-routing" class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Routers</a>
+            <a href="./product.html#spindle"     class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Spindles &amp; Spares</a>
+            <a href="./product.html#vcut"        class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">V-Cut Blades</a>
+            <a href="./product.html#more"        class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">More Tools</a>
           </div>
+        </li>
+        <li><a href="./blog.html"    class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Blogs</a></li>
+        <li><a href="./contact.html" class="nav-link nav-active font-syne font-semibold text-[12px] uppercase tracking-widest transition-colors">Contact</a></li>
+      </ul>
+    </nav>
 
-          <!-- Desktop Menu -->
-          <ul class="hidden md:flex items-center gap-2">
-            <li>
-              <a href="./index.html" data-page="home" class="navbar-link"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="./about.html" data-page="about" class="navbar-link"
-                >About</a
-              >
-            </li>
-            <li>
-              <a href="./product.html" data-page="products" class="navbar-link"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a href="./contact.html" data-page="contact" class="navbar-link"
-                >Contact</a
-              >
-            </li>
-          </ul>
+    <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu"
+            class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer">
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
+    </button>
+  </div>
 
-          <!-- Mobile Toggle -->
-          <button id="menuToggle" class="md:hidden flex flex-col gap-1.5">
-            <span></span>
-            <span></span>
-            <span></span>
+  <div id="mobileMenu" class="md:hidden bg-card border-t border-orange/10">
+    <ul class="flex flex-col px-6 py-4 gap-4">
+      <li><a href="./index.html"   class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Home</a></li>
+      <li><a href="./about.html"   class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">About</a></li>
+      <li><a href="./product.html" class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Products</a></li>
+      <li><a href="./blog.html"    class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Blogs</a></li>
+      <li><a href="./contact.html" class="font-syne font-semibold text-sm text-orange">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
+  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
+  <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
+    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
+      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
+      <span class="opacity-40">/</span>
+      <span class="text-orange">Contact</span>
+    </nav>
+    <h1 class="font-syne font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
+      Get In <span class="grad-text">Touch.</span>
+    </h1>
+    <p class="mt-2 text-slate-400 text-[14px] max-w-md leading-relaxed">
+      Need PCB tools or expert support? Our team is just a message away.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CONTACT + MAP ═══════════════ -->
+<section class="py-12 bg-section-gradient">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
+
+    <!-- Map -->
+    <div class="fade-up map-wrap h-[420px] shadow-card-lift">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.6196341568091!2d73.80583848837976!3d18.45719812039949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e910456581%3A0xdb7ff7323634ca1!2sSuryatantra%20Enterprises%20LLP!5e0!3m2!1sen!2sin!4v1774237502589!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full border-0"
+        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        title="Suryatantra Enterprises Location">
+      </iframe>
+    </div>
+
+    <!-- Form -->
+    <div class="fade-up">
+      <div class="badge mb-3"><i class="fa fa-circle text-[4px]"></i> Send Enquiry</div>
+      <h2 class="font-syne font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">
+        Let's Start a <span class="grad-text">Conversation</span>
+      </h2>
+      <p class="text-slate-500 text-[13px] mb-5">Fill in the form and we'll respond within 24 hours.</p>
+
+      <form id="contactForm" class="space-y-3.5" novalidate>
+
+        <div class="field">
+          <input type="text" name="name" id="name" placeholder="Your Name" required />
+          <label for="name">Your Name</label>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-3.5">
+          <div class="field">
+            <input type="tel" name="phone" id="phone" placeholder="Phone No." required />
+            <label for="phone">Phone No.</label>
+          </div>
+          <div class="field">
+            <input type="email" name="email" id="email" placeholder="Your Email" required />
+            <label for="email">Your Email</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <textarea name="message" id="message" rows="4" placeholder="Message" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <p id="formStatus" style="display:none;" class="text-[12.5px] font-semibold text-center py-2 px-3 rounded-lg"></p>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+          <div class="flex items-center gap-3">
+            <a href="#"                             aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:suryatantraa@gmail.com" aria-label="Email"    class="social-btn"><i class="fa fa-envelope"></i></a>
+            <a href="https://wa.me/919730429324"    aria-label="WhatsApp" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"                             aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <button type="submit" id="submitBtn"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
+            <i class="fa fa-paper-plane text-xs"></i> Send Message
           </button>
         </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-        <!-- Mobile Menu -->
-        <div
-          id="mobileMenu"
-          class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
-        >
-          <ul class="flex flex-col gap-3 py-4">
-            <li><a href="./index.html" class="navbar-link">Home</a></li>
-            <li><a href="./about.html" class="navbar-link">About</a></li>
-            <li><a href="./product.html" class="navbar-link">Products</a></li>
-            <li><a href="./contact.html" class="navbar-link">Contact</a></li>
-          </ul>
-        </div>
+
+<!-- ═══════════════ INFO CARDS ═══════════════ -->
+<section class="py-8 bg-navy relative overflow-hidden">
+  <div class="absolute inset-0 dot-texture pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid sm:grid-cols-3 gap-3">
+
+    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group cursor-default">
+      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
+        <i class="fa fa-map-marker-alt"></i>
       </div>
-    </nav>
-    <script src="./assets/js/script.js"></script>
+      <div>
+        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Our Address</h4>
+        <p class="text-slate-400 text-[12.5px] leading-snug">Sinhagad Road, opp. Green-Field Hotel,<br>Dhayari, Pune – 411041, India</p>
+      </div>
+    </div>
 
-    <!-- ================= MAIN CONTENT ================= -->
-    <main class="flex-grow pt-12">
-      <!-- ================= CONTACT SECTION ================= -->
-      <section
-        class="min-h-screen pt-20 pb-10 bg-gradient-to-br from-emerald-50 via-white to-teal-50 flex items-center"
-      >
-        <div class="max-w-7xl mx-auto px-6 w-full">
-          <div class="text-center mb-4 fade-up">
-            <h1
-              class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 tracking-tight"
-            >
-              Get In Touch
-            </h1>
-            <div
-              class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-2"
-            ></div>
-            <p class="max-w-2xl mx-auto text-lg text-gray-600">
-              Have questions or need PCB manufacturing solutions? Our team is
-              ready to help you with expert advice and precision engineering.
+    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group">
+      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
+        <i class="fa fa-phone"></i>
+      </div>
+      <div>
+        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Phone</h4>
+        <a href="tel:+919730429324" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">+91 97304 29324</a>
+      </div>
+    </div>
+
+    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group">
+      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
+        <i class="fa fa-envelope"></i>
+      </div>
+      <div>
+        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Email</h4>
+        <a href="mailto:suryatantraa@gmail.com" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">suryatantraa@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="py-12 bg-section-gradient relative overflow-hidden">
+  <div class="absolute inset-0 dot-texture pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-8 fade-up">
+      <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Quick Answers</div>
+      <h2 class="font-syne font-extrabold text-[26px] md:text-[32px] text-white leading-tight">
+        Frequently Asked <span class="grad-text">Questions</span>
+      </h2>
+      <p class="mt-1.5 text-slate-400 text-[13px] max-w-sm mx-auto leading-relaxed">
+        Common queries about our products, services, and support.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-2.5">
+
+      <!-- Left -->
+      <div class="space-y-2.5">
+
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What types of PCB tools do you supply?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              We supply precision tools including drilling bits, routing blades, V-cut blades, spindles, and other specialised consumables for high-quality PCB manufacturing.
             </p>
           </div>
+        </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <!-- Google Maps -->
-            <div
-              class="rounded-2xl overflow-hidden shadow-2xl border-8 border-white h-[450px] fade-up"
-              style="animation-delay: 0.2s"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.661649422301!2d73.8055606759247!3d18.453621471209594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295982823675d%3A0xc3f9a72c439f0f63!2sDhayari%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                class="w-full h-full border-0"
-                allowfullscreen=""
-                loading="lazy"
-              >
-              </iframe>
-            </div>
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you offer custom automation solutions?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Yes! We design custom automation roadmaps to streamline your PCB workflows, improving efficiency and reducing manual errors in your production line.
+            </p>
+          </div>
+        </div>
 
-            <!-- Contact Info -->
-            <div class="space-y-8 fade-up" style="animation-delay: 0.4s">
-              <!-- Address -->
-              <div class="flex items-start gap-5 group">
-                <div
-                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
-                >
-                  <i class="fas fa-map-marker-alt text-2xl"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
-                  >
-                    Visit Us
-                  </h4>
-                  <p class="text-gray-700 leading-relaxed">
-                    <strong class="text-gray-900"
-                      >Suryatantra Enterprises LLP</strong
-                    ><br />
-                    S.no. 143, Milkat No. 1094/3, Opp. Green-Field Hotel,<br />
-                    Sinhagad Road, Dhayari, Pune – 411041 (India)
-                  </p>
-                </div>
-              </div>
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What is your delivery timeline?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Standard delivery is 3–5 business days for in-stock items. Custom or bulk orders may take 7–14 business days depending on specifications.
+            </p>
+          </div>
+        </div>
 
-              <!-- Phone -->
-              <div class="flex items-start gap-5 group">
-                <div
-                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
-                >
-                  <i class="fas fa-phone text-2xl"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
-                  >
-                    Call Us
-                  </h4>
-                  <a
-                    href="tel:+919730429324"
-                    class="text-gray-700 text-lg hover:text-emerald-600 transition-colors"
-                  >
-                    +91 97304 29324
-                  </a>
-                </div>
-              </div>
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you provide technical support?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Absolutely! Our technical team provides comprehensive support including installation guidance, troubleshooting, and maintenance advice for all our products.
+            </p>
+          </div>
+        </div>
 
-              <!-- Email -->
-              <div class="flex items-start gap-5 group">
-                <div
-                  class="bg-emerald-100 p-4 rounded-xl text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300"
-                >
-                  <i class="fas fa-envelope text-2xl"></i>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-emerald-600 uppercase tracking-wider mb-1"
-                  >
-                    Email Us
-                  </h4>
-                  <a
-                    href="mailto:suryatantraa@gmail.com"
-                    class="text-gray-700 text-lg hover:text-emerald-600 transition-colors"
-                  >
-                    suryatantraa@gmail.com
-                  </a>
-                </div>
-              </div>
+      </div>
 
-              <hr class="border-gray-200" />
+      <!-- Right -->
+      <div class="space-y-2.5">
 
-              <!-- Social Media & Enquiry Button -->
-              <div class="flex flex-wrap items-center gap-6">
-                <div class="flex gap-3">
-                  <a
-                    href="#"
-                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#1877F2] hover:-translate-y-1"
-                  >
-                    <i class="fab fa-facebook-f text-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#0A66C2] hover:-translate-y-1"
-                  >
-                    <i class="fab fa-linkedin-in text-lg"></i>
-                  </a>
-                  <a
-                    href="https://wa.me/919730429324"
-                    class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-emerald-600 border border-emerald-100 shadow-sm transition-all duration-300 hover:text-white hover:bg-[#25D366] hover:-translate-y-1"
-                  >
-                    <i class="fab fa-whatsapp text-xl"></i>
-                  </a>
-                </div>
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">How can I place an order?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Place an order via the enquiry form above, by emailing suryatantraa@gmail.com, or by calling our sales team. We'll guide you through every step.
+            </p>
+          </div>
+        </div>
 
-                <a href="#" id="openEnquiry"
-  class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white rounded-full font-bold uppercase">
-  Send Enquiry
-</a>
-<div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-  <iframe
-    src="./components/enquiry.html"
-    class="w-full h-full border-none"
-  ></iframe>
-</div>
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Where are you located?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Our headquarters are at Sinhagad Road, Dhayari, Pune – 411041, India. View our exact location on the map above.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you ship internationally?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              Yes, we ship internationally to select countries. Contact our sales team for rates and availability to your location.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
+          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What payment methods do you accept?</span>
+            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+          </button>
+          <div class="faq-content">
+            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
+              We accept bank transfers, credit/debit cards, and online payment gateways. Flexible payment terms are available for bulk orders.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="relative py-12 bg-mid overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-orange/[0.07] animate-pulse-ring pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-orange/[0.1] pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-orange/[0.05] blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-xl mx-auto px-6 text-center fade-up">
+    <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Ready to Order?</div>
+    <h2 class="font-syne font-extrabold text-[24px] md:text-[30px] text-white leading-tight mb-2.5">
+      Need <span class="grad-text">Expert Advice</span> on PCB Tools?
+    </h2>
+    <p class="text-slate-400 text-[13.5px] leading-relaxed mb-6">
+      Whether a quick quote or a long-term supply partnership — we're here to help you choose right.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <a href="https://wa.me/919730429324"
+         class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
+        <i class="fab fa-whatsapp text-sm"></i> Chat on WhatsApp
+      </a>
+      <a href="./product.html"
+         class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-syne font-bold text-[13px] rounded-full hover:border-orange hover:text-orange transition-all duration-200">
+        <i class="fa fa-layer-group text-xs"></i> Browse Products
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="bg-navy border-t border-white/[0.06] py-5">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2.5">
+    <a href="./index.html">
+      <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-7 object-contain">
+    </a>
+    <p class="text-slate-600 text-[11.5px] text-center">
+      &copy; <span id="footerYear"></span> Suryatantra Enterprises LLP. All rights reserved.
+    </p>
+    <div class="flex items-center gap-4">
+      <a href="mailto:suryatantraa@gmail.com" class="text-slate-500 hover:text-orange transition-colors text-[11.5px]">suryatantraa@gmail.com</a>
+      <a href="tel:+919730429324"             class="text-slate-500 hover:text-orange transition-colors text-[11.5px]">+91 97304 29324</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
 <script>
-  const openBtn = document.getElementById("openEnquiry");
-  const wrapper = document.getElementById("enquiryWrapper");
+  /* Footer year */
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
 
-  openBtn.addEventListener("click", e => {
+  /* Scroll-reveal */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => ro.observe(el));
+
+  /* Navbar scroll */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('nav-scrolled', scrollY > 30), { passive:true });
+
+  /* Hamburger */
+  const toggle = document.getElementById('menuToggle');
+  const menu   = document.getElementById('mobileMenu');
+  const bars   = toggle.querySelectorAll('.hb');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open);
+    bars[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+    bars[1].style.opacity   = open ? '0' : '';
+    bars[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+  });
+  /* Contact form */
+  const form      = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const statusEl  = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    wrapper.classList.remove("hidden");
-    document.body.classList.add("overflow-hidden");
+    const name    = document.getElementById('name').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !phone || !email || !message)
+      return showStatus('Please fill in all fields.', '#f97316', 'rgba(249,115,22,.08)');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return showStatus('Enter a valid email address.', '#f97316', 'rgba(249,115,22,.08)');
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin text-xs"></i> Sending…';
+
+    try {
+      await emailjs.send('service_suryatantra', 'template_contact',
+        { from_name:name, from_phone:phone, from_email:email, message, reply_to:email });
+      showStatus("✓ Message sent! We'll be in touch shortly.", '#22c55e', 'rgba(34,197,94,.08)');
+      form.reset();
+    } catch(err) {
+      console.error(err);
+      showStatus('Something went wrong. Please try again or email us.', '#f97316', 'rgba(249,115,22,.08)');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fa fa-paper-plane text-xs"></i> Send Message';
+    }
   });
 
-  window.closeEnquiry = () => {
-    wrapper.classList.add("hidden");
-    document.body.classList.remove("overflow-hidden");
-  };
+  function showStatus(msg, color, bg) {
+    statusEl.textContent = msg;
+    statusEl.style.cssText = `display:block;color:${color};background:${bg};border:1px solid ${color}44;`;
+    setTimeout(() => statusEl.style.display = 'none', 5500);
+  }
 </script>
 
+<script src="./assets/js/script.js"  onerror="console.warn('script.js not found')"></script>
+<script src="./assets/js/contact.js" onerror="console.warn('contact.js not found')"></script>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= FAQ SECTION ================= -->
-      <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">
-              Frequently Asked Questions
-            </h2>
-            <div
-              class="h-1.5 w-20 bg-emerald-500 mx-auto rounded-full mb-6"
-            ></div>
-            <p class="text-gray-600">
-              Common queries about our products and services.
-            </p>
-          </div>
-
-          <!-- FAQ Container with Hidden Scroll -->
-          <div class="max-h-[600px] overflow-y-auto pr-2 faq-scroll-container">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Column 1 - Left Side -->
-              <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >What types of PCB tools do you supply?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    We supply a wide range of precision tools including drilling
-                    bits, routing blades, V-cut blades, and other specialized
-                    consumables tailored for high-quality PCB manufacturing.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >Do you offer custom automation solutions?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    Yes! We design custom automation roadmaps to streamline your
-                    PCB workflows, improving efficiency and reducing manual
-                    errors in your production line.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >What is your delivery timeline?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    Our standard delivery timeline is 3-5 business days for
-                    items in stock. For custom orders or bulk purchases,
-                    delivery may take 7-14 business days depending on
-                    specifications.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 5 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >Do you provide technical support?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    Absolutely! Our technical team provides comprehensive
-                    support including installation guidance, troubleshooting,
-                    and maintenance advice for all our products.
-                  </div>
-                </div>
-              </div>
-
-              <!-- Column 2 - Right Side -->
-              <div class="space-y-4">
-                <!-- FAQ Item 4 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >How can I place an order?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    You can place an order by contacting us directly via the
-                    enquiry form above, emailing us at suryatantraa@gmail.com,
-                    or calling our sales team. We will guide you through the
-                    process.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 6 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >Where are you located?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    Our headquarters are located at Sinhagad Road, Dhayari, Pune
-                    – 411041, India.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 7 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >Do you ship internationally?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    Yes, we offer international shipping to select countries.
-                    Please contact our sales team for shipping rates and
-                    availability to your location.
-                  </div>
-                </div>
-
-                <!-- FAQ Item 8 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    class="w-full flex items-center justify-between p-5 text-left bg-gray-50 hover:bg-gray-100 transition-colors focus:outline-none faq-btn"
-                  >
-                    <span class="font-semibold text-gray-800"
-                      >What payment methods do you accept?</span
-                    >
-                    <i
-                      class="fas fa-plus text-emerald-600 transition-transform transform flex-shrink-0 ml-2"
-                    ></i>
-                  </button>
-                  <div
-                    class="hidden bg-white p-5 border-t border-gray-200 text-gray-600 faq-content"
-                  >
-                    We accept various payment methods including bank transfers,
-                    credit/debit cards, and online payment gateways. For bulk
-                    orders, we also offer flexible payment terms.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <style>
-        /* Custom scrollbar styling for FAQ section */
-        .faq-scroll-container {
-          scrollbar-width: thin;
-          scrollbar-color: rgba(16, 185, 129, 0.3) transparent;
-        }
-
-        .faq-scroll-container::-webkit-scrollbar {
-          width: 6px;
-        }
-
-        .faq-scroll-container::-webkit-scrollbar-track {
-          background: transparent;
-        }
-
-        .faq-scroll-container::-webkit-scrollbar-thumb {
-          background-color: rgba(16, 185, 129, 0.3);
-          border-radius: 10px;
-        }
-
-        .faq-scroll-container::-webkit-scrollbar-thumb:hover {
-          background-color: rgba(16, 185, 129, 0.5);
-        }
-
-        /* Hide scrollbar but keep functionality */
-        .faq-scroll-container {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
-        }
-
-        .faq-scroll-container::-webkit-scrollbar {
-          display: none; /* Chrome, Safari and Opera */
-        }
-      </style>
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <div id="footer-placeholder"></div>
-
-    <!-- ================= SCRIPTS ================= -->
-    <script>
-      // Load Navbar
-      fetch("./components/navbar.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("navbar-placeholder").innerHTML = data;
-          // Initialize navbar after loading
-          if (window.initNavbar) {
-            window.initNavbar();
-          }
-        })
-        .catch((err) => console.error("Error loading navbar:", err));
-
-      // Load Footer
-      fetch("./components/footer.html")
-        .then((res) => res.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        })
-        .catch((err) => console.error("Error loading footer:", err));
-
-      // FAQ Accordion
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqBtns = document.querySelectorAll(".faq-btn");
-        faqBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector("i");
-
-            // Toggle current
-            content.classList.toggle("hidden");
-            icon.classList.toggle("fa-plus");
-            icon.classList.toggle("fa-minus");
-
-            // Close others
-            faqBtns.forEach((otherBtn) => {
-              if (otherBtn !== btn) {
-                otherBtn.nextElementSibling.classList.add("hidden");
-                otherBtn.querySelector("i").classList.add("fa-plus");
-                otherBtn.querySelector("i").classList.remove("fa-minus");
-              }
-            });
-          });
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>
