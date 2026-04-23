@@ -1,213 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar Test | Suryatantra</title>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="font-[Manrope] bg-slate-100 text-gray-800 min-h-screen">
-    <!-- ================= NAVBAR ================= -->
-<!-- ================= NAVBAR ================= -->
-<nav
-  id="navbar"
-  class="fixed top-0 w-full z-50 transition-all duration-500
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Test | Suryatantra</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Ensure mobile menu expands properly when dynamically injected or standalone */
+    #mobileMenu.open, #mobileMenu.menu-open {
+      max-height: 24rem !important; /* Equivalent to max-h-96 */
+      opacity: 1 !important;
+    }
+  </style>
+</head>
+
+<body class="font-body bg-slate-100 text-gray-800 min-h-screen">
+  <!-- ================= NAVBAR ================= -->
+  <!-- ================= NAVBAR ================= -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500
          bg-gradient-to-r from-slate-900/70 to-slate-950/70
-         backdrop-blur-lg"
->
-  <div class="max-w-7xl mx-auto px-5">
-    <div class="flex justify-between items-center py-3">
+         backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex justify-between items-center py-3">
 
-      <!-- Logo -->
-      <a href="./index.html" class="group">
-        <img
-          src="./assets/Images/Logo/Surytantra Logo-01.png"
-          alt="Suryatantra Logo"
-          class="h-10 transition-transform duration-300 group-hover:scale-110 logo-highlight"
-        />
-      </a>
+        <!-- Logo -->
+        <a href="./index.html" class="group">
+          <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Logo"
+            class="h-10 transition-transform duration-300 group-hover:scale-110 logo-highlight" />
+        </a>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-3">
-        <li>
-          <a href="./index.html" data-page="index"
-             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-3">
+          <li>
+            <a href="./index.html" data-page="index" class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
                     border border-emerald-500/20 bg-emerald-500/5
                     transition-all duration-300
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white hover:border-transparent hover:shadow-lg">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="./about.html" data-page="about"
-             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./about.html" data-page="about" class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
                     border border-emerald-500/20 bg-emerald-500/5
                     transition-all duration-300
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white hover:border-transparent hover:shadow-lg">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="./product.html" data-page="product"
-             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+              About
+            </a>
+          </li>
+          <li>
+            <a href="./product.html" data-page="product" class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
                     border border-emerald-500/20 bg-emerald-500/5
                     transition-all duration-300
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white hover:border-transparent hover:shadow-lg">
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="./contact.html" data-page="contact"
-             class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html" data-page="contact" class="navbar-link px-5 py-2 rounded-full text-slate-200 font-medium
                     border border-emerald-500/20 bg-emerald-500/5
                     transition-all duration-300
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white hover:border-transparent hover:shadow-lg">
-            Contact
-          </a>
-        </li>
-      </ul>
+              Contact
+            </a>
+          </li>
+        </ul>
 
-      <!-- Mobile Toggle -->
-      <button
-        id="menuToggle"
-        aria-label="Toggle menu"
-        class="md:hidden flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px]
+        <!-- Mobile Toggle -->
+        <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle menu" class="md:hidden flex flex-col gap-1.5 p-2 min-w-[44px] min-h-[44px]
                [&.active>span:nth-child(1)]:rotate-45
                [&.active>span:nth-child(1)]:translate-y-2
                [&.active>span:nth-child(2)]:opacity-0
                [&.active>span:nth-child(3)]:-rotate-45
-               [&.active>span:nth-child(3)]:-translate-y-2"
-      >
-        <span class="block w-6 h-0.5 bg-slate-200 transition-all"></span>
-        <span class="block w-6 h-0.5 bg-slate-200 transition-all"></span>
-        <span class="block w-6 h-0.5 bg-slate-200 transition-all"></span>
-      </button>
-    </div>
+               [&.active>span:nth-child(3)]:-translate-y-2">
+          <span class="hb block w-6 h-0.5 bg-slate-200 transition-all"></span>
+          <span class="hb block w-6 h-0.5 bg-slate-200 transition-all"></span>
+          <span class="hb block w-6 h-0.5 bg-slate-200 transition-all"></span>
+        </button>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="md:hidden overflow-hidden max-h-0 opacity-0
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0
              transition-all duration-300
              bg-slate-900/95 backdrop-blur-xl rounded-2xl
-             [&.open]:max-h-96 [&.open]:opacity-100"
-    >
-      <ul class="flex flex-col gap-3 p-4">
-        <li>
-          <a href="./index.html" data-page="index"
-             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+             [&.open]:max-h-96 [&.open]:opacity-100">
+        <ul class="flex flex-col gap-3 p-4">
+          <li>
+            <a href="./index.html" data-page="index" class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
                     border border-emerald-500/20 bg-emerald-500/5
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="./about.html" data-page="about"
-             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./about.html" data-page="about" class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
                     border border-emerald-500/20 bg-emerald-500/5
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="./product.html" data-page="product"
-             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+              About
+            </a>
+          </li>
+          <li>
+            <a href="./product.html" data-page="product" class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
                     border border-emerald-500/20 bg-emerald-500/5
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white">
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="./contact.html" data-page="contact"
-             class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html" data-page="contact" class="navbar-mobile-link block px-6 py-4 rounded-full text-slate-200
                     border border-emerald-500/20 bg-emerald-500/5
                     hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500
                     hover:text-white">
-            Contact
-          </a>
-        </li>
-      </ul>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-  function initNavbar() {
-    const navbar = document.getElementById("navbar");
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const navLinks = document.querySelectorAll(".navbar-link");
-    const mobileLinks = document.querySelectorAll(".navbar-mobile-link");
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    function initNavbar() {
+      const navbar = document.getElementById("navbar");
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const navLinks = document.querySelectorAll(".navbar-link");
+      const mobileLinks = document.querySelectorAll(".navbar-mobile-link");
 
-    if (!navbar || !menuToggle || !mobileMenu) return;
+      if (!navbar || !menuToggle || !mobileMenu) return;
 
-    // Scroll effect
-    window.addEventListener("scroll", () => {
-      navbar.classList.toggle(
-        "from-slate-900/95",
-        window.scrollY > 80
-      );
-      navbar.classList.toggle(
-        "to-slate-950/95",
-        window.scrollY > 80
-      );
-      navbar.classList.toggle(
-        "shadow-2xl",
-        window.scrollY > 80
-      );
-    });
-
-    // Mobile toggle
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      mobileMenu.classList.toggle("open");
-    });
-
-    // Active link
-    const page =
-      location.pathname.split("/").pop().replace(".html", "") || "index";
-
-    [...navLinks, ...mobileLinks].forEach(link => {
-      if (link.dataset.page === page) {
-        link.classList.add(
-          "bg-gradient-to-r",
-          "from-emerald-500",
-          "to-teal-500",
-          "text-white",
-          "border-transparent",
-          "shadow-lg"
+      // Scroll effect
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle(
+          "from-slate-900/95",
+          window.scrollY > 80
         );
-      }
-    });
-
-    // Close mobile menu on link click
-    mobileLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.remove("open");
-        menuToggle.classList.remove("active");
+        navbar.classList.toggle(
+          "to-slate-950/95",
+          window.scrollY > 80
+        );
+        navbar.classList.toggle(
+          "shadow-2xl",
+          window.scrollY > 80
+        );
       });
-    });
-  }
-</script>
 
-  </body>
+      // Mobile toggle
+      menuToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = mobileMenu.classList.toggle("open");
+        menuToggle.classList.toggle("active");
+        
+        // Accessibility
+        menuToggle.setAttribute("aria-expanded", isOpen);
+      });
+
+      // Active link
+      const page =
+        location.pathname.split("/").pop().replace(".html", "") || "index";
+
+      [...navLinks, ...mobileLinks].forEach(link => {
+        if (link.dataset.page === page) {
+          link.classList.add(
+            "bg-gradient-to-r",
+            "from-emerald-500",
+            "to-teal-500",
+            "text-white",
+            "border-transparent",
+            "shadow-lg"
+          );
+        }
+      });
+
+      // Close mobile menu on link click
+      mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          menuToggle.classList.remove("active");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Initialize navbar
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initNavbar);
+    } else {
+      initNavbar();
+    }
+  </script>
+
+</body>
+
 </html>

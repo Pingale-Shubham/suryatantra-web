@@ -1,13 +1,16 @@
-
 <!doctype html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
   <title>Suryatantra Enterprises LLP</title>
-  <meta name="description" content="Suryatantra Enterprises LLP — Empowering PCB Manufacturers with Top-Quality Supplies, Precision Machining Tools, and Components." />
-  <meta name="keywords" content="PCB Manufacturing tools, Precision Tools, Drilling Bits, Routing Blades, Suryatantra Enterprises, PCB tools Supplies" />
+  <meta name="description"
+    content="Suryatantra Enterprises LLP — Empowering PCB Manufacturers with Top-Quality Supplies, Precision Machining Tools, and Components." />
+  <meta name="keywords"
+    content="PCB Manufacturing tools, Precision Tools, Drilling Bits, Routing Blades, Suryatantra Enterprises, PCB tools Supplies" />
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,57 +19,68 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ['"Syne"', 'sans-serif'],
-            body:    ['"DM Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          fontSize: {
+            'xs': ['13px', '1.6'],
+            'sm': ['15px', '1.6'],
+            'base': ['17px', '1.6'],
+            'lg': ['20px', '1.5'],
+            'xl': ['24px', '1.4'],
+            '2xl': ['30px', '1.3'],
+            '3xl': ['36px', '1.2'],
+            '4xl': ['48px', '1.1'],
+            '5xl': ['64px', '1.0'],
           },
           colors: {
-            navy:    { DEFAULT: '#071428', 90: 'rgba(7,20,40,0.90)', 97: 'rgba(7,20,40,0.97)' },
-            mid:     '#0b1f3a',
-            deep:    '#0e2a4f',
-            card:    '#0f1e30',
+            navy: { DEFAULT: '#071428', 90: 'rgba(7,20,40,0.90)', 97: 'rgba(7,20,40,0.97)' },
+            mid: '#0b1f3a',
+            deep: '#0e2a4f',
+            card: '#0f1e30',
             surface: '#162436',
             brand: {
               DEFAULT: '#f97316',
-              light:   '#fb923c',
-              gold:    '#fbbf24',
+              light: '#fb923c',
+              gold: '#fbbf24',
             },
           },
           backgroundImage: {
-            'hero':           'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
-            'section-dark':   'linear-gradient(180deg,#09192f 0%,#071428 100%)',
+            'hero': 'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
+            'section-dark': 'linear-gradient(180deg,#09192f 0%,#071428 100%)',
             'brand-gradient': 'linear-gradient(135deg,#f97316 0%,#fbbf24 100%)',
-            'grid-lines':     'linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px)',
-            'dots':           'radial-gradient(rgba(249,115,22,.07) 1px,transparent 1px)',
-            'pcb-radial':     'radial-gradient(rgba(190,140,40,1) 1px,transparent 1px)',
+            'grid-lines': 'linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px)',
+            'dots': 'radial-gradient(rgba(249,115,22,.07) 1px,transparent 1px)',
+            'pcb-radial': 'radial-gradient(rgba(190,140,40,1) 1px,transparent 1px)',
           },
           backgroundSize: {
             'grid-60': '60px 60px',
             'dots-28': '28px 28px',
-            'pcb-28':  '28px 28px',
+            'pcb-28': '28px 28px',
           },
           boxShadow: {
-            'brand':    '0 8px 32px rgba(249,115,22,0.35)',
+            'brand': '0 8px 32px rgba(249,115,22,0.35)',
             'brand-lg': '0 16px 48px rgba(249,115,22,0.50)',
-            'card':     '0 24px 64px rgba(0,0,0,0.40)',
+            'card': '0 24px 64px rgba(0,0,0,0.40)',
           },
           keyframes: {
             'slide-up': {
-              '0%':   { opacity: '0', transform: 'translateY(28px)' },
+              '0%': { opacity: '0', transform: 'translateY(28px)' },
               '100%': { opacity: '1', transform: 'translateY(0)' },
             },
             'ring-pulse': {
               '0%,100%': { opacity: '0.20' },
-              '50%':     { opacity: '0.55' },
+              '50%': { opacity: '0.55' },
             },
             'float': {
               '0%,100%': { transform: 'translateY(0)' },
-              '50%':     { transform: 'translateY(-10px)' },
+              '50%': { transform: 'translateY(-10px)' },
             },
           },
           animation: {
-            'slide-up':   'slide-up .65s ease both',
+            'slide-up': 'slide-up .65s ease both',
             'ring-pulse': 'ring-pulse 4s ease-in-out infinite',
-            'float':      'float 5s ease-in-out infinite',
+            'float': 'float 5s ease-in-out infinite',
           },
         },
       },
@@ -76,7 +90,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -95,747 +111,886 @@
       transform: translateY(28px);
       transition: opacity .65s ease, transform .65s ease;
     }
-    .fade-up.visible { opacity: 1; transform: none; }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* Nav underline */
-    .nav-link { position: relative; }
+    .nav-link {
+      position: relative;
+    }
+
     .nav-link::after {
       content: '';
       position: absolute;
-      bottom: -5px; left: 0;
-      width: 0; height: 2px;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
       background: #f97316;
       border-radius: 2px;
       transition: width .3s ease;
     }
-    .nav-link:hover { color: #fff !important; }
-    .nav-link:hover::after,
-    .nav-active::after { width: 100%; }
-    .nav-active { color: #f97316 !important; }
 
-    #navbar { transition: background .3s, border-color .3s; }
-    #navbar.nav-scrolled { background: rgba(7,20,40,.97) !important; }
+    .nav-link:hover {
+      color: #fff !important;
+    }
+
+    .nav-link:hover::after,
+    .nav-active::after {
+      width: 100%;
+    }
+
+    .nav-active {
+      color: #f97316 !important;
+    }
+
+    #navbar {
+      transition: background .3s, border-color .3s;
+    }
+
+    #navbar.nav-scrolled {
+      background: rgba(7, 20, 40, .97) !important;
+    }
 
     /* Mobile menu */
     #mobileMenu {
-      max-height: 0; overflow: hidden; opacity: 0;
-      transition: max-height .38s cubic-bezier(.4,0,.2,1), opacity .28s ease;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .38s cubic-bezier(.4, 0, .2, 1), opacity .28s ease;
     }
-    #mobileMenu.menu-open { max-height: 380px; opacity: 1; }
-    .hb { transition: transform .3s ease, opacity .3s ease; }
+
+    #mobileMenu.menu-open {
+      max-height: 380px;
+      opacity: 1;
+    }
+
+    .hb {
+      transition: transform .3s ease, opacity .3s ease;
+    }
 
     /* Product category cards */
     .prod-card {
       transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
     }
+
     .prod-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 28px 64px rgba(0,0,0,.45);
-      border-color: rgba(249,115,22,.4) !important;
+      box-shadow: 0 28px 64px rgba(0, 0, 0, .45);
+      border-color: rgba(249, 115, 22, .4) !important;
     }
-    .prod-card img { transition: transform .55s ease; }
-    .prod-card:hover img { transform: scale(1.07); }
+
+    .prod-card img {
+      transition: transform .55s ease;
+    }
+
+    .prod-card:hover img {
+      transform: scale(1.07);
+    }
 
     /* Why-us cards */
     .why-card {
       transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
     }
+
     .why-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0,0,0,.4);
-      border-color: rgba(249,115,22,.4) !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
+      border-color: rgba(249, 115, 22, .4) !important;
     }
+
     .why-card:hover .why-icon {
-      background: rgba(249,115,22,.18);
+      background: rgba(249, 115, 22, .18);
       border-color: #f97316;
-      box-shadow: 0 0 24px rgba(249,115,22,.3);
+      box-shadow: 0 0 24px rgba(249, 115, 22, .3);
     }
-    .why-icon { transition: background .3s, border-color .3s, box-shadow .3s; }
+
+    .why-icon {
+      transition: background .3s, border-color .3s, box-shadow .3s;
+    }
 
     /* Blog cards */
     .blog-card {
       transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
     }
+
     .blog-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0,0,0,.4);
-      border-color: rgba(249,115,22,.35) !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
+      border-color: rgba(249, 115, 22, .35) !important;
     }
-    .blog-card img { transition: transform .55s ease; }
-    .blog-card:hover img { transform: scale(1.05); }
+
+    .blog-card img {
+      transition: transform .55s ease;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.05);
+    }
 
     /* Hero scroll indicator */
     @keyframes bounce-y {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
     }
-    .bounce-y { animation: bounce-y 1.8s ease-in-out infinite; }
+
+    .bounce-y {
+      animation: bounce-y 1.8s ease-in-out infinite;
+    }
 
     /* Hide scrollbar utility */
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 
 <body class="font-body bg-navy text-slate-200 overflow-x-hidden antialiased">
 
-<!-- ════════════════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════════════════
      NAVBAR
 ════════════════════════════════════════════════════════ -->
-<header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
 
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
 
-    <a href="./index.html" class="shrink-0 flex items-center">
-      <img src="./assets/Images/Logo/Surytantra Logo-01.png"
-           alt="Suryatantra Enterprises LLP" class="h-10 object-contain" />
-    </a>
+      <a href="./index.html" class="shrink-0 flex items-center">
+        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP"
+          class="h-10 object-contain" />
+      </a>
 
-    <nav class="hidden md:block" aria-label="Primary">
-      <ul class="flex items-center gap-9">
-        <li>
-          <a href="./index.html" data-page="index"
-             class="nav-link nav-active font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="./about.html" data-page="about"
-             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
-            About
-          </a>
-        </li>
-        <li class="relative group">
-          <button type="button"
-                  class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors hover:text-white flex items-center gap-1.5 cursor-pointer bg-transparent border-0">
-            Products
-            <i class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-300 group-hover:rotate-180"></i>
-          </button>
-          <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)]
+      <nav class="hidden md:block" aria-label="Primary">
+        <ul class="flex items-center gap-9">
+          <li>
+            <a href="./index.html" data-page="index"
+              class="nav-link nav-active font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./about.html" data-page="about"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+              About
+            </a>
+          </li>
+          <li class="relative group">
+            <button type="button"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors hover:text-white flex items-center gap-1.5 cursor-pointer bg-transparent border-0">
+              Products
+              <i
+                class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-300 group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)]
                       w-52 bg-card border border-brand/20 rounded-2xl p-2.5 shadow-2xl
                       opacity-0 invisible translate-y-2 pointer-events-none
                       group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                       transition-all duration-300">
-            <a href="./product.html#pcb-drill"   class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Drills</a>
-            <a href="./product.html#pcb-routing" class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Routers</a>
-            <a href="./product.html#spindle"     class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Spindles &amp; Spares</a>
-            <a href="./product.html#vcut"        class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">V-Cut Blades</a>
-            <a href="./product.html#more"        class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">More Tools</a>
-          </div>
-        </li>
-        <li>
-          <a href="./blog.html" data-page="blog"
-             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
-            Blogs
-          </a>
-        </li>
-        <li>
-          <a href="./contact.html" data-page="contact"
-             class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
-            class="md:hidden flex flex-col gap-[5px] p-1.5 bg-transparent border-0 cursor-pointer">
-      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-      <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-    </button>
-  </div>
-
-  <div id="mobileMenu" class="md:hidden bg-card border-t border-brand/10">
-    <ul class="flex flex-col px-6 py-6 gap-5">
-      <li><a href="./index.html"   class="font-display font-semibold text-sm text-brand">Home</a></li>
-      <li><a href="./about.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">About</a></li>
-      <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Products</a></li>
-      <li><a href="./blog.html"    class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Blogs</a></li>
-      <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-
-<!-- ════════════════════════════════════════════════════════
-     HERO
-════════════════════════════════════════════════════════ -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-
-  <!-- PCB background image -->
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-       style="background-image: url('./assets/Images/pcb.png');"></div>
-
-  <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#071428]/92 via-[#0b1f3a]/88 to-[#0e2a4f]/95"></div>
-
-  <!-- Gold dot grid -->
-  <div class="absolute inset-0 bg-pcb-radial bg-pcb-28 opacity-[0.09] pointer-events-none"></div>
-
-  <!-- Glow orbs -->
-  <div class="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-brand/8 blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-mid/50 blur-[100px] pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pt-[72px]">
-
-    <!-- Tag pill -->
-    <span class="fade-up inline-flex items-center gap-2 px-5 py-2 rounded-full
-                 bg-brand/10 border border-brand/30 text-brand text-xs font-display font-semibold
-                 uppercase tracking-[.1em] mb-6">
-      <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse inline-block"></span>
-      Established 2019 &nbsp;·&nbsp; 20+ Years Industry Expertise
-    </span>
-
-    <h1 class="fade-up font-display font-extrabold text-[clamp(2.6rem,7vw,5rem)] leading-[1.06] mb-5">
-      Engineering Precision Tools for<br>
-      <span class="text-gradient">Modern PCB Manufacturing</span>
-    </h1>
-
-    <p class="fade-up text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
-      Suryatantra Enterprises LLP delivers high-performance drilling, routing, and consumable solutions designed to enhance productivity, accuracy, and operational efficiency for PCB manufacturers.
-    </p>
-
-    <div class="fade-up flex flex-wrap items-center justify-center gap-4">
-      <a href="./product.html"
-         class="inline-flex items-center gap-2.5 px-8 py-3.5
-                bg-brand-gradient text-white font-display font-bold text-sm rounded-full
-                shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-        <i class="fa fa-layer-group text-xs"></i> Explore Products
-      </a>
-      <a href="./contact.html"
-         class="inline-flex items-center gap-2.5 px-8 py-3.5
-                border border-white/15 text-slate-200 font-display font-bold text-sm rounded-full
-                hover:border-brand hover:text-brand transition-all duration-300">
-        Work With Us <i class="fa fa-arrow-right text-xs"></i>
-      </a>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="mt-10 flex justify-center">
-      <div class="bounce-y flex flex-col items-center gap-1.5 text-slate-500">
-        <span class="text-[10px] font-display uppercase tracking-[.15em]">Scroll</span>
-        <i class="fa fa-chevron-down text-xs"></i>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════════════════
-     STATS BAR
-════════════════════════════════════════════════════════ -->
-<div class="bg-card border-y border-brand/10">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[.06]">
-
-    <div class="fade-up flex flex-col items-center justify-center py-6 px-4 hover:bg-brand/[.04] transition-colors duration-300">
-      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
-            data-count="20" data-suffix="+">0+</span>
-      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Years Experience</span>
-    </div>
-
-    <div class="fade-up flex flex-col items-center justify-center py-6 px-4 hover:bg-brand/[.04] transition-colors duration-300">
-      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
-            data-count="500" data-suffix="+">0+</span>
-      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Clients Served</span>
-    </div>
-
-    <div class="fade-up flex flex-col items-center justify-center py-6 px-4 hover:bg-brand/[.04] transition-colors duration-300">
-      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
-            data-count="1200" data-suffix="+">0+</span>
-      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Products Supplied</span>
-    </div>
-
-    <div class="fade-up flex flex-col items-center justify-center py-6 px-4 hover:bg-brand/[.04] transition-colors duration-300">
-      <span class="font-display font-black text-[2.6rem] leading-none text-gradient"
-            data-count="99" data-suffix="%">0%</span>
-      <span class="mt-1.5 text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em]">Client Retention</span>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════════════════════
-     KEY PRODUCTS
-════════════════════════════════════════════════════════ -->
-<section class="py-16 bg-section-dark relative overflow-hidden">
-  <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
-
-    <!-- Heading -->
-    <div class="text-center mb-10 fade-up">
-      <span class="inline-flex items-center justify-center gap-2
-                   bg-brand/10 border border-brand/25 rounded-full
-                   px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-4">
-        <i class="fa fa-circle text-[5px]"></i> Our Products
-      </span>
-      <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight">
-        Complete PCB <span class="text-gradient">Tooling Solutions</span>
-      </h2>
-      <p class="mt-3 text-slate-400 max-w-lg mx-auto text-base leading-relaxed">
-        From micro-drills to V-cut blades — everything your production line needs, engineered to precision.
-      </p>
-    </div>
-
-    <!-- Cards — horizontal scroll on mobile, grid on desktop -->
-    <div class="flex flex-row overflow-x-auto gap-5 pb-4 hide-scrollbar snap-x snap-mandatory
-                sm:grid sm:grid-cols-2 lg:grid-cols-5 sm:overflow-visible sm:pb-0">
-
-      <!-- Drill -->
-      <a href="./product.html#pcb-drill"
-         class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
-                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
-        <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
-          <img src="./assets/Images/pcb-drill/slot-drill.png" alt="PCB Drill"
-               class="max-h-full max-w-full object-contain">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
-            Drills
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-white text-base mb-1.5">PCB Drill Tools</h3>
-          <p class="text-slate-400 text-xs leading-relaxed flex-1">Industrial-grade drilling for FR4, aluminium &amp; multilayer PCBs.</p>
-          <span class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
-            Explore <i class="fa fa-arrow-right text-[10px]"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- Router -->
-      <a href="./product.html#pcb-routing"
-         class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
-                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
-        <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
-          <img src="./assets/Images/pcb-routing/aluminium-coated.png" alt="PCB Router"
-               class="max-h-full max-w-full object-contain">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
-            Routers
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-white text-base mb-1.5">PCB Routing Tools</h3>
-          <p class="text-slate-400 text-xs leading-relaxed flex-1">Precision routing for clean edge finish and dimensional stability.</p>
-          <span class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
-            Explore <i class="fa fa-arrow-right text-[10px]"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- Spindle -->
-      <a href="./product.html#spindle"
-         class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
-                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
-        <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
-          <img src="./assets/Images/spindle/230505.png" alt="Spindles"
-               class="max-h-full max-w-full object-contain">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
-            Spindles
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-white text-base mb-1.5">Spindles &amp; Spares</h3>
-          <p class="text-slate-400 text-xs leading-relaxed flex-1">High-speed spindles and precision spare parts for PCB machinery.</p>
-          <span class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
-            Explore <i class="fa fa-arrow-right text-[10px]"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- V-Cut -->
-      <a href="./product.html#vcut"
-         class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
-                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
-        <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
-          <img src="./assets/Images/vcut/51x48.png" alt="V-Cut Blades"
-               class="max-h-full max-w-full object-contain">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
-            V-Cut
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-white text-base mb-1.5">V-Cut Blades</h3>
-          <p class="text-slate-400 text-xs leading-relaxed flex-1">Precision blades for clean, repeatable PCB depanelization.</p>
-          <span class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
-            Explore <i class="fa fa-arrow-right text-[10px]"></i>
-          </span>
-        </div>
-      </a>
-
-      <!-- More -->
-      <a href="./product.html#more"
-         class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
-                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
-        <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
-          <img src="./assets/Images/more/routing-brush.png" alt="More Tools"
-               class="max-h-full max-w-full object-contain">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
-            Accessories
-          </span>
-        </div>
-        <div class="p-5 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-white text-base mb-1.5">More Tools</h3>
-          <p class="text-slate-400 text-xs leading-relaxed flex-1">Pins, rings, brushes, burr removers and all PCB accessories.</p>
-          <span class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
-            Explore <i class="fa fa-arrow-right text-[10px]"></i>
-          </span>
-        </div>
-      </a>
-
-    </div>
-
-    <div class="text-center mt-8 fade-up">
-      <a href="./product.html"
-         class="inline-flex items-center gap-2 px-7 py-3 border border-brand/30 text-brand
-                font-display font-bold text-sm rounded-full hover:bg-brand/10 transition-all duration-300">
-        View Full Catalogue <i class="fa fa-arrow-right text-xs"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════════════════════════
-     WHY CHOOSE US
-════════════════════════════════════════════════════════ -->
-<section class="py-16 bg-navy relative overflow-hidden">
-  <div class="absolute inset-0 bg-grid-lines bg-grid-60 pointer-events-none"></div>
-  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-brand/6 blur-[100px] pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
-
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-      <!-- Left: content -->
-      <div class="fade-up">
-        <span class="inline-flex items-center gap-2
-                     bg-brand/10 border border-brand/25 rounded-full
-                     px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-5">
-          <i class="fa fa-circle text-[5px]"></i> Why Choose Us
-        </span>
-        <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight mb-4">
-          The <span class="text-gradient">Suryatantra</span><br>Difference
-        </h2>
-        <p class="text-slate-400 leading-relaxed mb-6 max-w-md">
-          For over two decades we have been the trusted supply partner for PCB manufacturers who demand consistent quality, fast delivery, and hands-on technical expertise.
-        </p>
-
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
-            ISO-grade carbide tooling with traceable quality certifications
+              <a href="./product.html#pcb-drill"
+                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Drills</a>
+              <a href="./product.html#pcb-routing"
+                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Routers</a>
+              <a href="./product.html#spindle"
+                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Spindles
+                &amp; Spares</a>
+              <a href="./product.html#vcut"
+                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">V-Cut
+                Blades</a>
+              <a href="./product.html#more"
+                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">More
+                Tools</a>
+            </div>
           </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
-            Fast dispatch — most items shipped within 24 hours
+          <li>
+            <a href="./blog.html" data-page="blog"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+              Blogs
+            </a>
           </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
-            Dedicated technical support before and after purchase
-          </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
-            Bulk pricing and flexible payment terms for repeat clients
+          <li>
+            <a href="./contact.html" data-page="contact"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
+              Contact
+            </a>
           </li>
         </ul>
+      </nav>
 
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="./about.html"
-             class="inline-flex items-center gap-2 px-7 py-3 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-            Learn About Us <i class="fa fa-arrow-right text-xs"></i>
-          </a>
-          <a href="./contact.html"
-             class="inline-flex items-center gap-2 px-7 py-3 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300">
-            Get a Quote
-          </a>
-        </div>
+      <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
+        class="md:hidden flex flex-col gap-[5px] p-1.5 bg-transparent border-0 cursor-pointer">
+        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden bg-card border-t border-brand/10">
+      <ul class="flex flex-col px-6 py-6 gap-5">
+        <li><a href="./index.html" class="font-display font-semibold text-sm text-brand">Home</a></li>
+        <li><a href="./about.html"
+            class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">About</a></li>
+        <li><a href="./product.html"
+            class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Products</a>
+        </li>
+        <li><a href="./blog.html"
+            class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Blogs</a></li>
+        <li><a href="./contact.html"
+            class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+    <!-- PCB background image -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('./assets/Images/pcb.png');"></div>
+
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#071428]/92 via-[#0b1f3a]/88 to-[#0e2a4f]/95"></div>
+
+    <!-- Gold dot grid -->
+    <div class="absolute inset-0 bg-pcb-radial bg-pcb-28 opacity-[0.09] pointer-events-none"></div>
+
+    <!-- Glow orbs -->
+    <div
+      class="absolute top-0 right-0 w-[150px] md:w-[700px] h-[150px] md:h-[700px] rounded-full bg-brand/10 blur-[80px] md:blur-[120px] pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[120px] md:w-[500px] h-[120px] md:h-[500px] rounded-full bg-mid/60 blur-[70px] md:blur-[100px] pointer-events-none">
+    </div>
+
+    <div
+      class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white py-12 md:py-20 pt-[90px] md:pt-[120px] w-full min-w-0">
+
+      <!-- Tag pill -->
+      <span class="fade-up inline-flex flex-wrap items-center justify-center gap-2 px-3 md:px-5 py-1.5 md:py-2 rounded-full
+               bg-brand/10 border border-brand/30 text-brand text-[9px] md:text-xs font-display font-semibold
+               uppercase tracking-[.1em] mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse inline-block flex-shrink-0"></span>
+        Established 2019 &nbsp;·&nbsp; 7+ Years Industry Expertise
+      </span>
+
+      <h1
+        class="fade-up font-display font-extrabold text-[clamp(1.5rem,7vw,5rem)] leading-[1.1] md:leading-[1.06] mb-6">
+        Engineering Precision Tools for<br class="hidden sm:block">
+        <span class="text-gradient">Modern PCB Manufacturing</span>
+      </h1>
+
+      <p class="fade-up text-slate-300 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed mb-10 px-2 md:px-0">
+        Suryatantra Enterprises LLP delivers high-performance drilling, routing, and consumable solutions designed to
+        enhance productivity, accuracy, and operational efficiency for PCB manufacturers.
+      </p>
+
+      <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="./product.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
+              bg-brand-gradient text-white font-display font-bold text-sm rounded-full
+              shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+          <i class="fa fa-layer-group text-xs"></i> Explore Products
+        </a>
+        <a href="./contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
+              border border-white/15 text-slate-200 font-display font-bold text-sm rounded-full
+              hover:border-brand hover:text-brand transition-all duration-300">
+          Work With Us <i class="fa fa-arrow-right text-xs"></i>
+        </a>
       </div>
 
-      <!-- Right: strength mini-cards -->
-      <div class="grid grid-cols-2 gap-4 fade-up">
-
-        <div class="why-card bg-card border border-white/[.07] rounded-2xl p-6 relative overflow-hidden">
-          <div class="why-icon w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl mb-5">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <span class="absolute top-4 right-5 font-display font-black text-5xl text-brand/[.06] leading-none select-none">01</span>
-          <h4 class="font-display font-bold text-white text-sm mb-2">Precision Engineering</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Tight-tolerance tooling built for repeatable, high-yield results.</p>
+      <!-- Scroll indicator -->
+      <div class="mt-10 flex justify-center">
+        <div class="bounce-y flex flex-col items-center gap-1.5 text-slate-500">
+          <span class="text-[10px] font-display uppercase tracking-[.15em]">Scroll</span>
+          <i class="fa fa-chevron-down text-xs"></i>
         </div>
-
-        <div class="why-card bg-card border border-white/[.07] rounded-2xl p-6 relative overflow-hidden">
-          <div class="why-icon w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl mb-5">
-            <i class="fas fa-industry"></i>
-          </div>
-          <span class="absolute top-4 right-5 font-display font-black text-5xl text-brand/[.06] leading-none select-none">02</span>
-          <h4 class="font-display font-bold text-white text-sm mb-2">Manufacturing Know-How</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Deep PCB workflow knowledge from prototypes to mass production.</p>
-        </div>
-
-        <div class="why-card bg-card border border-white/[.07] rounded-2xl p-6 relative overflow-hidden">
-          <div class="why-icon w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl mb-5">
-            <i class="fas fa-shipping-fast"></i>
-          </div>
-          <span class="absolute top-4 right-5 font-display font-black text-5xl text-brand/[.06] leading-none select-none">03</span>
-          <h4 class="font-display font-bold text-white text-sm mb-2">Fast &amp; Reliable Supply</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Strong inventory ensures your line never stops for tooling.</p>
-        </div>
-
-        <div class="why-card bg-card border border-white/[.07] rounded-2xl p-6 relative overflow-hidden">
-          <div class="why-icon w-12 h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-xl mb-5">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <span class="absolute top-4 right-5 font-display font-black text-5xl text-brand/[.06] leading-none select-none">04</span>
-          <h4 class="font-display font-bold text-white text-sm mb-2">Long-Term Partnership</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">Trust, transparency, and consistent quality keep clients for life.</p>
-        </div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════════════════════════
-     BLOGS TEASER
+  <!-- ════════════════════════════════════════════════════════
+     STATS BAR
 ════════════════════════════════════════════════════════ -->
-<section class="py-16 bg-section-dark relative overflow-hidden">
-  <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
+  <div class="bg-card border-y border-brand/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[.06]">
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div
+        class="fade-up flex flex-col items-center justify-center py-5 px-2 sm:px-4 hover:bg-brand/[.04] transition-colors duration-300">
+        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="7"
+          data-suffix="+">0+</span>
+        <span
+          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Years
+          Experience</span>
+      </div>
 
-    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
-      <div class="fade-up">
-        <span class="inline-flex items-center gap-2
-                     bg-brand/10 border border-brand/25 rounded-full
-                     px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-4">
-          <i class="fa fa-circle text-[5px]"></i> Industry Knowledge
+      <div
+        class="fade-up flex flex-col items-center justify-center py-5 px-2 sm:px-4 hover:bg-brand/[.04] transition-colors duration-300">
+        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient"
+          data-count="500" data-suffix="+">0+</span>
+        <span
+          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Clients
+          Served</span>
+      </div>
+
+      <div
+        class="fade-up flex flex-col items-center justify-center py-5 px-2 sm:px-4 hover:bg-brand/[.04] transition-colors duration-300">
+        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient"
+          data-count="1200" data-suffix="+">0+</span>
+        <span
+          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Products
+          Supplied</span>
+      </div>
+
+      <div
+        class="fade-up flex flex-col items-center justify-center py-5 px-2 sm:px-4 hover:bg-brand/[.04] transition-colors duration-300">
+        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="99"
+          data-suffix="%">0%</span>
+        <span
+          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Client
+          Retention</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════════
+     KEY PRODUCTS
+════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-section-dark relative overflow-hidden">
+    <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-10 fade-up">
+        <span class="inline-flex items-center justify-center gap-2
+                   bg-brand/10 border border-brand/25 rounded-full
+                   px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-4">
+          <i class="fa fa-circle text-[5px]"></i> Our Products
         </span>
         <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight">
-          Latest from Our <span class="text-gradient">Blog</span>
+          Complete PCB <span class="text-gradient">Tooling Solutions</span>
         </h2>
+        <p class="mt-3 text-slate-400 max-w-lg mx-auto text-base leading-relaxed">
+          From micro-drills to V-cut blades — everything your production line needs, engineered to precision.
+        </p>
       </div>
-      <a href="./blog.html"
-         class="fade-up shrink-0 inline-flex items-center gap-2 px-6 py-2.5 border border-brand/30 text-brand
+
+      <!-- Cards — horizontal scroll on mobile, grid on desktop -->
+      <div class="flex flex-row overflow-x-auto gap-5 pb-4 hide-scrollbar snap-x snap-mandatory
+                sm:grid sm:grid-cols-2 lg:grid-cols-5 sm:overflow-visible sm:pb-0">
+
+        <!-- Drill -->
+        <a href="./product.html#pcb-drill" class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
+                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
+            <img src="./assets/Images/pcb-drill/slot-drill.png" alt="PCB Drill"
+              class="max-h-full max-w-full object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
+              Drills
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-bold text-white text-base mb-1.5">PCB Drill Tools</h3>
+            <p class="text-slate-400 text-xs leading-relaxed flex-1">Industrial-grade drilling for FR4, aluminium &amp;
+              multilayer PCBs.</p>
+            <span
+              class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
+              Explore <i class="fa fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Router -->
+        <a href="./product.html#pcb-routing" class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
+                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
+            <img src="./assets/Images/pcb-routing/aluminium-coated.png" alt="PCB Router"
+              class="max-h-full max-w-full object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
+              Routers
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-bold text-white text-base mb-1.5">PCB Routing Tools</h3>
+            <p class="text-slate-400 text-xs leading-relaxed flex-1">Precision routing for clean edge finish and
+              dimensional stability.</p>
+            <span
+              class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
+              Explore <i class="fa fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Spindle -->
+        <a href="./product.html#spindle" class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
+                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
+            <img src="./assets/Images/spindle/230505.png" alt="Spindles" class="max-h-full max-w-full object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
+              Spindles
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-bold text-white text-base mb-1.5">Spindles &amp; Spares</h3>
+            <p class="text-slate-400 text-xs leading-relaxed flex-1">High-speed spindles and precision spare parts for
+              PCB machinery.</p>
+            <span
+              class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
+              Explore <i class="fa fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- V-Cut -->
+        <a href="./product.html#vcut" class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
+                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
+            <img src="./assets/Images/vcut/51x48.png" alt="V-Cut Blades" class="max-h-full max-w-full object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
+              V-Cut
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-bold text-white text-base mb-1.5">V-Cut Blades</h3>
+            <p class="text-slate-400 text-xs leading-relaxed flex-1">Precision blades for clean, repeatable PCB
+              depanelization.</p>
+            <span
+              class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
+              Explore <i class="fa fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- More -->
+        <a href="./product.html#more" class="prod-card group shrink-0 w-[78vw] sm:w-auto snap-center
+                bg-card border border-white/[.07] rounded-2xl overflow-hidden flex flex-col">
+          <div class="relative h-48 overflow-hidden bg-[#0d1a2e] flex items-center justify-center p-4">
+            <img src="./assets/Images/more/routing-brush.png" alt="More Tools"
+              class="max-h-full max-w-full object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/70 to-transparent pointer-events-none"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">
+              Accessories
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-bold text-white text-base mb-1.5">More Tools</h3>
+            <p class="text-slate-400 text-xs leading-relaxed flex-1">Pins, rings, brushes, burr removers and all PCB
+              accessories.</p>
+            <span
+              class="mt-4 inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs group-hover:gap-2.5 transition-all duration-200">
+              Explore <i class="fa fa-arrow-right text-[10px]"></i>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-8 fade-up">
+        <a href="./product.html" class="inline-flex items-center gap-2 px-7 py-3 border border-brand/30 text-brand
+                font-display font-bold text-sm rounded-full hover:bg-brand/10 transition-all duration-300">
+          View Full Catalogue <i class="fa fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 bg-navy relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-lines bg-grid-60 pointer-events-none"></div>
+    <div
+      class="absolute top-0 right-0 w-[200px] md:w-[500px] h-[200px] md:h-[500px] rounded-full bg-brand/6 blur-[100px] pointer-events-none">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        <!-- Left: content -->
+        <div class="fade-up">
+          <span
+            class="inline-flex items-center gap-2
+                   bg-brand/10 border border-brand/25 rounded-full
+                   px-3 md:px-4 py-1.5 text-[10px] md:text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-5">
+            <i class="fa fa-circle text-[5px]"></i> Why Choose Us
+          </span>
+          <h2 class="font-display font-extrabold text-[clamp(1.6rem,5vw,3rem)] text-white leading-tight mb-4">
+            The <span class="text-gradient">Suryatantra</span><br>Difference
+          </h2>
+          <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6 max-w-md">
+            For over two decades we have been the trusted supply partner for PCB manufacturers who demand consistent
+            quality, fast delivery, and hands-on technical expertise.
+          </p>
+
+          <ul class="space-y-3 md:space-y-4">
+            <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+              <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
+              ISO-grade carbide tooling with traceable quality certifications
+            </li>
+            <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+              <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
+              Fast dispatch — most items shipped within 24 hours
+            </li>
+            <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+              <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
+              Dedicated technical support before and after purchase
+            </li>
+            <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
+              <i class="fa fa-check-circle text-brand mt-0.5 flex-shrink-0"></i>
+              Bulk pricing and flexible payment terms for repeat clients
+            </li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-3 md:gap-4">
+            <a href="./about.html"
+              class="inline-flex items-center gap-2 px-5 md:px-7 py-3 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+              Learn About Us <i class="fa fa-arrow-right text-xs"></i>
+            </a>
+            <a href="./contact.html"
+              class="inline-flex items-center gap-2 px-5 md:px-7 py-3 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: strength mini-cards -->
+        <div class="grid grid-cols-2 gap-3 md:gap-4 fade-up">
+
+          <div class="why-card bg-card border border-white/[.07] rounded-2xl p-4 md:p-6 relative overflow-hidden">
+            <div
+              class="why-icon w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-lg md:text-xl mb-4 md:mb-5">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <span
+              class="absolute top-3 right-4 md:top-4 md:right-5 font-display font-black text-4xl md:text-5xl text-brand/[.06] leading-none select-none">01</span>
+            <h4 class="font-display font-bold text-white text-xs md:text-sm mb-1.5 md:mb-2">Precision Engineering</h4>
+            <p class="text-slate-400 text-[11px] md:text-xs leading-relaxed">Tight-tolerance tooling built for
+              repeatable, high-yield results.</p>
+          </div>
+
+          <div class="why-card bg-card border border-white/[.07] rounded-2xl p-4 md:p-6 relative overflow-hidden">
+            <div
+              class="why-icon w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-lg md:text-xl mb-4 md:mb-5">
+              <i class="fas fa-industry"></i>
+            </div>
+            <span
+              class="absolute top-3 right-4 md:top-4 md:right-5 font-display font-black text-4xl md:text-5xl text-brand/[.06] leading-none select-none">02</span>
+            <h4 class="font-display font-bold text-white text-xs md:text-sm mb-1.5 md:mb-2">Manufacturing Know-How</h4>
+            <p class="text-slate-400 text-[11px] md:text-xs leading-relaxed">Deep PCB workflow knowledge from prototypes
+              to mass production.</p>
+          </div>
+
+          <div class="why-card bg-card border border-white/[.07] rounded-2xl p-4 md:p-6 relative overflow-hidden">
+            <div
+              class="why-icon w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-lg md:text-xl mb-4 md:mb-5">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <span
+              class="absolute top-3 right-4 md:top-4 md:right-5 font-display font-black text-4xl md:text-5xl text-brand/[.06] leading-none select-none">03</span>
+            <h4 class="font-display font-bold text-white text-xs md:text-sm mb-1.5 md:mb-2">Fast &amp; Reliable Supply
+            </h4>
+            <p class="text-slate-400 text-[11px] md:text-xs leading-relaxed">Strong inventory ensures your line never
+              stops for tooling.</p>
+          </div>
+
+          <div class="why-card bg-card border border-white/[.07] rounded-2xl p-4 md:p-6 relative overflow-hidden">
+            <div
+              class="why-icon w-10 h-10 md:w-12 md:h-12 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-lg md:text-xl mb-4 md:mb-5">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <span
+              class="absolute top-3 right-4 md:top-4 md:right-5 font-display font-black text-4xl md:text-5xl text-brand/[.06] leading-none select-none">04</span>
+            <h4 class="font-display font-bold text-white text-xs md:text-sm mb-1.5 md:mb-2">Long-Term Partnership</h4>
+            <p class="text-slate-400 text-[11px] md:text-xs leading-relaxed">Trust, transparency, and consistent quality
+              keep clients for life.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+     BLOGS TEASER
+════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-section-dark relative overflow-hidden">
+    <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
+        <div class="fade-up">
+          <span class="inline-flex items-center gap-2
+                     bg-brand/10 border border-brand/25 rounded-full
+                     px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-4">
+            <i class="fa fa-circle text-[5px]"></i> Industry Knowledge
+          </span>
+          <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight">
+            Latest from Our <span class="text-gradient">Blog</span>
+          </h2>
+        </div>
+        <a href="./blog.html"
+          class="fade-up shrink-0 inline-flex items-center gap-2 px-6 py-2.5 border border-brand/30 text-brand
                 font-display font-bold text-sm rounded-full hover:bg-brand/10 transition-all duration-300 self-start sm:self-auto">
-        All Articles <i class="fa fa-arrow-right text-xs"></i>
-      </a>
+          All Articles <i class="fa fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Blog 1 -->
+        <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
+          <div class="relative h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581093588401-16f2c1b2f7b3?w=600&q=80" alt="PCB Drill Bits"
+              class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Drilling</span>
+          </div>
+          <div class="p-6">
+            <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">4 min read</p>
+            <h3 class="font-display font-bold text-white text-base leading-snug mb-3">Choosing the Right PCB Drill Bits
+            </h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Selecting the correct drill bit improves hole
+              precision, extends tool life, and keeps production running smoothly.</p>
+            <a href="./blog.html"
+              class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
+              Read Article <i class="fa fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
+          <div class="relative h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Spindles"
+              class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Spindles</span>
+          </div>
+          <div class="p-6">
+            <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">5 min read</p>
+            <h3 class="font-display font-bold text-white text-base leading-snug mb-3">High-Speed Spindles in PCB
+              Production</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">High RPM spindles above 60,000 RPM deliver smoother
+              drilling, reduced vibration, and better hole quality.</p>
+            <a href="./blog.html"
+              class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
+              Read Article <i class="fa fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
+          <div class="relative h-44 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581091012184-5c3f6e7a3d52?w=600&q=80" alt="PCB Routing"
+              class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
+            <span
+              class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Routing</span>
+          </div>
+          <div class="p-6">
+            <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">4 min read</p>
+            <h3 class="font-display font-bold text-white text-base leading-snug mb-3">PCB Routing Tools Explained</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">Advanced routing blades define edge finish and
+              dimensional stability of your final PCB.</p>
+            <a href="./blog.html"
+              class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
+              Read Article <i class="fa fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- Blog 1 -->
-      <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
-        <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581093588401-16f2c1b2f7b3?w=600&q=80"
-               alt="PCB Drill Bits" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Drilling</span>
-        </div>
-        <div class="p-6">
-          <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">4 min read</p>
-          <h3 class="font-display font-bold text-white text-base leading-snug mb-3">Choosing the Right PCB Drill Bits</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">Selecting the correct drill bit improves hole precision, extends tool life, and keeps production running smoothly.</p>
-          <a href="./blog.html" class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
-            Read Article <i class="fa fa-arrow-right text-[10px]"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- Blog 2 -->
-      <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
-        <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"
-               alt="Spindles" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Spindles</span>
-        </div>
-        <div class="p-6">
-          <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">5 min read</p>
-          <h3 class="font-display font-bold text-white text-base leading-snug mb-3">High-Speed Spindles in PCB Production</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">High RPM spindles above 60,000 RPM deliver smoother drilling, reduced vibration, and better hole quality.</p>
-          <a href="./blog.html" class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
-            Read Article <i class="fa fa-arrow-right text-[10px]"></i>
-          </a>
-        </div>
-      </article>
-
-      <!-- Blog 3 -->
-      <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
-        <div class="relative h-44 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581091012184-5c3f6e7a3d52?w=600&q=80"
-               alt="PCB Routing" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
-          <span class="absolute top-3 left-3 bg-brand/90 text-white font-display font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full">Routing</span>
-        </div>
-        <div class="p-6">
-          <p class="text-brand text-[10px] font-semibold uppercase tracking-widest mb-2">4 min read</p>
-          <h3 class="font-display font-bold text-white text-base leading-snug mb-3">PCB Routing Tools Explained</h3>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">Advanced routing blades define edge finish and dimensional stability of your final PCB.</p>
-          <a href="./blog.html" class="inline-flex items-center gap-1.5 text-brand font-display font-semibold text-xs hover:gap-2.5 transition-all duration-200">
-            Read Article <i class="fa fa-arrow-right text-[10px]"></i>
-          </a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════════════════
      CTA
 ════════════════════════════════════════════════════════ -->
-<section class="relative py-4 bg-mid overflow-hidden">
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-brand/[.11] pointer-events-none"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-brand/[.04] blur-3xl pointer-events-none"></div>
+  <section class="relative py-4 bg-mid overflow-hidden">
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none">
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-brand/[.11] pointer-events-none">
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-brand/[.04] blur-3xl pointer-events-none">
+    </div>
 
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center fade-up">
-    <span class="inline-flex items-center justify-center gap-2
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center fade-up">
+      <span class="inline-flex items-center justify-center gap-2
                  bg-brand/10 border border-brand/25 rounded-full
                  px-4 py-1.5 text-[11px] font-display font-bold text-brand uppercase tracking-[.1em] mb-5">
-      <i class="fa fa-circle text-[5px]"></i> Let's Work Together
-    </span>
-    <h2 class="font-display font-extrabold text-[clamp(2rem,4.5vw,3.25rem)] text-white leading-tight mb-4">
-      Ready to Upgrade Your<br><span class="text-gradient">PCB Tooling?</span>
-    </h2>
-    <p class="text-slate-400 text-lg leading-relaxed mb-8">
-      Contact our team for expert advice, a custom quote, or to discuss your specific manufacturing requirements.
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-4">
-      <a href="./contact.html"
-         class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-        <i class="fa fa-envelope text-xs"></i> Contact Our Team
-      </a>
-      <a href="https://wa.me/919730429324"
-         class="inline-flex items-center gap-2 px-8 py-3.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
+        <i class="fa fa-circle text-[5px]"></i> Let's Work Together
+      </span>
+      <h2 class="font-display font-extrabold text-[clamp(2rem,4.5vw,3.25rem)] text-white leading-tight mb-4">
+        Ready to Upgrade Your<br><span class="text-gradient">PCB Tooling?</span>
+      </h2>
+      <p class="text-slate-400 text-lg leading-relaxed mb-8">
+        Contact our team for expert advice, a custom quote, or to discuss your specific manufacturing requirements.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="./contact.html"
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+          <i class="fa fa-envelope text-xs"></i> Contact Our Team
+        </a>
+        <a href="https://wa.me/919730429324"
+          class="inline-flex items-center gap-2 px-8 py-3.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════════════════
      ENQUIRY FLOATING BUTTON
 ════════════════════════════════════════════════════════ -->
-<a href="#" id="openEnquiry"
-   class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14
+  <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14
           bg-brand text-white rounded-full shadow-brand overflow-hidden
           transition-all duration-300 ease-out hover:w-40 hover:shadow-brand-lg">
-  <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
-    <i class="fa-solid fa-envelope"></i>
-  </span>
-  <span class="ml-1 pr-5 text-sm font-display font-semibold tracking-wide whitespace-nowrap
+    <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
+      <i class="fa-solid fa-envelope"></i>
+    </span>
+    <span class="ml-1 pr-5 text-sm font-display font-semibold tracking-wide whitespace-nowrap
                opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0
                transition-all duration-300 delay-75">
-    Send Enquiry
-  </span>
-</a>
+      Send Enquiry
+    </span>
+  </a>
 
-<div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-  <iframe src="./components/enquiry.html" class="w-full h-full border-none"></iframe>
-</div>
+  <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
+    <iframe src="./components/enquiry.html" class="w-full h-full border-none"></iframe>
+  </div>
 
 
-<!-- ════════════════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════════════════
      FOOTER
 ════════════════════════════════════════════════════════ -->
-<div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 
 
-<!-- ════════════════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════════════════
      SCRIPTS
 ════════════════════════════════════════════════════════ -->
-<script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-<script>
-/* ── Enquiry button ── */
-const openBtn = document.getElementById('openEnquiry');
-const wrapper = document.getElementById('enquiryWrapper');
-openBtn?.addEventListener('click', (e) => {
-  e.preventDefault();
-  wrapper.classList.remove('hidden');
-  document.body.classList.add('overflow-hidden');
-});
-window.closeEnquiry = () => {
-  wrapper?.classList.add('hidden');
-  document.body.classList.remove('overflow-hidden');
-};
-
-/* ── Navbar scroll ── */
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar')?.classList.toggle('nav-scrolled', scrollY > 24);
-}, { passive: true });
-
-/* ── Mobile menu ── */
-const toggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const hbBars = toggle ? [...toggle.querySelectorAll('.hb')] : [];
-
-toggle?.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('menu-open');
-  toggle.setAttribute('aria-expanded', String(isOpen));
-  if (isOpen) {
-    hbBars[0].style.transform = 'rotate(45deg) translate(5px,5px)';
-    hbBars[1].style.opacity   = '0';
-    hbBars[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
-  } else {
-    hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
-  }
-});
-
-document.addEventListener('click', (e) => {
-  if (mobileMenu?.classList.contains('menu-open') &&
-      !mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
-    mobileMenu.classList.remove('menu-open');
-    toggle.setAttribute('aria-expanded', 'false');
-    hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
-  }
-});
-
-/* ── Scroll-reveal ── */
-const fadeEls = document.querySelectorAll('.fade-up');
-const revealIO = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const siblings = [...entry.target.parentElement.querySelectorAll('.fade-up:not(.visible)')];
-    const idx = siblings.indexOf(entry.target);
-    setTimeout(() => entry.target.classList.add('visible'), idx * 80);
-    revealIO.unobserve(entry.target);
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-fadeEls.forEach(el => revealIO.observe(el));
-
-/* ── Animated counters ── */
-const counters = document.querySelectorAll('[data-count]');
-const counterIO = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const el     = entry.target;
-    const target = parseInt(el.dataset.count, 10);
-    const suffix = el.dataset.suffix ?? '';
-    const dur    = 1800;
-    const start  = performance.now();
-    const tick   = (now) => {
-      const t = Math.min((now - start) / dur, 1);
-      el.textContent = Math.round((1 - Math.pow(1 - t, 3)) * target) + suffix;
-      if (t < 1) requestAnimationFrame(tick);
+  <script>
+    /* ── Enquiry button ── */
+    const openBtn = document.getElementById('openEnquiry');
+    const wrapper = document.getElementById('enquiryWrapper');
+    openBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      wrapper.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    });
+    window.closeEnquiry = () => {
+      wrapper?.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
     };
-    requestAnimationFrame(tick);
-    counterIO.unobserve(el);
-  });
-}, { threshold: 0.6 });
-counters.forEach(el => counterIO.observe(el));
-</script>
+
+    /* ── Navbar scroll ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar')?.classList.toggle('nav-scrolled', scrollY > 24);
+    }, { passive: true });
+
+    /* ── Mobile menu ── */
+    const toggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hbBars = toggle ? [...toggle.querySelectorAll('.hb')] : [];
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('menu-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        hbBars[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+        hbBars[1].style.opacity = '0';
+        hbBars[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+      } else {
+        hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (mobileMenu?.classList.contains('menu-open') &&
+        !mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+        mobileMenu.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
+      }
+    });
+
+    /* ── Scroll-reveal ── */
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const siblings = [...entry.target.parentElement.querySelectorAll('.fade-up:not(.visible)')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('visible'), idx * 80);
+        revealIO.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => revealIO.observe(el));
+
+    /* ── Animated counters ── */
+    const counters = document.querySelectorAll('[data-count]');
+    const counterIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix ?? '';
+        const dur = 1800;
+        const start = performance.now();
+        const tick = (now) => {
+          const t = Math.min((now - start) / dur, 1);
+          el.textContent = Math.round((1 - Math.pow(1 - t, 3)) * target) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        counterIO.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => counterIO.observe(el));
+  </script>
 
 </body>
+
 </html>

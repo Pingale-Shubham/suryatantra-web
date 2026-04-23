@@ -92,12 +92,14 @@ const MobileMenu = {
 
   open() {
     this.menu.classList.add('menu-open', 'open');
+    this.toggle?.classList.add('active');
     this.toggle?.setAttribute('aria-expanded', 'true');
     this._animateBars(true);
   },
 
   close() {
     this.menu.classList.remove('menu-open', 'open');
+    this.toggle?.classList.remove('active');
     this.toggle?.setAttribute('aria-expanded', 'false');
     this._animateBars(false);
   },
