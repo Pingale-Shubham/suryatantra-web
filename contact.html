@@ -6,13 +6,28 @@
   <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
   <title>Suryatantra Enterprises LLP | Contact</title>
   <meta name="description" content="Suryatantra Enterprises LLP — Contact us for PCB manufacturing tools, precision machining, and technical support." />
+  <link rel="stylesheet" href="styles.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { syne: ['Syne','sans-serif'], dm: ['DM Sans','sans-serif'] },
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          fontSize: {
+            'xs': ['13px', '1.6'],
+            'sm': ['15px', '1.6'],
+            'base': ['17px', '1.6'],
+            'lg': ['20px', '1.5'],
+            'xl': ['24px', '1.4'],
+            '2xl': ['30px', '1.3'],
+            '3xl': ['36px', '1.2'],
+            '4xl': ['48px', '1.1'],
+            '5xl': ['64px', '1.0'],
+          },
           colors: { navy:'#071428', mid:'#0b1f3a', deep:'#0e2a4f', card:'#111f33', orange:'#f97316', amber:'#fbbf24' },
           backgroundImage: {
             'hero-gradient':    'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
@@ -31,7 +46,9 @@
     };
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>(function(){ emailjs.init("nafRyrWhypRdV_Zy-"); })();</script>
@@ -141,7 +158,7 @@
   </style>
 </head>
 
-<body class="font-dm bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
+<body class="font-body bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
 
 <!-- ═══════════════ NAVBAR ═══════════════ -->
 <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-navy/90 backdrop-blur-xl border-b border-orange/10 transition-all duration-300">
@@ -153,10 +170,10 @@
 
     <nav class="hidden md:block">
       <ul class="flex items-center gap-8">
-        <li><a href="./index.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
-        <li><a href="./about.html" class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
+        <li><a href="./index.html" class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
+        <li><a href="./about.html" class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
         <li class="relative group">
-          <button class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 flex items-center gap-1 bg-transparent border-none cursor-pointer hover:text-white transition-colors">
+          <button class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 flex items-center gap-1 bg-transparent border-none cursor-pointer hover:text-white transition-colors">
             Products <i class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-200 group-hover:rotate-180"></i>
           </button>
           <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+10px)] w-44
@@ -171,8 +188,8 @@
             <a href="./product.html#more"        class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">More Tools</a>
           </div>
         </li>
-        <li><a href="./blog.html"    class="nav-link font-syne font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Blogs</a></li>
-        <li><a href="./contact.html" class="nav-link nav-active font-syne font-semibold text-[12px] uppercase tracking-widest transition-colors">Contact</a></li>
+        <li><a href="./blog.html"    class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Blogs</a></li>
+        <li><a href="./contact.html" class="nav-link nav-active font-display font-semibold text-[12px] uppercase tracking-widest transition-colors">Contact</a></li>
       </ul>
     </nav>
 
@@ -186,11 +203,11 @@
 
   <div id="mobileMenu" class="md:hidden bg-card border-t border-orange/10">
     <ul class="flex flex-col px-6 py-4 gap-4">
-      <li><a href="./index.html"   class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Home</a></li>
-      <li><a href="./about.html"   class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">About</a></li>
-      <li><a href="./product.html" class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Products</a></li>
-      <li><a href="./blog.html"    class="font-syne font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Blogs</a></li>
-      <li><a href="./contact.html" class="font-syne font-semibold text-sm text-orange">Contact</a></li>
+      <li><a href="./index.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Home</a></li>
+      <li><a href="./about.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">About</a></li>
+      <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Products</a></li>
+      <li><a href="./blog.html"    class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Blogs</a></li>
+      <li><a href="./contact.html" class="font-display font-semibold text-sm text-orange">Contact</a></li>
     </ul>
   </div>
 </header>
@@ -207,7 +224,7 @@
       <span class="opacity-40">/</span>
       <span class="text-orange">Contact</span>
     </nav>
-    <h1 class="font-syne font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
+    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
       Get In <span class="grad-text">Touch.</span>
     </h1>
     <p class="mt-2 text-slate-400 text-[14px] max-w-md leading-relaxed">
@@ -232,7 +249,7 @@
     <!-- Form -->
     <div class="fade-up">
       <div class="badge mb-3"><i class="fa fa-circle text-[4px]"></i> Send Enquiry</div>
-      <h2 class="font-syne font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">
+      <h2 class="font-display font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">
         Let's Start a <span class="grad-text">Conversation</span>
       </h2>
       <p class="text-slate-500 text-[13px] mb-5">Fill in the form and we'll respond within 24 hours.</p>
@@ -270,7 +287,7 @@
             <a href="#"                             aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <button type="submit" id="submitBtn"
-                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
+                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
             <i class="fa fa-paper-plane text-xs"></i> Send Message
           </button>
         </div>
@@ -290,7 +307,7 @@
         <i class="fa fa-map-marker-alt"></i>
       </div>
       <div>
-        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Our Address</h4>
+        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Our Address</h4>
         <p class="text-slate-400 text-[12.5px] leading-snug">Sinhagad Road, opp. Green-Field Hotel,<br>Dhayari, Pune – 411041, India</p>
       </div>
     </div>
@@ -300,7 +317,7 @@
         <i class="fa fa-phone"></i>
       </div>
       <div>
-        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Phone</h4>
+        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Phone</h4>
         <a href="tel:+919730429324" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">+91 97304 29324</a>
       </div>
     </div>
@@ -310,7 +327,7 @@
         <i class="fa fa-envelope"></i>
       </div>
       <div>
-        <h4 class="font-syne font-bold text-white text-[12.5px] mb-0.5">Email</h4>
+        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Email</h4>
         <a href="mailto:suryatantraa@gmail.com" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">suryatantraa@gmail.com</a>
       </div>
     </div>
@@ -327,7 +344,7 @@
 
     <div class="text-center mb-8 fade-up">
       <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Quick Answers</div>
-      <h2 class="font-syne font-extrabold text-[26px] md:text-[32px] text-white leading-tight">
+      <h2 class="font-display font-extrabold text-[26px] md:text-[32px] text-white leading-tight">
         Frequently Asked <span class="grad-text">Questions</span>
       </h2>
       <p class="mt-1.5 text-slate-400 text-[13px] max-w-sm mx-auto leading-relaxed">
@@ -342,7 +359,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What types of PCB tools do you supply?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">What types of PCB tools do you supply?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -354,7 +371,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you offer custom automation solutions?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you offer custom automation solutions?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -366,7 +383,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What is your delivery timeline?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">What is your delivery timeline?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -378,7 +395,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you provide technical support?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you provide technical support?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -395,7 +412,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">How can I place an order?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">How can I place an order?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -407,7 +424,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Where are you located?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">Where are you located?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -419,7 +436,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">Do you ship internationally?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you ship internationally?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -431,7 +448,7 @@
 
         <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
           <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-syne font-semibold text-white text-[13px] leading-snug">What payment methods do you accept?</span>
+            <span class="font-display font-semibold text-white text-[13px] leading-snug">What payment methods do you accept?</span>
             <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
           </button>
           <div class="faq-content">
@@ -455,7 +472,7 @@
 
   <div class="relative z-10 max-w-xl mx-auto px-6 text-center fade-up">
     <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Ready to Order?</div>
-    <h2 class="font-syne font-extrabold text-[24px] md:text-[30px] text-white leading-tight mb-2.5">
+    <h2 class="font-display font-extrabold text-[24px] md:text-[30px] text-white leading-tight mb-2.5">
       Need <span class="grad-text">Expert Advice</span> on PCB Tools?
     </h2>
     <p class="text-slate-400 text-[13.5px] leading-relaxed mb-6">
@@ -463,11 +480,11 @@
     </p>
     <div class="flex flex-wrap items-center justify-center gap-3">
       <a href="https://wa.me/919730429324"
-         class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-syne font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
+         class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
         <i class="fab fa-whatsapp text-sm"></i> Chat on WhatsApp
       </a>
       <a href="./product.html"
-         class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-syne font-bold text-[13px] rounded-full hover:border-orange hover:text-orange transition-all duration-200">
+         class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full hover:border-orange hover:text-orange transition-all duration-200">
         <i class="fa fa-layer-group text-xs"></i> Browse Products
       </a>
     </div>
