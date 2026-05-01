@@ -7,7 +7,6 @@
   <title>Suryatantra Enterprises LLP | Contact</title>
   <meta name="description" content="Suryatantra Enterprises LLP — Contact us for PCB manufacturing tools, precision machining, and technical support." />
   <link rel="stylesheet" href="styles.css" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -45,154 +44,30 @@
       },
     };
   </script>
-
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>(function(){ emailjs.init("nafRyrWhypRdV_Zy-"); })();</script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; }
-
-    .grad-text {
-      background: linear-gradient(135deg,#f97316,#fbbf24);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .grid-texture {
-      background-image:
-        linear-gradient(rgba(249,115,22,.04) 1px, transparent 1px),
-        linear-gradient(90deg,rgba(249,115,22,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .dot-texture {
-      background-image: radial-gradient(rgba(249,115,22,.06) 1px, transparent 1px);
-      background-size: 22px 22px;
-    }
-
-    /* Scroll-reveal */
-    .fade-up { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
-    .fade-up.visible { opacity:1; transform:none; }
-
-    /* Navbar */
-    .nav-link { position:relative; }
-    .nav-link::after {
-      content:''; position:absolute; bottom:-3px; left:0;
-      width:0; height:2px; background:#f97316; transition:width .25s ease;
-    }
-    .nav-link:hover { color:#fff !important; }
-    .nav-link:hover::after { width:100%; }
-    .nav-active { color:#f97316 !important; }
-    .nav-active::after { width:100% !important; }
-    .nav-scrolled { background:rgba(7,20,40,.98) !important; }
-
-    /* Mobile menu */
-    #mobileMenu { max-height:0; overflow:hidden; opacity:0; transition:max-height .3s ease, opacity .25s ease; }
-    #mobileMenu.menu-open { max-height:320px; opacity:1; }
-    .hb { transition:transform .3s ease, opacity .3s ease; }
-
-    /* Badge */
-    .badge {
-      display:inline-flex; align-items:center; gap:6px;
-      background:rgba(249,115,22,.1); border:1px solid rgba(249,115,22,.28);
-      border-radius:999px; padding:4px 12px;
-      font-size:10px; font-weight:700; color:#f97316;
-      text-transform:uppercase; letter-spacing:.1em;
-    }
-
-    /* Floating-label form */
-    .field { position:relative; }
-    .field input, .field textarea {
-      width:100%; background:rgba(255,255,255,.03);
-      border:1.5px solid rgba(255,255,255,.1); border-radius:10px;
-      outline:none; padding:.85rem 1rem .45rem;
-      color:#e2e8f0; font-family:'DM Sans',sans-serif; font-size:.9rem;
-      transition:border-color .2s, background .2s;
-    }
-    .field textarea { resize:none; }
-    .field input::placeholder, .field textarea::placeholder { color:transparent; }
-    .field input:focus, .field textarea:focus {
-      border-color:#f97316; background:rgba(249,115,22,.04);
-    }
-    .field label {
-      position:absolute; left:1rem; top:.8rem;
-      color:#64748b; font-size:.85rem; font-family:'DM Sans',sans-serif;
-      pointer-events:none; transition:top .18s ease, font-size .18s ease, color .18s ease;
-    }
-    .field input:focus ~ label,
-    .field input:not(:placeholder-shown) ~ label,
-    .field textarea:focus ~ label,
-    .field textarea:not(:placeholder-shown) ~ label {
-      top:.28rem; font-size:.67rem; color:#f97316; letter-spacing:.04em;
-    }
-
-    /* FAQ */
-    .faq-content { max-height:0; overflow:hidden; transition:max-height .36s cubic-bezier(.4,0,.2,1); }
-    .faq-btn i.fa-plus { transition:transform .28s ease; }
-    .faq-btn.faq-open i.fa-plus { transform:rotate(45deg); }
-    .faq-item { transition:border-color .2s; }
-
-    /* Info card */
-    .info-card { transition:transform .22s ease, border-color .22s ease; }
-    .info-card:hover { transform:translateY(-2px); }
-
-    /* Social icon */
-    .social-btn {
-      width:36px; height:36px; border-radius:50%;
-      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
-      display:flex; align-items:center; justify-content:center;
-      color:#94a3b8; font-size:13px;
-      transition:background .2s, border-color .2s, color .2s, transform .2s;
-    }
-    .social-btn:hover { background:rgba(249,115,22,.12); border-color:#f97316; color:#f97316; transform:translateY(-2px); }
-
-    /* Map border glow */
-    .map-wrap { position:relative; border-radius:16px; overflow:hidden; }
-    .map-wrap::before {
-      content:''; position:absolute; inset:-1px; border-radius:16px;
-      background:linear-gradient(135deg,rgba(249,115,22,.2),transparent 60%);
-      z-index:0; pointer-events:none;
-    }
-    .map-wrap iframe { position:relative; z-index:1; display:block; }
-  </style>
 </head>
-
 <body class="font-body bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
 
 <!-- ═══════════════ NAVBAR ═══════════════ -->
 <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-navy/90 backdrop-blur-xl border-b border-orange/10 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-
     <a href="./index.html" class="flex-shrink-0">
       <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 object-contain">
     </a>
-
     <nav class="hidden md:block">
       <ul class="flex items-center gap-8">
         <li><a href="./index.html" class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
         <li><a href="./about.html" class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
-        <li class="relative group">
-          <button class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 flex items-center gap-1 bg-transparent border-none cursor-pointer hover:text-white transition-colors">
-            Products <i class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-200 group-hover:rotate-180"></i>
-          </button>
-          <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+10px)] w-44
-                      bg-card border border-orange/20 rounded-xl p-2 shadow-2xl
-                      opacity-0 invisible translate-y-1
-                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                      transition-all duration-200 pointer-events-none group-hover:pointer-events-auto">
-            <a href="./product.html#pcb-drill"   class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Drills</a>
-            <a href="./product.html#pcb-routing" class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Routers</a>
-            <a href="./product.html#spindle"     class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">Spindles &amp; Spares</a>
-            <a href="./product.html#vcut"        class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">V-Cut Blades</a>
-            <a href="./product.html#more"        class="block px-3 py-2 rounded-lg text-slate-400 text-[12.5px] hover:bg-orange/10 hover:text-orange transition-all duration-150">More Tools</a>
-          </div>
-        </li>
+        <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">Products</a></li>
         <li><a href="./blog.html"    class="nav-link font-display font-semibold text-[12px] uppercase tracking-widest text-slate-400 transition-colors">Blogs</a></li>
         <li><a href="./contact.html" class="nav-link nav-active font-display font-semibold text-[12px] uppercase tracking-widest transition-colors">Contact</a></li>
       </ul>
     </nav>
-
     <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu"
             class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer">
       <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
@@ -200,7 +75,6 @@
       <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
     </button>
   </div>
-
   <div id="mobileMenu" class="md:hidden bg-card border-t border-orange/10">
     <ul class="flex flex-col px-6 py-4 gap-4">
       <li><a href="./index.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Home</a></li>
@@ -212,12 +86,10 @@
   </div>
 </header>
 
-
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
   <div class="absolute inset-0 grid-texture pointer-events-none"></div>
   <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
-
   <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
     <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
       <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
@@ -227,12 +99,11 @@
     <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
       Get In <span class="grad-text">Touch.</span>
     </h1>
-    <p class="mt-2 text-slate-400 text-[14px] max-w-md leading-relaxed">
+    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">
       Need PCB tools or expert support? Our team is just a message away.
     </p>
   </div>
 </section>
-
 
 <!-- ═══════════════ CONTACT + MAP ═══════════════ -->
 <section class="py-12 bg-section-gradient">
@@ -463,34 +334,35 @@
   </div>
 </section>
 
-
 <!-- ═══════════════ CTA ═══════════════ -->
-<section class="relative py-12 bg-mid overflow-hidden">
+<section class="relative py-8 md:py-8 bg-mid overflow-hidden">
+  <!-- Background Effects -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-orange/[0.07] animate-pulse-ring pointer-events-none"></div>
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-orange/[0.1] pointer-events-none"></div>
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-orange/[0.05] blur-3xl pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-xl mx-auto px-6 text-center fade-up">
-    <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Ready to Order?</div>
-    <h2 class="font-display font-extrabold text-[24px] md:text-[30px] text-white leading-tight mb-2.5">
-      Need <span class="grad-text">Expert Advice</span> on PCB Tools?
-    </h2>
-    <p class="text-slate-400 text-[13.5px] leading-relaxed mb-6">
-      Whether a quick quote or a long-term supply partnership — we're here to help you choose right.
+  <!-- Content -->
+  <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-center fade-up">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-1.5 bg-orange/10 border border-orange/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-orange uppercase tracking-wide mb-4">
+      <i class="fa fa-circle text-[4px]"></i>Ready to Order?
+    </div>
+    <!-- Heading -->
+    <h2 class="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">Need <span class="grad-text">Expert Advice</span> on PCB Tools?</h2>
+    <!-- Description -->
+    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+      Whether a quick quote or a long-term supply partnership — we’re here to help you choose right.
     </p>
+    <!-- Buttons -->
     <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="https://wa.me/919730429324"
-         class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
-        <i class="fab fa-whatsapp text-sm"></i> Chat on WhatsApp
+      <a href="https://wa.me/919730429324" class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-display font-bold text-sm rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
+        <i class="fab fa-whatsapp text-sm"></i>Chat on WhatsApp
       </a>
-      <a href="./product.html"
-         class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full hover:border-orange hover:text-orange transition-all duration-200">
-        <i class="fa fa-layer-group text-xs"></i> Browse Products
+      <a href="./product.html" class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-orange hover:text-orange transition-all duration-200">
+        <i class="fa fa-layer-group text-xs"></i>Browse Products
       </a>
     </div>
   </div>
 </section>
-
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="bg-navy border-t border-white/[0.06] py-5">
@@ -507,74 +379,6 @@
     </div>
   </div>
 </footer>
-
-
-<!-- ═══════════════ SCRIPTS ═══════════════ -->
-<script>
-  /* Footer year */
-  document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-  /* Scroll-reveal */
-  const ro = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-up').forEach(el => ro.observe(el));
-
-  /* Navbar scroll */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('nav-scrolled', scrollY > 30), { passive:true });
-
-  /* Hamburger */
-  const toggle = document.getElementById('menuToggle');
-  const menu   = document.getElementById('mobileMenu');
-  const bars   = toggle.querySelectorAll('.hb');
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', open);
-    bars[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
-    bars[1].style.opacity   = open ? '0' : '';
-    bars[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
-  });
-  /* Contact form */
-  const form      = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const statusEl  = document.getElementById('formStatus');
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const name    = document.getElementById('name').value.trim();
-    const phone   = document.getElementById('phone').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !phone || !email || !message)
-      return showStatus('Please fill in all fields.', '#f97316', 'rgba(249,115,22,.08)');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      return showStatus('Enter a valid email address.', '#f97316', 'rgba(249,115,22,.08)');
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin text-xs"></i> Sending…';
-
-    try {
-      await emailjs.send('service_suryatantra', 'template_contact',
-        { from_name:name, from_phone:phone, from_email:email, message, reply_to:email });
-      showStatus("✓ Message sent! We'll be in touch shortly.", '#22c55e', 'rgba(34,197,94,.08)');
-      form.reset();
-    } catch(err) {
-      console.error(err);
-      showStatus('Something went wrong. Please try again or email us.', '#f97316', 'rgba(249,115,22,.08)');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fa fa-paper-plane text-xs"></i> Send Message';
-    }
-  });
-
-  function showStatus(msg, color, bg) {
-    statusEl.textContent = msg;
-    statusEl.style.cssText = `display:block;color:${color};background:${bg};border:1px solid ${color}44;`;
-    setTimeout(() => statusEl.style.display = 'none', 5500);
-  }
-</script>
 
 <script src="./assets/js/script.js"  onerror="console.warn('script.js not found')"></script>
 <script src="./assets/js/contact.js" onerror="console.warn('contact.js not found')"></script>

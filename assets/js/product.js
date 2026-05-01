@@ -120,6 +120,21 @@ const PRODUCTS = {
         ]
       },
       {
+        name: "FR4 Diamond Coated Router",
+        image: "./assets/Images/pcb-routing/fr4-dcoated.png",
+        parameters: {
+          "Diameter": "0.8 – 3.0 mm",
+          "Coating": "diamond",
+          "Application": "diamond coated bit",
+          // "Max RPM": "60,000"
+        },
+        features: [
+          "Smooth board edges",
+          "High-speed cutting",
+          "Extended tool life"
+        ]
+      },
+      {
         name: "FR4 Non Coated Router",
         image: "./assets/Images/pcb-routing/fr4-non-coated.png",
         parameters: {
@@ -132,6 +147,21 @@ const PRODUCTS = {
           "Cost-effective solution",
           "Clean routing finish",
           "Stable performance"
+        ]
+      },
+      {
+        name: "Diamond Coated Router",
+        image: "./assets/Images/pcb-routing/d-coated.png",
+        parameters: {
+          "Diameter": "0.8 – 3.0 mm",
+          "Coating": "Diamond",
+          "Application": "diamond",
+          // "Max RPM": "60,000"
+        },
+        features: [
+          "Smooth board edges",
+          "High-speed cutting",
+          "Extended tool life"
         ]
       },
       {

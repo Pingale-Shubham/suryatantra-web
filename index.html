@@ -97,166 +97,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
   <style>
-    /* Gradient text */
-    .text-gradient {
-      background: linear-gradient(135deg, #f97316, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Scroll-reveal */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* Nav underline */
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #f97316;
-      border-radius: 2px;
-      transition: width .3s ease;
-    }
-
-    .nav-link:hover {
-      color: #fff !important;
-    }
-
-    .nav-link:hover::after,
-    .nav-active::after {
-      width: 100%;
-    }
-
-    .nav-active {
-      color: #f97316 !important;
-    }
-
-    #navbar {
-      transition: background .3s, border-color .3s;
-    }
-
-    #navbar.nav-scrolled {
-      background: rgba(7, 20, 40, .97) !important;
-    }
-
-    /* Mobile menu */
-    #mobileMenu {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height .38s cubic-bezier(.4, 0, .2, 1), opacity .28s ease;
-    }
-
-    #mobileMenu.menu-open {
-      max-height: 380px;
-      opacity: 1;
-    }
-
-    .hb {
-      transition: transform .3s ease, opacity .3s ease;
-    }
-
-    /* Product category cards */
-    .prod-card {
-      transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
-    }
-
-    .prod-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 28px 64px rgba(0, 0, 0, .45);
-      border-color: rgba(249, 115, 22, .4) !important;
-    }
-
-    .prod-card img {
-      transition: transform .55s ease;
-    }
-
-    .prod-card:hover img {
-      transform: scale(1.07);
-    }
-
-    /* Why-us cards */
-    .why-card {
-      transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
-    }
-
-    .why-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
-      border-color: rgba(249, 115, 22, .4) !important;
-    }
-
-    .why-card:hover .why-icon {
-      background: rgba(249, 115, 22, .18);
-      border-color: #f97316;
-      box-shadow: 0 0 24px rgba(249, 115, 22, .3);
-    }
-
-    .why-icon {
-      transition: background .3s, border-color .3s, box-shadow .3s;
-    }
-
-    /* Blog cards */
-    .blog-card {
-      transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
-    }
-
-    .blog-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, .4);
-      border-color: rgba(249, 115, 22, .35) !important;
-    }
-
-    .blog-card img {
-      transition: transform .55s ease;
-    }
-
-    .blog-card:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Hero scroll indicator */
-    @keyframes bounce-y {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(8px);
-      }
-    }
-
-    .bounce-y {
-      animation: bounce-y 1.8s ease-in-out infinite;
-    }
-
-    /* Hide scrollbar utility */
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .hide-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
   </style>
 </head>
 
@@ -288,32 +128,11 @@
               About
             </a>
           </li>
-          <li class="relative group">
-            <button type="button"
-              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors hover:text-white flex items-center gap-1.5 cursor-pointer bg-transparent border-0">
+                    <li>
+            <a href="./product.html" data-page="product"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
               Products
-              <i
-                class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-300 group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)]
-                      w-52 bg-card border border-brand/20 rounded-2xl p-2.5 shadow-2xl
-                      opacity-0 invisible translate-y-2 pointer-events-none
-                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
-                      transition-all duration-300">
-              <a href="./product.html#pcb-drill"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Drills</a>
-              <a href="./product.html#pcb-routing"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Routers</a>
-              <a href="./product.html#spindle"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Spindles
-                &amp; Spares</a>
-              <a href="./product.html#vcut"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">V-Cut
-                Blades</a>
-              <a href="./product.html#more"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">More
-                Tools</a>
-            </div>
+            </a>
           </li>
           <li>
             <a href="./blog.html" data-page="blog"
@@ -363,7 +182,7 @@
 
     <!-- PCB background image -->
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('./assets/Images/pcb.png');"></div>
+      style="background-image: url('./assets/Images/blog/pcb_drill_bits.png');"></div>
 
     <!-- Gradient overlay -->
     <div class="absolute inset-0 bg-gradient-to-br from-[#071428]/92 via-[#0b1f3a]/88 to-[#0e2a4f]/95"></div>
@@ -772,7 +591,7 @@
         <!-- Blog 1 -->
         <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
           <div class="relative h-44 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1581093588401-16f2c1b2f7b3?w=600&q=80" alt="PCB Drill Bits"
+            <img src="./assets/Images/bg.png" alt="PCB Drill Bits"
               class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
             <span
@@ -794,7 +613,7 @@
         <!-- Blog 2 -->
         <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
           <div class="relative h-44 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Spindles"
+            <img src="./assets/Images/blog/pcb_spindles.png" alt="Spindles"
               class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
             <span
@@ -816,7 +635,7 @@
         <!-- Blog 3 -->
         <article class="blog-card fade-up bg-card border border-white/[.07] rounded-2xl overflow-hidden">
           <div class="relative h-44 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1581091012184-5c3f6e7a3d52?w=600&q=80" alt="PCB Routing"
+            <img src="./assets/Images/blog/multilayer_pcb_drilling.png" alt="PCB Routing"
               class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent"></div>
             <span
@@ -910,86 +729,6 @@
      SCRIPTS
 ════════════════════════════════════════════════════════ -->
   <script src="./assets/js/script.js"></script>
-
-  <script>
-    /* ── Enquiry button ── */
-    const openBtn = document.getElementById('openEnquiry');
-    const wrapper = document.getElementById('enquiryWrapper');
-    openBtn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      wrapper.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    });
-    window.closeEnquiry = () => {
-      wrapper?.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    };
-
-    /* ── Navbar scroll ── */
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar')?.classList.toggle('nav-scrolled', scrollY > 24);
-    }, { passive: true });
-
-    /* ── Mobile menu ── */
-    const toggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const hbBars = toggle ? [...toggle.querySelectorAll('.hb')] : [];
-
-    toggle?.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('menu-open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      if (isOpen) {
-        hbBars[0].style.transform = 'rotate(45deg) translate(5px,5px)';
-        hbBars[1].style.opacity = '0';
-        hbBars[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
-      } else {
-        hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      if (mobileMenu?.classList.contains('menu-open') &&
-        !mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
-        mobileMenu.classList.remove('menu-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        hbBars.forEach(b => { b.style.transform = ''; b.style.opacity = ''; });
-      }
-    });
-
-    /* ── Scroll-reveal ── */
-    const fadeEls = document.querySelectorAll('.fade-up');
-    const revealIO = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const siblings = [...entry.target.parentElement.querySelectorAll('.fade-up:not(.visible)')];
-        const idx = siblings.indexOf(entry.target);
-        setTimeout(() => entry.target.classList.add('visible'), idx * 80);
-        revealIO.unobserve(entry.target);
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    fadeEls.forEach(el => revealIO.observe(el));
-
-    /* ── Animated counters ── */
-    const counters = document.querySelectorAll('[data-count]');
-    const counterIO = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const target = parseInt(el.dataset.count, 10);
-        const suffix = el.dataset.suffix ?? '';
-        const dur = 1800;
-        const start = performance.now();
-        const tick = (now) => {
-          const t = Math.min((now - start) / dur, 1);
-          el.textContent = Math.round((1 - Math.pow(1 - t, 3)) * target) + suffix;
-          if (t < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-        counterIO.unobserve(el);
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(el => counterIO.observe(el));
-  </script>
 
 </body>
 

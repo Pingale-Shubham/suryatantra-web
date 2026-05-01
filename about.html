@@ -98,103 +98,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
   <style>
-    /* Gradient text */
-    .text-gradient {
-      background: linear-gradient(135deg, #f97316, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Scroll-reveal — JS toggles .visible */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* Nav link underline */
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #f97316;
-      border-radius: 2px;
-      transition: width .3s ease;
-    }
-
-    .nav-link:hover {
-      color: #fff !important;
-    }
-
-    .nav-link:hover::after,
-    .nav-active::after {
-      width: 100%;
-    }
-
-    .nav-active {
-      color: #f97316 !important;
-    }
-
-    /* Scrolled navbar */
-    #navbar {
-      transition: background .3s, backdrop-filter .3s, border-color .3s;
-    }
-
-    #navbar.nav-scrolled {
-      background: rgba(7, 20, 40, .97) !important;
-    }
-
-    /* Mobile menu height animation */
-    #mobileMenu {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height .38s cubic-bezier(.4, 0, .2, 1),
-        opacity .28s ease;
-    }
-
-    #mobileMenu.menu-open {
-      max-height: 380px;
-      opacity: 1;
-    }
-
-    /* Hamburger transitions */
-    .hb {
-      transition: transform .3s ease, opacity .3s ease;
-    }
-
-    /* Strength card hover */
-    .strength-card {
-      transition: transform .35s ease, box-shadow .35s ease, border-color .3s ease;
-    }
-
-    .strength-card:hover {
-      transform: translateY(-6px);
-    }
-
-    /* Card icon glow on card hover */
-    .strength-card:hover .card-icon {
-      background: rgba(249, 115, 22, .18);
-      border-color: #f97316;
-      box-shadow: 0 0 24px rgba(249, 115, 22, .28);
-    }
-
-    .card-icon {
-      transition: background .3s, border-color .3s, box-shadow .3s;
-    }
   </style>
 </head>
 
@@ -230,36 +133,11 @@
               About
             </a>
           </li>
-
-          <!-- Products mega-dropdown -->
-          <li class="relative group">
-            <button type="button"
-              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors hover:text-white flex items-center gap-1.5 cursor-pointer bg-transparent border-0">
+          <li>
+            <a href="./product.html" data-page="product"
+              class="nav-link font-display font-semibold text-[12px] uppercase tracking-[.12em] text-slate-400 transition-colors">
               Products
-              <i
-                class="fa fa-chevron-down text-[8px] mt-px transition-transform duration-300 group-hover:rotate-180"></i>
-            </button>
-
-            <!-- Dropdown panel -->
-            <div class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)]
-                      w-52 bg-card border border-brand/20 rounded-2xl p-2.5 shadow-2xl
-                      opacity-0 invisible translate-y-2 pointer-events-none
-                      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
-                      transition-all duration-300">
-              <a href="./product.html#pcb-drill"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Drills</a>
-              <a href="./product.html#pcb-routing"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Routers</a>
-              <a href="./product.html#spindle"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">Spindles
-                &amp; Spares</a>
-              <a href="./product.html#vcut"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">V-Cut
-                Blades</a>
-              <a href="./product.html#more"
-                class="block px-3.5 py-2 rounded-xl text-slate-400 text-[13px] font-medium hover:bg-brand/10 hover:text-brand hover:pl-5 transition-all duration-200">More
-                Tools</a>
-            </div>
+            </a>
           </li>
 
           <li>
@@ -307,47 +185,24 @@
 
   </header>
 
-
-  <!-- ════════════════════════════════════════════════════════════
-     HERO BANNER
-════════════════════════════════════════════════════════════ -->
-  <!-- HERO -->
-  <section class="relative pt-[72px] min-h-[320px] md:min-h-[380px] flex items-center overflow-hidden bg-hero">
-
-    <!-- Grid texture -->
-    <div class="absolute inset-0 bg-grid-lines bg-grid-60 pointer-events-none"></div>
-
-    <!-- Glow orbs -->
-    <div
-      class="absolute -top-48 -right-24 w-[250px] md:w-[600px] h-[250px] md:h-[600px] rounded-full bg-brand/10 blur-3xl pointer-events-none">
-    </div>
-    <div
-      class="absolute -bottom-36 -left-20 w-48 md:w-96 h-48 md:h-96 rounded-full bg-mid/60 blur-3xl pointer-events-none">
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16 w-full">
-
-      <!-- Breadcrumb -->
-      <nav aria-label="Breadcrumb"
-        class="flex items-center gap-2 text-[11px] text-slate-500 mb-4 md:mb-6 font-body tracking-wide">
-        <a href="./index.html" class="hover:text-brand transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-brand font-medium">About Us</span>
-      </nav>
-
-      <h1 class="font-display font-extrabold text-[clamp(1.75rem,6vw,4.25rem)] leading-[1.08] text-white">
-        Engineering <span class="text-gradient">Precision.</span><br>
-        Building Trust.
-      </h1>
-
-      <p class="mt-4 md:mt-5 text-slate-400 text-sm md:text-lg max-w-[520px] leading-relaxed">
-        Two decades of powering PCB manufacturers with advanced tooling, consumables,
-        and technical expertise that keep production lines moving.
-      </p>
-
-    </div>
-  </section>
-
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
+  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
+  <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
+    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
+      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
+      <span class="opacity-40">/</span>
+      <span class="text-orange">About Us</span>
+    </nav>
+    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
+       Engineering <span class="text-gradient">Precision.</span>Building Trust.
+    </h1>
+    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">
+  Two decades of powering PCB manufacturers with advanced tooling, consumables, and technical expertise that keep production lines moving.
+</p>
+  </div>
+</section>
 
   <!-- STATS BAR -->
   <div class="bg-card border-y border-brand/10">
@@ -355,7 +210,7 @@
 
       <div class="fade-up flex flex-col items-center justify-center py-5 md:py-7 px-2 sm:px-4
                 hover:bg-brand/[.04] transition-colors duration-300 group">
-        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="20"
+        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="7"
           data-suffix="+">0+</span>
         <span
           class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Years
@@ -408,7 +263,7 @@
 
         <div class="absolute -bottom-6 -right-6 hidden sm:block
                   bg-brand-gradient rounded-2xl px-6 py-5 text-center shadow-brand">
-          <strong class="font-display font-black text-[2rem] text-white leading-none block">20+</strong>
+          <strong class="font-display font-black text-[2rem] text-white leading-none block">07+</strong>
           <span class="text-[10px] text-white/80 font-semibold uppercase tracking-[.12em]">Years of Excellence</span>
         </div>
       </div>
@@ -590,52 +445,26 @@
     </div>
   </section>
 
-
-  <!-- ════════════════════════════════════════════════════════════
-     CTA
-════════════════════════════════════════════════════════════ -->
-  <section class="relative py-20 bg-mid overflow-hidden">
-
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-[720px] h-[720px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-[500px] h-[500px] rounded-full border border-brand/[.11] pointer-events-none"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-72 h-72 rounded-full bg-brand/[.05] blur-3xl pointer-events-none"></div>
-
-    <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
-
-      <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25
-                 rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-6">
-        <i class="fa fa-circle text-[4px]"></i> Let's Work Together
-      </span>
-
-      <h2 class="font-display font-extrabold text-[clamp(2rem,4.5vw,3.25rem)] text-white leading-tight mb-5">
-        Partner With Us for<br>
-        <span class="text-gradient">High-Precision</span> PCB Solutions
-      </h2>
-
-      <p class="text-slate-400 text-[1.05rem] leading-relaxed mb-10">
-        Enhance your manufacturing efficiency with reliable tools, consumables, and automation
-        support backed by two decades of industry expertise.
-      </p>
-
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="./contact.html" class="inline-flex items-center gap-2.5 px-8 py-3.5
-                bg-brand-gradient text-white font-display font-bold text-[13px] rounded-full
-                shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-          <i class="fa fa-envelope text-xs"></i> Contact Our Team
-        </a>
-        <a href="./product.html" class="inline-flex items-center gap-2.5 px-8 py-3.5
-                border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full
-                hover:border-brand hover:text-brand transition-all duration-300">
-          <i class="fa fa-layer-group text-xs"></i> Browse Products
-        </a>
-      </div>
-
-    </div>
-  </section>
-
+<!-- ═══════════════ CTA ═══════════════ -->
+      <section class="relative py-8 md:py-8 bg-mid overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-brand/[.11] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-brand/[.05] blur-3xl pointer-events-none"></div>
+        <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
+          <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-6"><i class="fa fa-circle text-[4px]"></i> Let's Work Together</span>
+          <h2 class="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">Partner With Us for<span class="text-gradient">High-Precision</span> PCB Solutions</h2>
+          <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">Enhance your manufacturing efficiency with reliable tools, consumables, and automation support backed by two decades of industry expertise.</p>
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="./contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-orange-gold text-white font-display font-bold text-sm rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-300">
+              <i class="fa fa-envelope text-xs"></i> Contact Our Team
+            </a>
+            <a href="./product.html" class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-orange hover:text-orange transition-all duration-200">
+              <i class="fa fa-layer-group text-xs"></i>Browse Products
+            </a>
+          </div>
+        </div>
+      </section>
 
   <!-- ════════════════════════════════════════════════════════════
      FOOTER PLACEHOLDER
