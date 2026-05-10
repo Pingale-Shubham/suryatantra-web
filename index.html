@@ -179,70 +179,46 @@
      HERO
 ════════════════════════════════════════════════════════ -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-
     <!-- PCB background image -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('./assets/Images/blog/pcb_drill_bits.png');"></div>
-
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-[1px] scale-85" style="background-image: url('./assets/Images/blog/pcb_drill_bits.png');"></div>
+    <!-- Dark overlay for better text visibility -->
+    <div class="absolute inset-0 bg-black/60"></div>
     <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#071428]/92 via-[#0b1f3a]/88 to-[#0e2a4f]/95"></div>
-
+    <div class="absolute inset-0 bg-gradient-to-br from-[#071428]/95 via-[#0b1f3a]/92 to-[#0e2a4f]/96"></div>
     <!-- Gold dot grid -->
-    <div class="absolute inset-0 bg-pcb-radial bg-pcb-28 opacity-[0.09] pointer-events-none"></div>
-
+    <div class="absolute inset-0 bg-pcb-radial bg-pcb-28 opacity-[0.08] pointer-events-none"></div>
     <!-- Glow orbs -->
-    <div
-      class="absolute top-0 right-0 w-[150px] md:w-[700px] h-[150px] md:h-[700px] rounded-full bg-brand/10 blur-[80px] md:blur-[120px] pointer-events-none">
-    </div>
-    <div
-      class="absolute bottom-0 left-0 w-[120px] md:w-[500px] h-[120px] md:h-[500px] rounded-full bg-mid/60 blur-[70px] md:blur-[100px] pointer-events-none">
-    </div>
-
-    <div
-      class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white py-12 md:py-20 pt-[90px] md:pt-[120px] w-full min-w-0">
-
+    <div class="absolute top-0 right-0 w-[150px] md:w-[700px] h-[150px] md:h-[700px] rounded-full bg-brand/10 blur-[80px] md:blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[120px] md:w-[500px] h-[120px] md:h-[500px] rounded-full bg-mid/60 blur-[70px] md:blur-[100px] pointer-events-none"></div>
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white py-12 md:py-20 pt-[90px] md:pt-[120px] w-full min-w-0">
       <!-- Tag pill -->
-      <span class="fade-up inline-flex flex-wrap items-center justify-center gap-2 px-3 md:px-5 py-1.5 md:py-2 rounded-full
-               bg-brand/10 border border-brand/30 text-brand text-[9px] md:text-xs font-display font-semibold
-               uppercase tracking-[.1em] mb-6">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse inline-block flex-shrink-0"></span>
-        Established 2019 &nbsp;·&nbsp; 7+ Years Industry Expertise
+      <span class="fade-up inline-flex flex-wrap items-center justify-center gap-2 px-3 md:px-5 py-1.5 md:py-2 rounded-full bg-brand/15 backdrop-blur-md border border-brand/40 text-brand text-[9px] md:text-xs font-display font-semibold uppercase tracking-[.1em] mb-6 shadow-lg">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse inline-block flex-shrink-0"></span> Established 2019 · 7+ Years Industry Expertise
       </span>
-
-      <h1
-        class="fade-up font-display font-extrabold text-[clamp(1.5rem,7vw,5rem)] leading-[1.1] md:leading-[1.06] mb-6">
-        Engineering Precision Tools for<br class="hidden sm:block">
-        <span class="text-gradient">Modern PCB Manufacturing</span>
+      <!-- Heading -->
+      <h1 class="fade-up font-display font-extrabold text-[clamp(1.5rem,7vw,5rem)] leading-[1.1] md:leading-[1.06] mb-6 text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">Engineering Precision Tools for
+        <br class="hidden sm:block"><span class="text-gradient">Modern PCB Manufacturing</span>
       </h1>
-
-      <p class="fade-up text-slate-300 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed mb-10 px-2 md:px-0">
-        Suryatantra Enterprises LLP delivers high-performance drilling, routing, and consumable solutions designed to
-        enhance productivity, accuracy, and operational efficiency for PCB manufacturers.
-      </p>
-
+      <!-- Description -->
+      <p class="fade-up text-slate-200 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed mb-10 px-2 md:px-0 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">Suryatantra Enterprises LLP delivers high-performance drilling, routing, and consumable solutions designed to enhance productivity, accuracy, and operational efficiency for PCB manufacturers.</p>
+      <!-- Buttons -->
       <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="./product.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
-              bg-brand-gradient text-white font-display font-bold text-sm rounded-full
-              shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-          <i class="fa fa-layer-group text-xs"></i> Explore Products
+        <a href="./product.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
+          <i class="fa fa-layer-group text-xs"></i>Explore Products
         </a>
-        <a href="./contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4
-              border border-white/15 text-slate-200 font-display font-bold text-sm rounded-full
-              hover:border-brand hover:text-brand transition-all duration-300">
-          Work With Us <i class="fa fa-arrow-right text-xs"></i>
+        <a href="./contact.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 backdrop-blur-md bg-white/5 border border-white/20 text-slate-100 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300">
+          Work With Us<i class="fa fa-arrow-right text-xs"></i>
         </a>
       </div>
-
       <!-- Scroll indicator -->
       <div class="mt-10 flex justify-center">
-        <div class="bounce-y flex flex-col items-center gap-1.5 text-slate-500">
-          <span class="text-[10px] font-display uppercase tracking-[.15em]">Scroll</span>
-          <i class="fa fa-chevron-down text-xs"></i>
+        <div class="bounce-y flex flex-col items-center gap-1.5 text-slate-400">
+          <span class="text-[16px] font-display uppercase tracking-[.30em]">Scroll</span><i class="fa fa-chevron-down text-xl"></i>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- ════════════════════════════════════════════════════════
      STATS BAR
@@ -697,27 +673,18 @@
     </div>
   </section>
 
-
-  <!-- ════════════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════════════════
      ENQUIRY FLOATING BUTTON
 ════════════════════════════════════════════════════════ -->
-  <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14
-          bg-brand text-white rounded-full shadow-brand overflow-hidden
-          transition-all duration-300 ease-out hover:w-40 hover:shadow-brand-lg">
-    <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0">
-      <i class="fa-solid fa-envelope"></i>
-    </span>
-    <span class="ml-1 pr-5 text-sm font-display font-semibold tracking-wide whitespace-nowrap
-               opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0
-               transition-all duration-300 delay-75">
+  <a href="#" id="openEnquiry" class="group fixed bottom-6 right-6 z-50 flex items-center h-14 w-14 bg-brand text-white rounded-full shadow-brand overflow-hidden transition-all duration-300 ease-out hover:w-40 hover:shadow-brand-lg">
+    <span class="flex items-center justify-center w-14 h-14 text-lg shrink-0"><i class="fa-solid fa-envelope"></i></span>
+    <span class="ml-1 pr-5 text-sm font-display font-semibold tracking-wide whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75">
       Send Enquiry
     </span>
   </a>
-
   <div id="enquiryWrapper" class="fixed inset-0 z-50 hidden">
-    <iframe src="./components/enquiry.html" class="w-full h-full border-none"></iframe>
+    <iframe src="./contact.html" class="w-full h-full border-none"></iframe>
   </div>
-
 
   <!-- ════════════════════════════════════════════════════════
      FOOTER
@@ -732,4 +699,4 @@
 
 </body>
 
-</html>
+</html> 

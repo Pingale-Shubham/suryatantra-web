@@ -133,54 +133,6 @@ const CounterAnimation = {
   }
 };
 
-/* ───────── CONTACT FORM ───────── */
-const ContactForm = {
-  init() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-
-    const status = document.getElementById('formStatus');
-    const btn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const { name, phone, email, message } = form;
-
-      if (name.value.length < 2) return this.show(status, 'Enter valid name');
-      if (!/^[6-9]\d{9}$/.test(phone.value)) return this.show(status, 'Invalid phone');
-      if (!/^\S+@\S+\.\S+$/.test(email.value)) return this.show(status, 'Invalid email');
-      if (message.value.length < 5) return this.show(status, 'Message too short');
-
-      btn.disabled = true;
-      btn.innerHTML = 'Sending...';
-
-      emailjs.send('service_krjc8ra', 'template_ow3end7', {
-        name: name.value,
-        phone: phone.value,
-        email: email.value,
-        message: message.value
-      })
-      .then(() => {
-        this.show(status, 'Message sent!', 'success');
-        form.reset();
-      })
-      .catch(() => {
-        this.show(status, 'Failed to send');
-      })
-      .finally(() => {
-        btn.disabled = false;
-        btn.innerHTML = 'Send Message';
-      });
-    });
-  },
-
-  show(el, msg, type = 'error') {
-    if (!el) return;
-    el.textContent = msg;
-    el.className = type === 'success' ? 'text-green-400' : 'text-red-400';
-  }
-};
 
 /* ───────── FAQ ───────── */
 const FAQ = {

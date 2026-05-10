@@ -44,12 +44,8 @@
       },
     };
   </script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>(function(){ emailjs.init("nafRyrWhypRdV_Zy-"); })();</script>
 </head>
 <body class="font-body bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
 
@@ -68,8 +64,7 @@
         <li><a href="./contact.html" class="nav-link nav-active font-display font-semibold text-[12px] uppercase tracking-widest transition-colors">Contact</a></li>
       </ul>
     </nav>
-    <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu"
-            class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer">
+    <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer">
       <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
       <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
       <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
@@ -93,80 +88,67 @@
   <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
     <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
       <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
-      <span class="opacity-40">/</span>
-      <span class="text-orange">Contact</span>
+      <span class="opacity-40">/</span><span class="text-orange">Contact</span>
     </nav>
-    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
-      Get In <span class="grad-text">Touch.</span>
-    </h1>
-    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">
-      Need PCB tools or expert support? Our team is just a message away.
-    </p>
+    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">Get In <span class="grad-text">Touch.</span></h1>
+    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">Need PCB tools or expert support? Our team is just a message away.</p>
   </div>
 </section>
 
 <!-- ═══════════════ CONTACT + MAP ═══════════════ -->
-<section class="py-12 bg-section-gradient">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
-
-    <!-- Map -->
-    <div class="fade-up map-wrap h-[420px] shadow-card-lift">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.6196341568091!2d73.80583848837976!3d18.45719812039949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e910456581%3A0xdb7ff7323634ca1!2sSuryatantra%20Enterprises%20LLP!5e0!3m2!1sen!2sin!4v1774237502589!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full border-0"
-        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-        title="Suryatantra Enterprises Location">
-      </iframe>
-    </div>
-
-    <!-- Form -->
-    <div class="fade-up">
-      <div class="badge mb-3"><i class="fa fa-circle text-[4px]"></i> Send Enquiry</div>
-      <h2 class="font-display font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">
-        Let's Start a <span class="grad-text">Conversation</span>
-      </h2>
-      <p class="text-slate-500 text-[13px] mb-5">Fill in the form and we'll respond within 24 hours.</p>
-
-      <form id="contactForm" class="space-y-3.5" novalidate>
-
-        <div class="field">
-          <input type="text" name="name" id="name" placeholder="Your Name" required />
-          <label for="name">Your Name</label>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-3.5">
+  <section class="py-12 bg-section-gradient">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
+      <!-- Map -->
+      <div class="fade-up map-wrap h-[420px] shadow-card-lift overflow-hidden rounded-3xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.6196341568091!2d73.80583848837976!3d18.45719812039949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e910456581%3A0xdb7ff7323634ca1!2sSuryatantra%20Enterprises%20LLP!5e0!3m2!1sen!2sin!4v1774237502589!5m2!1sen!2sin" class="w-full h-full border-0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Suryatantra Enterprises Location"></iframe>
+      </div>
+      <!-- Form -->
+      <div class="fade-up">
+        <h2 class="font-display font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">Let's Start a <span class="grad-text">Conversation</span></h2>
+        <p class="text-slate-500 text-[13px] mb-5">Fill in the form and we'll respond within 24 hours.</p>
+        <!-- <form id="contactForm" class="space-y-3.5" action="https://formsubmit.co/suryatantraa@gmail.com" method="POST"> -->
+        <form id="contactForm" class="space-y-3.5" action="https://formsubmit.co/iamshubh2000@gmail.com" method="POST">
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Email Subject -->
+          <input type="hidden" name="_subject" value="New Contact Form Submission">
+          <!-- Optional Redirect -->
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+          <!-- Name -->
+          <div class="field"> 
+            <input type="text" name="name" id="name" placeholder="YOUR NAME" required/>
+          </div>
+          <!-- Phone + Email -->
+          <div class="grid md:grid-cols-2 gap-3.5">
+            <div class="field">
+              <input type="tel" name="phone" id="phone" placeholder="PHONE NO." required/>
+            </div>
+            <div class="field">
+              <input type="email" name="email" id="email" placeholder="YOUR EMAIL" required/>
+            </div>
+          </div>
+          <!-- Message -->
           <div class="field">
-            <input type="tel" name="phone" id="phone" placeholder="Phone No." required />
-            <label for="phone">Phone No.</label>
+            <textarea name="message" id="message" rows="4" placeholder="YOUR MESSAGE" required></textarea>
           </div>
-          <div class="field">
-            <input type="email" name="email" id="email" placeholder="Your Email" required />
-            <label for="email">Your Email</label>
+          <!-- Footer -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
+            <!-- Social -->
+            <div class="flex items-center gap-3">
+              <a href="#" aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+              <a href="mailto:suryatantraa@gmail.com" aria-label="Email" class="social-btn"><i class="fa fa-envelope"></i></a>
+              <a href="https://wa.me/919730429324" target="_blank" aria-label="WhatsApp"class="social-btn"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <!-- Submit -->
+            <button type="submit" id="submitBtn" class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
+              <i class="fa fa-paper-plane text-xs"></i>Send Message
+            </button>
           </div>
-        </div>
-
-        <div class="field">
-          <textarea name="message" id="message" rows="4" placeholder="Message" required></textarea>
-          <label for="message">Your Message</label>
-        </div>
-
-        <p id="formStatus" style="display:none;" class="text-[12.5px] font-semibold text-center py-2 px-3 rounded-lg"></p>
-
-        <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
-          <div class="flex items-center gap-3">
-            <a href="#"                             aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-            <a href="mailto:suryatantraa@gmail.com" aria-label="Email"    class="social-btn"><i class="fa fa-envelope"></i></a>
-            <a href="https://wa.me/919730429324"    aria-label="WhatsApp" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"                             aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-          <button type="submit" id="submitBtn"
-                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
-            <i class="fa fa-paper-plane text-xs"></i> Send Message
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
 <!-- ═══════════════ INFO CARDS ═══════════════ -->
 <section class="py-8 bg-navy relative overflow-hidden">
@@ -365,20 +347,7 @@
 </section>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
-<footer class="bg-navy border-t border-white/[0.06] py-5">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2.5">
-    <a href="./index.html">
-      <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-7 object-contain">
-    </a>
-    <p class="text-slate-600 text-[11.5px] text-center">
-      &copy; <span id="footerYear"></span> Suryatantra Enterprises LLP. All rights reserved.
-    </p>
-    <div class="flex items-center gap-4">
-      <a href="mailto:suryatantraa@gmail.com" class="text-slate-500 hover:text-orange transition-colors text-[11.5px]">suryatantraa@gmail.com</a>
-      <a href="tel:+919730429324"             class="text-slate-500 hover:text-orange transition-colors text-[11.5px]">+91 97304 29324</a>
-    </div>
-  </div>
-</footer>
+    <div id="footer-placeholder"></div>
 
 <script src="./assets/js/script.js"  onerror="console.warn('script.js not found')"></script>
 <script src="./assets/js/contact.js" onerror="console.warn('contact.js not found')"></script>
