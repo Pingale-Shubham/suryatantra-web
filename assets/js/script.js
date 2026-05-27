@@ -1,179 +1,342 @@
+
+// Tailwind
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Outfit"', "sans-serif"],
+              body: ['"Inter"', "sans-serif"],
+            },
+            fontSize: {
+              xs: ["13px", "1.6"],
+              sm: ["15px", "1.6"],
+              base: ["17px", "1.6"],
+              lg: ["20px", "1.5"],
+              xl: ["24px", "1.4"],
+              "2xl": ["30px", "1.3"],
+              "3xl": ["36px", "1.2"],
+              "4xl": ["48px", "1.1"],
+              "5xl": ["64px", "1.0"],
+            },
+            colors: {
+              navy: "#071428",
+              mid: "#0b1f3a",
+              deep: "#0e2a4f",
+              card: "#111f33",
+              orange: "#f97316",
+              amber: "#fbbf24",
+            },
+            backgroundImage: {
+              "hero-gradient":
+                "linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)",
+              "section-gradient":
+                "linear-gradient(180deg,#09192f 0%,#071428 100%)",
+              "orange-gold": "linear-gradient(135deg,#f97316,#fbbf24)",
+            },
+            boxShadow: {
+              "orange-glow": "0 8px 30px rgba(249,115,22,0.35)",
+              "orange-lg": "0 14px 40px rgba(249,115,22,0.5)",
+              "card-lift": "0 24px 60px rgba(0,0,0,0.35)",
+            },
+            keyframes: {
+              "pulse-ring": {
+                "0%,100%": { opacity: "0.2" },
+                "50%": { opacity: "0.5" },
+              },
+              float: {
+                "0%,100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-8px)" },
+              },
+            },
+            animation: {
+              "pulse-ring": "pulse-ring 4s ease-in-out infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+          },
+        },
+      };
+
+
+/* =========================================================
+   MAIN SCRIPT.JS
+   ========================================================= */
+
 document.addEventListener('DOMContentLoaded', () => {
-  NavHighlight.init();
-  NavScroll.init();
-  MobileMenu.init();
-  FooterLoader.init();
-  ScrollReveal.init();
-  CounterAnimation.init();
-  ContactForm.init();
-  FAQ.init();
-  EnquiryModal.init();
+  App.init();
 });
 
-/* ───────── NAV ACTIVE ───────── */
+/* =========================================================
+   APP INITIALIZER
+   ========================================================= */
+
+const App = {
+  init() {
+    NavHighlight.init();
+    NavScroll.init();
+    MobileMenu.init();
+    FooterLoader.init();
+    ScrollReveal.init();
+    CounterAnimation.init();
+
+    // Optional modules
+    
+  }
+};
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
 const NavHighlight = {
   init() {
-    const current = location.pathname.split('/').pop().replace('.html', '') || 'index';
+    const currentPage =
+      location.pathname
+        .split('/')
+        .pop()
+        .replace('.html', '') || 'index';
+
     document.querySelectorAll('[data-page]').forEach(link => {
-      link.classList.toggle('nav-active', link.dataset.page === current);
+      const isActive = link.dataset.page === currentPage;
+      link.classList.toggle('nav-active', isActive);
     });
   }
 };
 
-/* ───────── NAV SCROLL ───────── */
+/* =========================================================
+   NAVBAR SCROLL EFFECT
+   ========================================================= */
+
 const NavScroll = {
   init() {
-    const nav = document.getElementById('navbar');
-    if (!nav) return;
+    this.navbar = document.getElementById('navbar');
 
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav-scrolled', window.scrollY > 24);
-    }, { passive: true });
+    if (!this.navbar) return;
+
+    this.handleScroll();
+
+    window.addEventListener(
+      'scroll',
+      () => this.handleScroll(),
+      { passive: true }
+    );
+  },
+
+  handleScroll() {
+    this.navbar.classList.toggle(
+      'nav-scrolled',
+      window.scrollY > 24
+    );
   }
 };
 
-/* ───────── MOBILE MENU ───────── */
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
 const MobileMenu = {
   init() {
-    const toggle = document.getElementById('menuToggle');
-    const menu = document.getElementById('mobileMenu');
-    if (!toggle || !menu) return;
+    this.toggle = document.getElementById('menuToggle');
+    this.menu = document.getElementById('mobileMenu');
 
-    const bars = toggle.querySelectorAll('.hb, .hamburger');
+    if (!this.toggle || !this.menu) return;
 
-    toggle.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('menu-open');
-      toggle.setAttribute('aria-expanded', isOpen);
+    this.bars = [
+      ...this.toggle.querySelectorAll('.hb, .hamburger')
+    ];
 
-      if (bars.length === 3) {
-        bars[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
-        bars[1].style.opacity = isOpen ? '0' : '';
-        bars[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
+    this.toggle.addEventListener('click', () => {
+      this.toggleMenu();
+    });
+
+    document.addEventListener('click', e => {
+      if (
+        !this.menu.contains(e.target) &&
+        !this.toggle.contains(e.target)
+      ) {
+        this.closeMenu();
       }
     });
 
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-        menu.classList.remove('menu-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        bars.forEach(b => {
-          b.style.transform = '';
-          b.style.opacity = '';
-        });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        this.closeMenu();
       }
     });
+  },
+
+  toggleMenu() {
+    const isOpen = this.menu.classList.toggle('menu-open');
+
+    this.toggle.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
+
+    this.animateBars(isOpen);
+  },
+
+  closeMenu() {
+    this.menu.classList.remove('menu-open');
+
+    this.toggle.setAttribute('aria-expanded', 'false');
+
+    this.animateBars(false);
+  },
+
+  animateBars(open) {
+    if (this.bars.length < 3) return;
+
+    const [bar1, bar2, bar3] = this.bars;
+
+    if (open) {
+      bar1.style.transform =
+        'rotate(45deg) translate(5px, 5px)';
+
+      bar2.style.opacity = '0';
+
+      bar3.style.transform =
+        'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      bar1.style.transform = '';
+      bar2.style.opacity = '';
+      bar3.style.transform = '';
+    }
   }
 };
 
-/* ───────── FOOTER LOAD ───────── */
+/* =========================================================
+   FOOTER LOADER
+   ========================================================= */
+
 const FooterLoader = {
   init() {
-    const el = document.getElementById('footer-placeholder');
-    if (!el) return;
+    const footerPlaceholder =
+      document.getElementById('footer-placeholder');
+
+    if (!footerPlaceholder) return;
 
     fetch('./components/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        el.innerHTML = html;
-        const year = el.querySelector('#footer-year');
-        if (year) year.textContent = new Date().getFullYear();
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Footer file not found');
+        }
+
+        return response.text();
       })
-      .catch(err => console.error(err));
-  }
-};
+      .then(html => {
+        footerPlaceholder.innerHTML = html;
 
-/* ───────── SCROLL REVEAL ───────── */
-const ScrollReveal = {
-  init() {
-    const els = document.querySelectorAll('.fade-up');
-    if (!els.length) return;
+        const year =
+          footerPlaceholder.querySelector('#footer-year');
 
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
+        if (year) {
+          year.textContent = new Date().getFullYear();
+        }
+      })
+      .catch(error => {
+        console.error('Footer load error:', error);
       });
-    }, { threshold: 0.1 });
-
-    els.forEach(el => io.observe(el));
   }
 };
 
-/* ───────── COUNTER ───────── */
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+   ========================================================= */
+
+const ScrollReveal = {
+  selector: '.fade-up',
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px',
+  staggerDelay: 90,
+
+  init() {
+    const elements =
+      document.querySelectorAll(this.selector);
+
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          const siblings = [
+            ...entry.target.parentElement.querySelectorAll(
+              `${this.selector}:not(.visible)`
+            )
+          ];
+
+          const index = siblings.indexOf(entry.target);
+
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * this.staggerDelay);
+
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: this.threshold,
+        rootMargin: this.rootMargin
+      }
+    );
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  }
+};
+
+/* =========================================================
+   COUNTER ANIMATION
+   ========================================================= */
+
 const CounterAnimation = {
   init() {
-    const els = document.querySelectorAll('[data-count]');
-    if (!els.length) return;
+    const counters =
+      document.querySelectorAll('[data-count]');
 
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+    if (!counters.length) return;
 
-        const el = entry.target;
-        const target = +el.dataset.count;
-        const suffix = el.dataset.suffix || '';
-        const duration = 1800;
-        const start = performance.now();
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
 
-        const animate = (now) => {
-          const progress = Math.min((now - start) / duration, 1);
-          el.textContent = Math.floor(progress * target) + suffix;
+          const element = entry.target;
 
-          if (progress < 1) requestAnimationFrame(animate);
-        };
+          const target = Number(element.dataset.count);
+          const suffix = element.dataset.suffix || '';
+          const duration = 1800;
 
-        requestAnimationFrame(animate);
-        io.unobserve(el);
-      });
-    }, { threshold: 0.6 });
+          const startTime = performance.now();
 
-    els.forEach(el => io.observe(el));
-  }
-};
+          const animate = currentTime => {
+            const progress = Math.min(
+              (currentTime - startTime) / duration,
+              1
+            );
 
+            const value = Math.floor(progress * target);
 
-/* ───────── FAQ ───────── */
-const FAQ = {
-  init() {
-    const btns = document.querySelectorAll('.faq-btn');
-    if (!btns.length) return;
+            element.textContent = `${value}${suffix}`;
 
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const isOpen = btn.classList.contains('faq-open');
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          };
 
-        document.querySelectorAll('.faq-btn').forEach(b => {
-          b.classList.remove('faq-open');
-          b.nextElementSibling.style.maxHeight = null;
+          requestAnimationFrame(animate);
+          observer.unobserve(element);
         });
+      },
+      {
+        threshold: 0.6
+      }
+    );
 
-        if (!isOpen) {
-          btn.classList.add('faq-open');
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
+    counters.forEach(counter => {
+      observer.observe(counter);
     });
-  }
-};
-
-/* ───────── ENQUIRY MODAL ───────── */
-const EnquiryModal = {
-  init() {
-    const btn = document.getElementById('openEnquiry');
-    const wrapper = document.getElementById('enquiryWrapper');
-
-    btn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      wrapper?.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    });
-
-    window.closeEnquiry = () => {
-      wrapper?.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    };
   }
 };

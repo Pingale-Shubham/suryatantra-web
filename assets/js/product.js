@@ -4,21 +4,6 @@ const WHATSAPP_NUMBER = "919730429324";
 
 /* ================= LOAD NAVBAR & FOOTER ================= */
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./components/navbar.html")
-    .then(r => r.text())
-    .then(h => {
-      const placeholder = document.getElementById("navbar-placeholder");
-      if (placeholder) {
-        placeholder.innerHTML = h;
-        // Re-init mobile menu if script.js is loaded
-        if (window.MobileMenu) window.MobileMenu.init();
-      }
-    });
-
-  fetch("./components/footer.html")
-    .then(r => r.text())
-    .then(h => document.getElementById("footer-placeholder").innerHTML = h);
-
   // Check for initial hash, default to pcb-drill
   const initialHash = window.location.hash.replace("#", "");
   renderCategory(initialHash || "pcb-drill");
