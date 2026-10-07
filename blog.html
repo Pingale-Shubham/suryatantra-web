@@ -3,126 +3,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suryatantra Enterprises LLP | Blogs</title>
-    <meta name="description" content="Industry insights, expert knowledge on PCB tools, precision manufacturing, and production optimisation from Suryatantra Enterprises LLP."/>
-    <link rel="stylesheet" href="styles.css" />
-	<script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['"Outfit"', "sans-serif"],
-              body: ['"Inter"', "sans-serif"],
-            },
-            fontSize: {
-              xs: ["13px", "1.6"],
-              sm: ["15px", "1.6"],
-              base: ["17px", "1.6"],
-              lg: ["20px", "1.5"],
-              xl: ["24px", "1.4"],
-              "2xl": ["30px", "1.3"],
-              "3xl": ["36px", "1.2"],
-              "4xl": ["48px", "1.1"],
-              "5xl": ["64px", "1.0"],
-            },
-            colors: {
-              navy: "#071428",
-              mid: "#0b1f3a",
-              deep: "#0e2a4f",
-              card: "#111f33",
-              orange: "#f97316",
-              amber: "#fbbf24",
-            },
-            backgroundImage: {
-              "hero-gradient":
-                "linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)",
-              "section-gradient":
-                "linear-gradient(180deg,#09192f 0%,#071428 100%)",
-              "orange-gold": "linear-gradient(135deg,#f97316,#fbbf24)",
-            },
-            boxShadow: {
-              "orange-glow": "0 8px 30px rgba(249,115,22,0.35)",
-              "orange-lg": "0 14px 40px rgba(249,115,22,0.5)",
-              "card-lift": "0 24px 60px rgba(0,0,0,0.35)",
-            },
-            keyframes: {
-              "pulse-ring": {
-                "0%,100%": { opacity: "0.2" },
-                "50%": { opacity: "0.5" },
-              },
-              float: {
-                "0%,100%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-8px)" },
-              },
-            },
-            animation: {
-              "pulse-ring": "pulse-ring 4s ease-in-out infinite",
-              float: "float 6s ease-in-out infinite",
-            },
-          },
-        },
-      };
-    </script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/css/blog.css">
+    <title>Suryatantra Enterprises LLP | Blog</title>
+    <meta name="description" content="Notes on PCB drills, routers, spindles, and V-cut scoring from Suryatantra Enterprises LLP, Dhayari, Pune."/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-[#071428] text-slate-200">
+<body class="font-body bg-[#f4f6fb] text-slate-700 overflow-x-hidden antialiased">
     
   <!-- ═════════════════ NAVBAR ═══════════════════ -->
-  <header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
-    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
-      <a href="./index.html" class="shrink-0 flex items-center">
-        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-10 object-contain" />
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 flex items-center justify-between h-[76px] gap-4">
+      <a href="./index.html" class="min-w-0 inline-flex items-center rounded-md bg-transparent px-2 py-1">
+        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 sm:h-10 w-auto max-w-[168px] sm:max-w-[240px] object-contain object-left" />
       </a>
-      <nav class="hidden md:block" aria-label="Primary">
-        <ul class="flex items-center gap-9">
-          <li><a href="./index.html" data-page="index" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Home</a></li>
-          <li><a href="./about.html" data-page="about" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">About</a></li>
-          <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors"> Products</a></li>
-          <li><a href="./blog.html" data-page="blog" class="nav-link nav-active font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Blogs</a></li>
-          <li><a href="./contact.html" data-page="contact" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
-        class="md:hidden flex flex-col gap-[5px] p-1.5 bg-transparent border-0 cursor-pointer">
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-      </button>
+      <div class="flex items-center gap-4 shrink-0">
+        <nav class="hidden lg:block" aria-label="Primary">
+          <ul class="flex items-center gap-7">
+            <li><a href="./index.html" data-page="index" class="nav-link font-display font-semibold text-sm text-slate-700">Home</a></li>
+            <li><a href="./about.html" data-page="about" class="nav-link font-display font-semibold text-sm text-slate-700">About</a></li>
+            <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-sm text-slate-700">Products</a></li>
+            <li><a href="./blog.html" data-page="blog" class="nav-link nav-active font-display font-semibold text-sm text-slate-700">Blog</a></li>
+            <li><a href="./contact.html" data-page="contact" class="nav-link font-display font-semibold text-sm text-slate-700">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="./contact.html?product=PCB%20tooling"
+          class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+          Request a quote
+        </a>
+        <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
+          style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;background:transparent;border:0;cursor:pointer">
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+        </button>
+      </div>
     </div>
-    <div id="mobileMenu" class="md:hidden bg-card border-t border-brand/10">
-      <ul class="flex flex-col px-6 py-6 gap-5">
-        <li><a href="./index.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Home</a></li>
-        <li><a href="./about.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">About</a></li>
-        <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Products</a></li>
-        <li><a href="./blog.html" class="font-display font-semibold text-sm text-brand">Blogs</a></li>
-        <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Contact</a></li>
+    <div id="mobileMenu" class="lg:hidden bg-white border-t border-slate-200">
+      <ul class="flex flex-col px-5 py-5 gap-4">
+        <li><a href="./index.html" class="font-display font-semibold text-sm text-slate-700">Home</a></li>
+        <li><a href="./about.html" class="font-display font-semibold text-sm text-slate-700">About</a></li>
+        <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-700">Products</a></li>
+        <li><a href="./blog.html" class="font-display font-semibold text-sm text-[#c2410c]">Blog</a></li>
+        <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-700">Contact</a></li>
+        <li class="pt-2 md:hidden">
+          <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full">Request a quote</a>
+        </li>
       </ul>
     </div>
   </header>
 
-    <!-- ══════════════ PAGE HERO ══════════════ -->
-<section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
-  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
-  <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
-    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
-      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
-      <span class="opacity-40">/</span>
-      <span class="text-orange">Blogs</span>
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 pt-[5.25rem] pb-3">
+    <nav class="flex items-center gap-2 text-sm text-slate-500 mb-3" aria-label="Breadcrumb">
+      <a href="./index.html" class="hover:text-[#c2410c]">Home</a>
+      <span aria-hidden="true">/</span>
+      <span class="text-slate-800">Blog</span>
     </nav>
-    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
-      Industry <span class="grad-text">Insights</span>
+    <!-- <p class="text-xs font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-2">Drills, routers, spindles, V-cut</p>
+    <h1 class="font-display font-extrabold text-[clamp(1.9rem,4vw,3rem)] leading-[1.1] text-slate-900 max-w-3xl">
+      Notes on the tools a line wears out
     </h1>
-    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">
-      Expert knowledge on PCB tools, precision manufacturing &amp; production optimisation — straight from the field.
-    </p>
-    <!-- <div class="flex items-center gap-3 flex-shrink-0">
-      <span id="heroCount" class="result-badge">6 Articles</span>
-    </div> -->
+    <p class="mt-2 text-slate-600 text-base leading-relaxed max-w-2xl">
+      Short notes on drill selection, routing, spindles, and V-cut scoring. Written from the supply side in Dhayari.
+    </p> -->
   </div>
 </section>
 
@@ -130,15 +78,16 @@
 <section class="filter-wrapper">
   <div class="container-custom filter-layout">
     <div class="filters">
-      <button class="filter-btn active" data-filter="All">All</button>
-      <button class="filter-btn" data-filter="Drilling">Drilling</button>
-      <button class="filter-btn" data-filter="Routing">Routing</button>
-      <button class="filter-btn" data-filter="Spindles">Spindles</button>
-      <button class="filter-btn" data-filter="V-Cut">V-Cut</button>
+      <button type="button" class="filter-btn active" data-filter="All">All</button>
+      <button type="button" class="filter-btn" data-filter="Drilling">Drilling</button>
+      <button type="button" class="filter-btn" data-filter="Routing">Routing</button>
+      <button type="button" class="filter-btn" data-filter="Spindles">Spindles</button>
+      <button type="button" class="filter-btn" data-filter="V-Cut">V-Cut</button>
     </div>
     <div class="search-box">
-      <i class="fa-solid fa-search"></i>
-      <input id="searchInput" type="text" placeholder="Search articles">
+      <label for="searchInput" class="sr-only">Search articles</label>
+      <i class="fa-solid fa-search" aria-hidden="true"></i>
+      <input id="searchInput" type="search" placeholder="Search articles" autocomplete="off">
     </div>
   </div>
 </section>
@@ -147,22 +96,30 @@
 <section class="blogs-section">
   <div class="container-custom">
     <div id="resultCount"></div>
-    <div id="blogGrid" class="blog-grid"></div>
+    <div class="blog-scroller">
+      <button type="button" id="blogPrev" class="blog-nav" aria-label="Previous articles">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div id="blogGrid" class="blog-grid"></div>
+      <button type="button" id="blogNext" class="blog-nav" aria-label="Next articles">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
     <div id="emptyState" class="empty-state hidden">
       <i class="fa-solid fa-search"></i>
-      <h3>No Articles Found</h3>
+      <h3>No articles found</h3>
       <p>Try another keyword or category.</p>
     </div>
   </div>
 </section>
 
 <!-- MODAL -->
-<div id="blogModal" class="modal hidden">
-  <div id="modalOverlay"></div>
-  <div class="modal-content">
-    <button id="modalClose">×</button>
-    <img id="modalImage">
-    <div class="modal-body">
+<div id="blogModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+  <div id="modalOverlay" class="modal-overlay"></div>
+  <div class="modal-content modal-panel">
+    <button id="modalClose" type="button" aria-label="Close article">&times;</button>
+    <img id="modalImage" alt="">
+    <div id="modalBody" class="modal-body">
       <span id="modalCategory"></span>
       <h2 id="modalTitle"></h2>
       <p id="modalReadTime"></p>
@@ -171,41 +128,79 @@
   </div>
 </div>
 
-</div><!-- ═══════════════ CTA ═══════════════ -->
-    <section class="relative py-8 md:py-8 bg-mid overflow-hidden">
-      <!-- Background Effects -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-orange/[0.07] animate-pulse-ring pointer-events-none"></div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-orange/[0.1] pointer-events-none"></div>
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-orange/[0.05] blur-3xl pointer-events-none"></div>
-      <!-- Content -->
-      <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-center fade-up">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-1.5 bg-orange/10 border border-orange/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-orange uppercase tracking-wide mb-4">
-          <i class="fa fa-circle text-[4px]"></i>Need Expert Advice?
-        </div>
-        <!-- Heading -->
-        <h2 class="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">Talk to Our <span class="grad-text">PCB Tooling</span> Specialists</h2>
-        <!-- Description -->
-        <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-          Our team helps you select the right tools, optimise process parameters, and reduce your cost per board.
-        </p>
-        <!-- Buttons -->
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <a href="./contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-orange-gold text-white font-display font-bold text-sm rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-300">
-              <i class="fa fa-envelope text-xs"></i> Contact Our Team
-          </a>
-          <a href="./product.html" class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-orange hover:text-orange transition-all duration-200">
-            <i class="fa fa-layer-group text-xs"></i>Browse Products
-          </a>
-        </div>
-      </div>
-    </section>
+<section class="py-6 bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div>
+      <h2 class="font-display font-bold text-xl text-slate-900">Ask about the tool in the note</h2>
+      <p class="mt-1 text-sm text-slate-600">Share the diameter, coating, or spindle you are running.</p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+        <i class="fa fa-envelope text-xs"></i> Request a quote
+      </a>
+      <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 bg-white text-slate-700 font-display font-semibold text-sm rounded-full hover:border-brand hover:text-[#c2410c] transition-all duration-300">
+        <i class="fab fa-whatsapp"></i> WhatsApp the team
+      </a>
+    </div>
+  </div>
+</section>
 
     <!-- ══════════════ FOOTER PLACEHOLDER ══════════════ -->
-    <div id="footer-placeholder"></div>
+    <footer id="site-footer" class="relative overflow-hidden text-slate-600">
+     <!-- <div class="h-0.5 bg-[#f97316]"></div> -->
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 py-6 lg:py-10">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-6 lg:grid-cols-12 lg:gap-x-10">
+        <div class="col-span-2 lg:col-span-4">
+          <a href="./index.html" class="inline-flex">
+            <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-11 w-auto" />
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">PCB drills, routers, spindles, V-cut blades, and line consumables. Supplied from Dhayari, Pune.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="footer-kicker">Company</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="footer-kicker">Products</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./product.html#pcb-drill">PCB drill tools</a></li>
+            <li><a href="./product.html#pcb-routing">PCB routing tools</a></li>
+            <li><a href="./product.html#spindle">Spindles and spares</a></li>
+            <li><a href="./product.html#vcut">V-cut blades</a></li>
+            <li><a href="./product.html#more">Line consumables</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-3">
+          <p class="footer-kicker">Enquire</p>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="tel:+919730429324" class="inline-flex items-center gap-2.5"><i class="fi fa fa-phone" aria-hidden="true"></i>+91 97304 29324</a></li>
+            <li><a href="mailto:suryatantraa@gmail.com" class="inline-flex items-center gap-2.5"><i class="fi fa fa-envelope" aria-hidden="true"></i>suryatantraa@gmail.com</a></li>
+            <li><a href="https://wa.me/919730429324" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5"><i class="fi fab fa-whatsapp" aria-hidden="true"></i>WhatsApp the team</a></li>
+            <li><a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2.5"><i class="fi fa fa-arrow-right" aria-hidden="true"></i>Request a quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar mt-8 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex gap-2.5 text-slate-600"><i class="fi fa fa-location-dot mt-0.5" aria-hidden="true"></i><span>S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041</span></p>
+        <div class="footer-end">
+          <p>© <span id="year"></span> Suryatantra Enterprises LLP. All rights reserved.</p>
+          <div class="footer-actions">
+            <button type="button" class="footer-action" data-go-top aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="footer-action footer-action-wa" aria-label="WhatsApp us for a quote"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <!-- ══════════════ SCRIPTS ══════════════ -->
     <!-- Shared components (navbar active state, footer loader, etc.) -->
+    <script src="./assets/js/leads.js"></script>
     <script src="./assets/js/script.js" onerror="console.warn('script.js not found')"></script>
     <!-- Blog-specific logic -->
     <script src="assets/js/blog.js" onerror="console.warn('script.js not found')"></script>

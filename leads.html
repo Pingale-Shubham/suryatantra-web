@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Enquiry list | Suryatantra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    body { margin: 0; background: #f4f6fb; color: #334155; font-family: Inter, sans-serif; }
+    .board { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    h1 { font-family: Outfit, sans-serif; color: #0f172a; margin: 0 0 0.35rem; }
+    .note { margin: 0 0 1rem; }
+    .gate, .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1rem; }
+    .gate { max-width: 24rem; }
+    .gate input, .toolbar button, .stats-card { font: inherit; }
+    .gate input { width: 100%; margin: 0.6rem 0; padding: 0.65rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; }
+    button { border: 0; border-radius: 999px; background: #f97316; color: #fff; font-family: Outfit, sans-serif; font-weight: 700; padding: 0.6rem 1rem; cursor: pointer; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+    .stats-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 0.9rem 1rem; }
+    .stats-card strong { display: block; font-family: Outfit, sans-serif; font-size: 1.6rem; color: #0f172a; }
+    .toolbar { display: flex; justify-content: space-between; gap: 0.75rem; align-items: center; margin: 0.5rem 0 0.75rem; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 1rem; overflow: hidden; }
+    th, td { text-align: left; padding: 0.65rem 0.7rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; font-size: 0.84rem; }
+    th { font-family: Outfit, sans-serif; color: #0f172a; background: #f8fafc; }
+    tr.late { background: #fff7ed; }
+    select { font: inherit; padding: 0.25rem 0.4rem; }
+    .error { color: #9a3412; }
+    .wrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <h1>Enquiry list</h1>
+    <p class="note">Reply within 24 hours. Rows still marked New after a day are highlighted.</p>
+    <form id="gate" class="gate">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Open list</button>
+      <p id="gate-error" class="error" hidden></p>
+    </form>
+    <section id="list" hidden>
+      <div class="stats" id="stats"></div>
+      <div class="toolbar">
+        <p id="count"></p>
+        <button type="button" id="export">Download CSV</button>
+      </div>
+      <div class="wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Company</th>
+              <th>Tool or part</th>
+              <th>Quantity</th>
+              <th>City</th>
+              <th>Channel</th>
+              <th>Source</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const gate = document.getElementById("gate");
+    const list = document.getElementById("list");
+    const rows = document.getElementById("rows");
+    const statsEl = document.getElementById("stats");
+    const gateError = document.getElementById("gate-error");
+    let password = sessionStorage.getItem("st-lead-password") || "";
+    let latest = [];
+
+    function showError(message) {
+      gateError.hidden = false;
+      gateError.textContent = message;
+    }
+
+    function hoursOld(iso) {
+      const then = new Date(iso).getTime();
+      if (!then) return 0;
+      return (Date.now() - then) / 36e5;
+    }
+
+    function formatWhen(iso) {
+      const date = new Date(iso);
+      if (Number.isNaN(date.getTime())) return iso || "";
+      return date.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
+    }
+
+    function pairs(obj) {
+      return Object.entries(obj || {}).sort(function (a, b) { return b[1] - a[1]; });
+    }
+
+    function renderStats(stats) {
+      const sources = pairs(stats.bySource).map(function (pair) {
+        return pair[0] + ": " + pair[1];
+      }).join(" · ") || "No visits recorded yet";
+      const pages = pairs(stats.byPage).map(function (pair) {
+        return pair[0] + ": " + pair[1];
+      }).join(" · ") || "No pages recorded yet";
+      statsEl.innerHTML =
+        '<article class="stats-card"><span>Form sends</span><strong>' + (stats.formSends || 0) + '</strong></article>' +
+        '<article class="stats-card"><span>WhatsApp clicks</span><strong>' + (stats.whatsappClicks || 0) + '</strong></article>' +
+        '<article class="stats-card"><span>Where they came from</span><p>' + sources + '</p></article>' +
+        '<article class="stats-card"><span>Which page</span><p>' + pages + '</p></article>';
+    }
+
+    function renderRows(leads) {
+      latest = leads;
+      document.getElementById("count").textContent = leads.length + " enquiries";
+      rows.innerHTML = leads.map(function (lead) {
+        const late = lead.status === "new" && hoursOld(lead.date) >= 24;
+        return '<tr class="' + (late ? "late" : "") + '" data-id="' + lead.id + '">' +
+          '<td>' + formatWhen(lead.date) + (late ? '<br>Reply due' : '') + '</td>' +
+          '<td>' + escapeHtml(lead.name) + (lead.email ? '<br>' + escapeHtml(lead.email) : '') + '</td>' +
+          '<td>' + escapeHtml(lead.phone) + '</td>' +
+          '<td>' + escapeHtml(lead.company) + '</td>' +
+          '<td>' + escapeHtml(lead.product) + '</td>' +
+          '<td>' + escapeHtml(lead.quantity) + '</td>' +
+          '<td>' + escapeHtml(lead.city) + '</td>' +
+          '<td>' + escapeHtml(lead.channel) + '<br>' + escapeHtml(lead.page || "") + '</td>' +
+          '<td>' + escapeHtml(lead.source || "") + '</td>' +
+          '<td><select data-status>' +
+            ['new', 'quoted', 'won'].map(function (status) {
+              return '<option value="' + status + '"' + (lead.status === status ? ' selected' : '') + '>' + status + '</option>';
+            }).join('') +
+          '</select></td></tr>';
+      }).join('');
+    }
+
+    function escapeHtml(value) {
+      return String(value || '').replace(/[&<>"']/g, function (char) {
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char];
+      });
+    }
+
+    function load() {
+      return fetch('./lead.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ action: 'list', password: password })
+      }).then(function (response) {
+        if (!response.ok) throw new Error(response.status === 401 ? 'That password did not open the list.' : 'The enquiry list did not load. Open this page from the website server.');
+        return response.json();
+      }).then(function (data) {
+        gate.hidden = true;
+        list.hidden = false;
+        renderStats(data.stats || {});
+        renderRows(data.leads || []);
+      });
+    }
+
+    gate.addEventListener('submit', function (event) {
+      event.preventDefault();
+      password = document.getElementById('password').value;
+      sessionStorage.setItem('st-lead-password', password);
+      load().catch(function (error) {
+        sessionStorage.removeItem('st-lead-password');
+        showError(error.message);
+      });
+    });
+
+    rows.addEventListener('change', function (event) {
+      const select = event.target.closest('[data-status]');
+      if (!select) return;
+      const id = select.closest('tr').dataset.id;
+      fetch('./lead.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'status', password: password, id: id, status: select.value })
+      }).then(function () { return load(); }).catch(function () {
+        showError('The status did not save.');
+      });
+    });
+
+    document.getElementById('export').addEventListener('click', function () {
+      const header = ['date', 'name', 'phone', 'company', 'product', 'quantity', 'city', 'email', 'channel', 'page', 'landing', 'source', 'status', 'message'];
+      const lines = [header.join(',')].concat(latest.map(function (lead) {
+        return header.map(function (key) {
+          return '"' + String(lead[key] || '').replace(/"/g, '""') + '"';
+        }).join(',');
+      }));
+      const blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'suryatantra-enquiries.csv';
+      link.click();
+    });
+
+    if (password) {
+      load().catch(function () {
+        sessionStorage.removeItem('st-lead-password');
+        password = '';
+      });
+    }
+  </script>
+</body>
+</html>

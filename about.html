@@ -7,427 +7,234 @@
   <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
   <title>Suryatantra Enterprises LLP | About Us</title>
   <meta name="description"
-    content="Suryatantra Enterprises LLP — Empowering PCB Manufacturers with top-quality supplies, precision machining tools, and components." />
+    content="Suryatantra Enterprises LLP supplies PCB drills, routers, spindles, V-cut blades, and line consumables from Dhayari, Pune. Established in 2019." />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- ── Tailwind CDN ── -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          /* Fonts */
-          fontFamily: {
-            display: ['"Outfit"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          },
-          fontSize: {
-            'xs': ['13px', '1.6'],
-            'sm': ['15px', '1.6'],
-            'base': ['17px', '1.6'],
-            'lg': ['20px', '1.5'],
-            'xl': ['24px', '1.4'],
-            '2xl': ['30px', '1.3'],
-            '3xl': ['36px', '1.2'],
-            '4xl': ['48px', '1.1'],
-            '5xl': ['64px', '1.0'],
-          },
-
-          /* Brand palette */
-          colors: {
-            navy: { DEFAULT: '#071428', 90: 'rgba(7,20,40,0.90)', 97: 'rgba(7,20,40,0.97)' },
-            mid: '#0b1f3a',
-            deep: '#0e2a4f',
-            card: '#0f1e30',
-            surface: '#162436',
-            brand: {
-              DEFAULT: '#f97316',
-              light: '#fb923c',
-              gold: '#fbbf24',
-            },
-          },
-
-          /* Custom gradients */
-          backgroundImage: {
-            'hero': 'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
-            'section-dark': 'linear-gradient(180deg,#09192f 0%,#071428 100%)',
-            'brand-gradient': 'linear-gradient(135deg,#f97316 0%,#fbbf24 100%)',
-            'grid-lines': 'linear-gradient(rgba(249,115,22,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.05) 1px,transparent 1px)',
-            'dots': 'radial-gradient(rgba(249,115,22,.07) 1px,transparent 1px)',
-          },
-          backgroundSize: {
-            'grid-60': '60px 60px',
-            'dots-28': '28px 28px',
-          },
-
-          /* Custom shadows */
-          boxShadow: {
-            'brand': '0 8px 32px rgba(249,115,22,0.35)',
-            'brand-lg': '0 16px 48px rgba(249,115,22,0.50)',
-            'card': '0 24px 64px rgba(0,0,0,0.40)',
-          },
-
-          /* Keyframes */
-          keyframes: {
-            'slide-up': {
-              '0%': { opacity: '0', transform: 'translateY(28px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-            'ring-pulse': {
-              '0%,100%': { opacity: '0.20' },
-              '50%': { opacity: '0.55' },
-            },
-          },
-          animation: {
-            'slide-up': 'slide-up .65s ease both',
-            'ring-pulse': 'ring-pulse 4s ease-in-out infinite',
-          },
-        },
-      },
-    };
-  </script>
-
-  <!-- ── Google Fonts ── -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- ── Font Awesome ── -->
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <style>
-  </style>
 </head>
 
-<body class="font-body bg-navy text-slate-200 overflow-x-hidden antialiased">
+<body class="font-body bg-navy text-slate-700 overflow-x-hidden antialiased">
 
   <!-- ═════════════════ NAVBAR ═══════════════════ -->
-  <header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
-    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
-      <a href="./index.html" class="shrink-0 flex items-center">
-        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-10 object-contain" />
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 flex items-center justify-between h-[76px] gap-4">
+      <a href="./index.html" class="min-w-0 inline-flex items-center rounded-md bg-transparent px-2 py-1">
+        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 sm:h-10 w-auto max-w-[168px] sm:max-w-[240px] object-contain object-left" />
       </a>
-      <nav class="hidden md:block" aria-label="Primary">
-        <ul class="flex items-center gap-9">
-          <li>
-            <a href="./index.html" data-page="index" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Home</a>
-          </li>
-          <li>
-            <a href="./about.html" data-page="about" class="nav-link nav-active font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">About</a>
-          </li>
-          <li>
-            <a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors"> Products</a>
-          </li>
-          <li>
-            <a href="./blog.html" data-page="blog" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Blogs</a>
-          </li>
-          <li>
-            <a href="./contact.html" data-page="contact" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
-        class="md:hidden flex flex-col gap-[5px] p-1.5 bg-transparent border-0 cursor-pointer">
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-        <span class="hb block w-6 h-[2px] bg-slate-400 rounded-sm"></span>
-      </button>
+      <div class="flex items-center gap-4 shrink-0">
+        <nav class="hidden lg:block" aria-label="Primary">
+          <ul class="flex items-center gap-7">
+            <li><a href="./index.html" data-page="index" class="nav-link font-display font-semibold text-sm text-slate-700">Home</a></li>
+            <li><a href="./about.html" data-page="about" class="nav-link nav-active font-display font-semibold text-sm text-slate-700">About</a></li>
+            <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-sm text-slate-700">Products</a></li>
+            <li><a href="./blog.html" data-page="blog" class="nav-link font-display font-semibold text-sm text-slate-700">Blog</a></li>
+            <li><a href="./contact.html" data-page="contact" class="nav-link font-display font-semibold text-sm text-slate-700">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="./contact.html?product=PCB%20tooling"
+          class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+          Request a quote
+        </a>
+        <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
+          style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;background:transparent;border:0;cursor:pointer">
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+        </button>
+      </div>
     </div>
-    <div id="mobileMenu" class="md:hidden bg-card border-t border-brand/10">
-      <ul class="flex flex-col px-6 py-6 gap-5">
-        <li><a href="./index.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Home</a></li>
-        <li><a href="./about.html" class="font-display font-semibold text-sm text-brand">About</a></li>
-        <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Products</a></li>
-        <li><a href="./blog.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Blogs</a></li>
-        <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-300 hover:text-brand transition-colors">Contact</a></li>
+    <div id="mobileMenu" class="lg:hidden bg-white border-t border-slate-200">
+      <ul class="flex flex-col px-5 py-5 gap-4">
+        <li><a href="./index.html" class="font-display font-semibold text-sm text-slate-700">Home</a></li>
+        <li><a href="./about.html" class="font-display font-semibold text-sm text-[#c2410c]">About</a></li>
+        <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-700">Products</a></li>
+        <li><a href="./blog.html" class="font-display font-semibold text-sm text-slate-700">Blog</a></li>
+        <li><a href="./contact.html" class="font-display font-semibold text-sm text-slate-700">Contact</a></li>
+        <li class="pt-2 md:hidden">
+          <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full">Request a quote</a>
+        </li>
       </ul>
     </div>
   </header>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
-  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
-  <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
-    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
-      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
-      <span class="opacity-40">/</span>
-      <span class="text-orange">About Us</span>
-    </nav>
-    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">
-       Engineering <span class="text-gradient">Precision.</span>Building Trust.
-    </h1>
-    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">
-  Two decades of powering PCB manufacturers with advanced tooling, consumables, and technical expertise that keep production lines moving.
-</p>
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 pt-24 pb-5 md:pt-28 md:pb-6 grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <div>
+      <nav class="flex items-center gap-2 text-sm text-slate-500 mb-3" aria-label="Breadcrumb">
+        <a href="./index.html" class="hover:text-[#c2410c]">Home</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-slate-800">About</span>
+      </nav>
+      <p class="text-xs font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-2">Established 2019 · Dhayari, Pune</p>
+      <h1 class="font-display font-extrabold text-[clamp(1.9rem,4vw,3rem)] leading-[1.1] text-slate-900">
+        A supply partner for PCB manufacturers
+      </h1>
+      <div class="mt-3 space-y-2 text-slate-600 text-base leading-relaxed">
+        <p>We started in 2019 to supply the tools a PCB plant wears out: carbide drills, routers, V-cut blades, spindles, and the pins, rings, and brushes around them.</p>
+        <p>Orders come from prototype shops and from volume factories. In-stock items ship in 3–5 business days, and each reorder follows the same specification.</p>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <a href="./product.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+          View products <i class="fa fa-arrow-right text-xs"></i>
+        </a>
+        <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 text-slate-700 font-display font-semibold text-sm rounded-full hover:border-brand hover:text-[#c2410c] transition-all duration-300">
+          Request a quote
+        </a>
+      </div>
+    </div>
+    <figure class="relative overflow-hidden rounded-2xl border border-slate-200 h-72 sm:h-80 lg:h-full lg:min-h-[18rem]">
+      <img src="./assets/Images/pmt.jpg" alt="PCB drilling spindle working a panel" class="absolute inset-0 h-full w-full object-cover" />
+    </figure>
+  </div>
+  <div id="company-stats" aria-label="Company figures" class="border-t border-slate-200 bg-surface">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 grid grid-cols-2 lg:grid-cols-4">
+      <div class="py-4 px-3 text-center border-r border-b lg:border-b-0 border-slate-200">
+        <span class="font-display font-extrabold text-4xl text-slate-900 leading-none" data-count="7" data-suffix="+">7+</span>
+        <span class="mt-2 block text-sm text-slate-600">Years in supply</span>
+      </div>
+      <div class="py-4 px-3 text-center border-b lg:border-b-0 lg:border-r border-slate-200">
+        <span class="font-display font-extrabold text-4xl text-slate-900 leading-none" data-count="500" data-suffix="+">500+</span>
+        <span class="mt-2 block text-sm text-slate-600">Clients served</span>
+      </div>
+      <div class="py-4 px-3 text-center border-r border-slate-200">
+        <span class="font-display font-extrabold text-4xl text-slate-900 leading-none" data-count="1200" data-suffix="+">1200+</span>
+        <span class="mt-2 block text-sm text-slate-600">Products supplied</span>
+      </div>
+      <div class="py-4 px-3 text-center">
+        <span class="font-display font-extrabold text-4xl text-slate-900 leading-none" data-count="99" data-suffix="%">99%</span>
+        <span class="mt-2 block text-sm text-slate-600">Repeat business</span>
+      </div>
+    </div>
   </div>
 </section>
 
-  <!-- STATS BAR -->
-  <div class="bg-card border-y border-brand/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[.06]">
-
-      <div class="fade-up flex flex-col items-center justify-center py-5 md:py-7 px-2 sm:px-4
-                hover:bg-brand/[.04] transition-colors duration-300 group">
-        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="7"
-          data-suffix="+">0+</span>
-        <span
-          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Years
-          Experience</span>
-      </div>
-
-      <div class="fade-up flex flex-col items-center justify-center py-5 md:py-7 px-2 sm:px-4
-                hover:bg-brand/[.04] transition-colors duration-300">
-        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient"
-          data-count="500" data-suffix="+">0+</span>
-        <span
-          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Clients
-          Served</span>
-      </div>
-
-      <div class="fade-up flex flex-col items-center justify-center py-5 md:py-7 px-2 sm:px-4
-                hover:bg-brand/[.04] transition-colors duration-300">
-        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient"
-          data-count="1200" data-suffix="+">0+</span>
-        <span
-          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Products
-          Supplied</span>
-      </div>
-
-      <div class="fade-up flex flex-col items-center justify-center py-5 md:py-7 px-2 sm:px-4
-                hover:bg-brand/[.04] transition-colors duration-300">
-        <span class="font-display font-black text-[clamp(1.6rem,6vw,2.6rem)] leading-none text-gradient" data-count="99"
-          data-suffix="%">0%</span>
-        <span
-          class="mt-1.5 text-[9px] sm:text-[10px] font-semibold text-slate-500 uppercase tracking-[.12em] text-center">Client
-          Retention</span>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- ════════════════════════════════════════════════════════════
-     WHO WE ARE
-════════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-section-dark">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-      <!-- Image column -->
-      <div class="fade-up relative">
-        <div class="absolute -top-4 -left-4 w-20 h-20 border-2 border-brand/35 rounded-2xl pointer-events-none"></div>
-
-        <img src="./assets/Images/pmt.jpg" alt="Suryatantra precision PCB manufacturing facility"
-          class="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl block" />
-
-        <div class="absolute -bottom-6 -right-6 hidden sm:block
-                  bg-brand-gradient rounded-2xl px-6 py-5 text-center shadow-brand">
-          <strong class="font-display font-black text-[2rem] text-white leading-none block">07+</strong>
-          <span class="text-[10px] text-white/80 font-semibold uppercase tracking-[.12em]">Years of Excellence</span>
-        </div>
-      </div>
-
-      <!-- Text column -->
-      <div class="fade-up space-y-7">
-
-        <span class="inline-flex items-center gap-2 bg-brand/10 border border-brand/25
-                   rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em]">
-          <i class="fa fa-circle text-[4px]"></i> Our Story
-        </span>
-
-        <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] leading-[1.12] text-white">
-          Who We <span class="text-gradient">Are</span>
+  <section class="py-8 md:py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="max-w-2xl mb-5">
+        <p class="text-xs font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-3">Who we supply</p>
+        <h2 class="font-display font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] text-slate-900 leading-tight">
+          Plants that run these lines every day
         </h2>
-
-        <div class="space-y-4 text-slate-400 text-[15px] leading-[1.85]">
-          <p>Suryatantra Enterprises LLP delivers advanced PCB drilling and routing solutions engineered to meet global
-            manufacturing standards. Every tool we supply is a commitment to quality, precision, and reliability.</p>
-          <p>With over two decades of industry experience, we understand the operational demands of PCB manufacturers
-            across all production scales — from prototype shops to high-volume factories.</p>
-          <p>Our expertise in precision tooling and automation support increases yield while minimising downtime, giving
-            our clients a measurable competitive edge.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="bg-surface border border-slate-200 rounded-2xl p-6">
+          <h3 class="font-display font-bold text-slate-900 mb-4">Factory types</h3>
+          <ul class="space-y-3 text-slate-700 text-sm leading-relaxed">
+            <li class="flex items-start gap-3"><i class="fa fa-industry text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Prototype and job-work PCB shops</li>
+            <li class="flex items-start gap-3"><i class="fa fa-industry text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> High-volume PCB factories</li>
+            <li class="flex items-start gap-3"><i class="fa fa-industry text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Multilayer and HDI board lines</li>
+            <li class="flex items-start gap-3"><i class="fa fa-industry text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Aluminium-board and depaneling lines</li>
+          </ul>
+        </article>
+        <article class="bg-surface border border-slate-200 rounded-2xl p-6">
+          <h3 class="font-display font-bold text-slate-900 mb-4">What we keep in stock</h3>
+          <ul class="space-y-3 text-slate-700 text-sm leading-relaxed">
+            <li class="flex items-start gap-3"><i class="fa fa-check text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Tungsten carbide and solid carbide drills</li>
+            <li class="flex items-start gap-3"><i class="fa fa-check text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Diamond-coated and aluminium-coated routers</li>
+            <li class="flex items-start gap-3"><i class="fa fa-check text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Hardened-steel V-cut blades</li>
+            <li class="flex items-start gap-3"><i class="fa fa-check text-[#c2410c] mt-1 shrink-0" aria-hidden="true"></i> Spindle spares in alloy steel, ceramic hybrid bearings, and high-speed steel</li>
+          </ul>
+        </article>
+      </div>
+      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <article class="border border-slate-200 rounded-2xl p-5">
+          <p class="font-display font-bold text-slate-900 mb-2">Specified tooling</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Diameter, coating, and board stack are confirmed before the quote, so the tool matches the machine already on the line.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-5">
+          <p class="font-display font-bold text-slate-900 mb-2">Stock on hand</p>
+          <p class="text-sm text-slate-600 leading-relaxed">In-stock items leave Dhayari in 3–5 business days. If a size is not on the shelf, we say so before you plan the run.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-5">
+          <p class="font-display font-bold text-slate-900 mb-2">One catalogue</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Drills, routers, spindles, V-cut blades, pins, rings, and brushes are ordered from the same desk.</p>
+        </article>
+        <article class="border border-slate-200 rounded-2xl p-5">
+          <p class="font-display font-bold text-slate-900 mb-2">The same number</p>
+          <p class="text-sm text-slate-600 leading-relaxed">Call or WhatsApp the team that raises the quote. The same number handles the follow-up.</p>
+        </article>
+      </div>
+      <div class="mt-5 pt-5 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h2 class="font-display font-bold text-xl text-slate-900">Send the size you are running</h2>
+          <p class="mt-1 text-sm text-slate-600">Share the diameter, coating, and quantity.</p>
         </div>
-
-        <ul class="space-y-3.5">
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
-            ISO-grade precision drill bits and routing tools
-          </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
-            End-to-end technical support and after-sales service
-          </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
-            Serving leading PCB manufacturers across India
-          </li>
-          <li class="flex items-start gap-3 text-slate-200 text-sm leading-snug">
-            <i class="fa fa-check-circle text-brand mt-0.5 shrink-0 text-[15px]"></i>
-            Complete range: Drills, Routers, V-Cut, Spindles &amp; more
-          </li>
-        </ul>
-
-        <div class="flex flex-wrap gap-4 pt-1">
-          <a href="./contact.html" class="inline-flex items-center gap-2.5 px-7 py-3.5
-                  bg-brand-gradient text-white font-display font-bold text-[13px] rounded-full
-                  shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300">
-            <i class="fa fa-arrow-right text-xs"></i> Get in Touch
+        <div class="flex flex-wrap gap-3">
+          <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+            <i class="fa fa-envelope text-xs"></i> Request a quote
           </a>
-          <a href="./product.html" class="inline-flex items-center gap-2.5 px-7 py-3.5
-                  border border-white/15 text-slate-300 font-display font-bold text-[13px] rounded-full
-                  hover:border-brand hover:text-brand transition-all duration-300">
-            View Products
+          <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 text-slate-700 font-display font-semibold text-sm rounded-full hover:border-brand hover:text-[#c2410c] transition-all duration-300">
+            <i class="fab fa-whatsapp"></i> WhatsApp the team
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- ════════════════════════════════════════════════════════════
-     CORE STRENGTHS
-════════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-navy relative overflow-hidden">
-
-    <div class="absolute inset-0 bg-dots bg-dots-28 pointer-events-none"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
-
-      <div class="text-center mb-12 fade-up">
-        <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25
-                   rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-5">
-          <i class="fa fa-circle text-[4px]"></i> What Sets Us Apart
-        </span>
-        <h2 class="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] text-white leading-tight">
-          Our Core <span class="text-gradient">Strengths</span>
-        </h2>
-        <p class="mt-4 text-slate-400 max-w-md mx-auto leading-relaxed text-[15px]">
-          Built on experience, driven by precision, and focused on long-term partnerships
-          that deliver real manufacturing value.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">01</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Precision Engineering</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            High-accuracy drill bits and routing tools designed for consistent performance,
-            tight tolerances, and long tool life — even in demanding production environments.
-          </p>
-        </div>
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">02</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-industry"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Manufacturing Expertise</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            Deep understanding of PCB workflows — from single-layer prototypes to multi-layer
-            HDI boards — helping you optimise efficiency and maximise production yield.
-          </p>
-        </div>
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">03</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-handshake"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Reliable Partnership</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            Long-term client relationships built on trust, consistent quality, proactive
-            communication, and dedicated technical support whenever you need it.
-          </p>
-        </div>
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">04</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-boxes"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Wide Product Range</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            From micro-drills and routing blades to V-cut tools, spindles, and automation
-            accessories — a complete one-stop supply chain for your PCB facility.
-          </p>
-        </div>
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">05</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-shipping-fast"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Fast &amp; Reliable Supply</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            Efficient logistics and strong inventory management ensure your production line
-            never faces unnecessary delays due to tooling shortages.
-          </p>
-        </div>
-
-        <div class="strength-card fade-up relative bg-card border border-white/[.07] rounded-2xl p-8 overflow-hidden
-                  hover:border-brand/40 hover:shadow-card">
-          <span class="absolute top-5 right-6 font-display font-black text-[5rem] leading-none
-                     text-brand/[.06] select-none pointer-events-none">06</span>
-          <div class="card-icon w-[56px] h-[56px] rounded-xl bg-brand/10 border border-brand/20
-                    flex items-center justify-center text-brand text-2xl mb-7">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h3 class="font-display font-bold text-[1.05rem] text-white mb-3">Dedicated Support</h3>
-          <p class="text-slate-400 text-sm leading-[1.8]">
-            Our technical team is always on hand to advise on tool selection, troubleshoot
-            performance issues, and help you get the most from every product.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<!-- ═══════════════ CTA ═══════════════ -->
-      <section class="relative py-8 md:py-8 bg-mid overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full border border-brand/[.07] animate-ring-pulse pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-brand/[.11] pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-brand/[.05] blur-3xl pointer-events-none"></div>
-        <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
-          <span class="inline-flex items-center justify-center gap-2 bg-brand/10 border border-brand/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-brand uppercase tracking-[.12em] mb-6"><i class="fa fa-circle text-[4px]"></i> Let's Work Together</span>
-          <h2 class="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">Partner With Us for<span class="text-gradient">High-Precision</span> PCB Solutions</h2>
-          <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">Enhance your manufacturing efficiency with reliable tools, consumables, and automation support backed by two decades of industry expertise.</p>
-          <!-- Buttons -->
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="./contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-gradient text-white font-display font-bold text-sm rounded-full shadow-brand hover:shadow-brand-lg hover:-translate-y-0.5 transition-all duration-300"><i class="fa fa-envelope text-xs"></i> Contact Our Team</a>
-            <a href="https://wa.me/919730429324" class="inline-flex items-center gap-2 px-8 py-3.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-brand hover:text-brand transition-all duration-300"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-          </div>
-        </div>
-      </section>
-
-  <!-- ════════════════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════════════════════
      FOOTER PLACEHOLDER
 ════════════════════════════════════════════════════════════ -->
-  <div id="footer-placeholder"></div>
+  <footer id="site-footer" class="relative overflow-hidden text-slate-600">
+     <!-- <div class="h-0.5 bg-[#f97316]"></div> -->
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 py-6 lg:py-10">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-6 lg:grid-cols-12 lg:gap-x-10">
+        <div class="col-span-2 lg:col-span-4">
+          <a href="./index.html" class="inline-flex">
+            <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-11 w-auto" />
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">PCB drills, routers, spindles, V-cut blades, and line consumables. Supplied from Dhayari, Pune.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="footer-kicker">Company</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="footer-kicker">Products</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./product.html#pcb-drill">PCB drill tools</a></li>
+            <li><a href="./product.html#pcb-routing">PCB routing tools</a></li>
+            <li><a href="./product.html#spindle">Spindles and spares</a></li>
+            <li><a href="./product.html#vcut">V-cut blades</a></li>
+            <li><a href="./product.html#more">Line consumables</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-3">
+          <p class="footer-kicker">Enquire</p>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="tel:+919730429324" class="inline-flex items-center gap-2.5"><i class="fi fa fa-phone" aria-hidden="true"></i>+91 97304 29324</a></li>
+            <li><a href="mailto:suryatantraa@gmail.com" class="inline-flex items-center gap-2.5"><i class="fi fa fa-envelope" aria-hidden="true"></i>suryatantraa@gmail.com</a></li>
+            <li><a href="https://wa.me/919730429324" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5"><i class="fi fab fa-whatsapp" aria-hidden="true"></i>WhatsApp the team</a></li>
+            <li><a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2.5"><i class="fi fa fa-arrow-right" aria-hidden="true"></i>Request a quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar mt-8 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex gap-2.5 text-slate-600"><i class="fi fa fa-location-dot mt-0.5" aria-hidden="true"></i><span>S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041</span></p>
+        <div class="footer-end">
+          <p>© <span id="year"></span> Suryatantra Enterprises LLP. All rights reserved.</p>
+          <div class="footer-actions">
+            <button type="button" class="footer-action" data-go-top aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="footer-action footer-action-wa" aria-label="WhatsApp us for a quote"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
   <!-- ════════════════════════════════════════════════════════════
      SCRIPTS
 ════════════════════════════════════════════════════════════ -->
+  <script src="./assets/js/leads.js"></script>
   <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/about.js"></script>
 
 </body>
 

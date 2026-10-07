@@ -5,351 +5,411 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="./assets/Images/Logo/title.png" />
   <title>Suryatantra Enterprises LLP | Contact</title>
-  <meta name="description" content="Suryatantra Enterprises LLP — Contact us for PCB manufacturing tools, precision machining, and technical support." />
+  <meta name="description" content="Request a quote from Suryatantra Enterprises LLP in Dhayari, Pune. Call +91 97304 29324 or send the tool size, coating, and quantity." />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['"Outfit"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          },
-          fontSize: {
-            'xs': ['13px', '1.6'],
-            'sm': ['15px', '1.6'],
-            'base': ['17px', '1.6'],
-            'lg': ['20px', '1.5'],
-            'xl': ['24px', '1.4'],
-            '2xl': ['30px', '1.3'],
-            '3xl': ['36px', '1.2'],
-            '4xl': ['48px', '1.1'],
-            '5xl': ['64px', '1.0'],
-          },
-          colors: { navy:'#071428', mid:'#0b1f3a', deep:'#0e2a4f', card:'#111f33', orange:'#f97316', amber:'#fbbf24' },
-          backgroundImage: {
-            'hero-gradient':    'linear-gradient(135deg,#071428 0%,#0b1f3a 55%,#0e2a4f 100%)',
-            'section-gradient': 'linear-gradient(180deg,#09192f 0%,#071428 100%)',
-            'orange-gold':      'linear-gradient(135deg,#f97316,#fbbf24)',
-          },
-          boxShadow: {
-            'orange-glow': '0 6px 24px rgba(249,115,22,0.35)',
-            'orange-lg':   '0 10px 32px rgba(249,115,22,0.5)',
-            'card-lift':   '0 16px 40px rgba(0,0,0,0.28)',
-          },
-          keyframes: { 'pulse-ring': { '0%,100%': {opacity:'0.15'}, '50%': {opacity:'0.4'} } },
-          animation: { 'pulse-ring': 'pulse-ring 4s ease-in-out infinite' },
-        },
-      },
-    };
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
-<body class="font-body bg-navy text-slate-200 min-h-screen overflow-x-hidden antialiased">
+<body class="font-body bg-navy text-slate-700 min-h-screen overflow-x-hidden antialiased">
 
 <!-- ═══════════════ NAVBAR ═══════════════ -->
-<header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-navy/90 backdrop-blur-xl border-b border-brand/10">
-    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-[72px]">
-    <a href="./index.html" class="flex-shrink-0">
-      <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 object-contain">
-    </a>
-    <nav class="hidden md:block">
-      <ul class="flex items-center gap-8">
-        <li><a href="./index.html" class="nav-link font-display font-semibold text-[15px] uppercase tracking-widest text-slate-400 transition-colors">Home</a></li>
-        <li><a href="./about.html" class="nav-link font-display font-semibold text-[15px] uppercase tracking-widest text-slate-400 transition-colors">About</a></li>
-        <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-[15px] uppercase tracking-[.12em] text-slate-400 transition-colors">Products</a></li>
-        <li><a href="./blog.html"    class="nav-link font-display font-semibold text-[15px] uppercase tracking-widest text-slate-400 transition-colors">Blogs</a></li>
-        <li><a href="./contact.html" class="nav-link nav-active font-display font-semibold text-[15px] uppercase tracking-widest transition-colors">Contact</a></li>
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 flex items-center justify-between h-[76px] gap-4">
+      <a href="./index.html" class="min-w-0 inline-flex items-center rounded-md bg-transparent px-2 py-1">
+        <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-8 sm:h-10 w-auto max-w-[168px] sm:max-w-[240px] object-contain object-left" />
+      </a>
+      <div class="flex items-center gap-4 shrink-0">
+        <nav class="hidden lg:block" aria-label="Primary">
+          <ul class="flex items-center gap-7">
+            <li><a href="./index.html" data-page="index" class="nav-link font-display font-semibold text-sm text-slate-700">Home</a></li>
+            <li><a href="./about.html" data-page="about" class="nav-link font-display font-semibold text-sm text-slate-700">About</a></li>
+            <li><a href="./product.html" data-page="product" class="nav-link font-display font-semibold text-sm text-slate-700">Products</a></li>
+            <li><a href="./blog.html" data-page="blog" class="nav-link font-display font-semibold text-sm text-slate-700">Blog</a></li>
+            <li><a href="./contact.html" data-page="contact" class="nav-link nav-active font-display font-semibold text-sm text-slate-700">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- <a href="./contact.html?product=PCB%20tooling"
+          class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+          Request a quote
+        </a> -->
+        <button id="menuToggle" type="button" aria-expanded="false" aria-label="Toggle navigation"
+          style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:8px;background:transparent;border:0;cursor:pointer">
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+          <span class="hb" style="display:block;width:24px;height:2px;background:#0f172a;border-radius:2px"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden bg-white border-t border-slate-200">
+      <ul class="flex flex-col px-5 py-5 gap-4">
+        <li><a href="./index.html" class="font-display font-semibold text-sm text-slate-700">Home</a></li>
+        <li><a href="./about.html" class="font-display font-semibold text-sm text-slate-700">About</a></li>
+        <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-700">Products</a></li>
+        <li><a href="./blog.html" class="font-display font-semibold text-sm text-slate-700">Blog</a></li>
+        <li><a href="./contact.html" class="font-display font-semibold text-sm text-[#c2410c]">Contact</a></li>
+        <li class="pt-2 md:hidden">
+          <a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full">Request a quote</a>
+        </li>
       </ul>
-    </nav>
-    <button id="menuToggle" aria-expanded="false" aria-label="Toggle menu" class="md:hidden flex flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer">
-      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
-      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
-      <span class="hb block w-5 h-0.5 bg-slate-400 rounded-sm"></span>
-    </button>
-  </div>
-  <div id="mobileMenu" class="md:hidden bg-card border-t border-orange/10">
-    <ul class="flex flex-col px-6 py-4 gap-4">
-      <li><a href="./index.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Home</a></li>
-      <li><a href="./about.html"   class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">About</a></li>
-      <li><a href="./product.html" class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Products</a></li>
-      <li><a href="./blog.html"    class="font-display font-semibold text-sm text-slate-300 hover:text-orange transition-colors">Blogs</a></li>
-      <li><a href="./contact.html" class="font-display font-semibold text-sm text-orange">Contact</a></li>
-    </ul>
-  </div>
-</header>
-
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="relative pt-16 min-h-[220px] flex items-center overflow-hidden bg-hero-gradient">
-  <div class="absolute inset-0 grid-texture pointer-events-none"></div>
-  <div class="absolute -top-24 -right-12 w-80 h-80 rounded-full bg-orange/10 blur-3xl pointer-events-none"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-10">
-    <nav class="flex items-center gap-2 text-[20px] text-slate-500 mb-2 font-medium tracking-wide">
-      <a href="./index.html" class="hover:text-orange transition-colors">Home</a>
-      <span class="opacity-40">/</span><span class="text-orange">Contact</span>
-    </nav>
-    <h1 class="font-display font-extrabold text-[38px] md:text-[48px] leading-[1.1] text-white">Get In <span class="grad-text">Touch.</span></h1>
-    <p class="mt-4 text-slate-400 text-base md:text-lg lg:text-xl max-w leading-relaxed">Need PCB tools or expert support? Our team is just a message away.</p>
-  </div>
-</section>
-
-<!-- ═══════════════ CONTACT + MAP ═══════════════ -->
-  <section class="py-12 bg-section-gradient">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-start">
-      <!-- Map -->
-      <div class="fade-up map-wrap h-[420px] shadow-card-lift overflow-hidden rounded-3xl">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.6196341568091!2d73.80583848837976!3d18.45719812039949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e910456581%3A0xdb7ff7323634ca1!2sSuryatantra%20Enterprises%20LLP!5e0!3m2!1sen!2sin!4v1774237502589!5m2!1sen!2sin" class="w-full h-full border-0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Suryatantra Enterprises Location"></iframe>
-      </div>
-      <!-- Form -->
-      <div class="fade-up">
-        <h2 class="font-display font-extrabold text-[26px] md:text-[30px] text-white leading-tight mb-1">Let's Start a <span class="grad-text">Conversation</span></h2>
-        <p class="text-slate-500 text-[13px] mb-5">Fill in the form and we'll respond within 24 hours.</p>
-        <!-- <form id="contactForm" class="space-y-3.5" action="sendmail.php" method="POST"> -->
-        <!-- <form id="contactForm" class="space-y-3.5" action="https://formsubmit.co/suryatantraenterprisesllp@gmail.com" method="POST"> -->
-        <form id="contactForm" class="space-y-3.5" action="https://formspree.io/f/mpqnogqr" method="POST">
-          <!-- Disable Captcha -->
-          <input type="hidden" name="_captcha" value="false">
-          <!-- Email Subject -->
-          <input type="hidden" name="_subject" value="New Contact Form Submission">
-          <!-- Optional Redirect -->
-          <input type="hidden" name="_next" value="https://suryatantra.in/">
-          <!-- Name -->
-          <div class="field"> 
-            <input type="text" name="name" id="name" placeholder="YOUR NAME" required/>
-          </div>
-          <!-- Phone + Email -->
-          <div class="grid md:grid-cols-2 gap-3.5">
-            <div class="field">
-              <input type="tel" name="phone" id="phone" placeholder="PHONE NO." required/>
-            </div>
-            <div class="field">
-              <input type="email" name="email" id="email" placeholder="YOUR EMAIL" required/>
-            </div>
-          </div>
-          <!-- Message -->
-          <div class="field">
-            <textarea name="message" id="message" rows="4" placeholder="YOUR MESSAGE" required></textarea>
-          </div>
-          <!-- Footer -->
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-1">
-            <!-- Social -->
-            <div class="flex items-center gap-3">
-              <a href="#" aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-              <a href="mailto:suryatantraa@gmail.com" aria-label="Email" class="social-btn"><i class="fa fa-envelope"></i></a>
-              <a href="https://wa.me/919730429324" target="_blank" aria-label="WhatsApp"class="social-btn"><i class="fab fa-whatsapp"></i></a>
-              <a href="#" aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <!-- Submit -->
-            <button type="submit" id="submitBtn" class="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-gold text-white font-display font-bold text-[13px] rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
-              <i class="fa fa-paper-plane text-xs"></i>Send Message
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
-  </section>
+  </header>
 
-<!-- ═══════════════ INFO CARDS ═══════════════ -->
-<section class="py-8 bg-navy relative overflow-hidden">
-  <div class="absolute inset-0 dot-texture pointer-events-none"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-6 grid sm:grid-cols-3 gap-3">
-
-    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group cursor-default">
-      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
-        <i class="fa fa-map-marker-alt"></i>
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="bg-[#f8fafc]">
+  <div class="max-w-7xl mx-auto w-full px-5 sm:px-6 pt-[5.25rem] pb-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 md:gap-6 mb-3">
+      <div class="min-w-0">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-1.5" aria-label="Breadcrumb">
+          <a href="./index.html" class="hover:text-[#c2410c]">Home</a>
+          <span aria-hidden="true">/</span>
+          <span class="text-slate-800">Contact</span>
+        </nav>
+        <!-- <h1 class="font-display font-extrabold text-[clamp(1.45rem,2.4vw,2rem)] leading-none text-slate-900">Send the size you are running</h1> -->
+        <h1 class="font-display font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.1] text-slate-900">Get in <span class="text-[#c2410c]">touch.</span></h1>
+        <p class="mt-2 text-slate-600 text-base leading-relaxed max-w-2xl">Need PCB tools or expert support? Our team is just a message away.</p>
       </div>
-      <div>
-        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Our Address</h4>
-        <p class="text-slate-400 text-[12.5px] leading-snug">Sinhagad Road, opp. Green-Field Hotel,<br>Dhayari, Pune – 411041, India</p>
-      </div>
+      <!-- <p class="max-w-sm text-sm text-slate-600 leading-snug md:text-right">Share the diameter, coating, and quantity. We reply with availability and a quote.</p> -->
     </div>
 
-    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group">
-      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
-        <i class="fa fa-phone"></i>
+    <div class="grid lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] gap-4 items-stretch">
+    <form id="contactForm" class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 w-full" action="sendmail.php" method="POST">
+      <div class="mb-3">
+        <h2 class="font-display font-bold text-lg text-slate-900 leading-none">Request a quote</h2>
+        <p class="mt-1 text-xs text-slate-500">In-stock items ship in 3–5 business days from Dhayari.</p>
       </div>
-      <div>
-        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Phone</h4>
-        <a href="tel:+919730429324" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">+91 97304 29324</a>
+      <p id="formStatus" class="text-sm font-semibold mb-2" hidden></p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" name="name" id="name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="numeric" maxlength="16" placeholder="97304 29324" required />
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" name="email" id="email" autocomplete="email" placeholder="name@company.com" required />
+        </div>
+        <div class="field">
+          <label for="company">Company name</label>
+          <input type="text" name="company" id="company" autocomplete="organization" required />
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" autocomplete="address-level2" required />
+        </div>
+        <div class="field">
+          <label for="pincode">Pincode</label>
+          <input type="text" name="pincode" id="pincode" inputmode="numeric" maxlength="12" autocomplete="postal-code" required />
+        </div>
+        <div class="field">
+          <label for="product">Tool or part</label>
+          <input type="text" name="product" id="product" required />
+        </div>
+        <div class="field">
+          <label for="quantity">Quantity</label>
+          <input type="number" name="quantity" id="quantity" required />
+        </div>
       </div>
-    </div>
+      <p class="text-slate-500 text-xs mt-2">Use the tool or part code, for example 39773 or ST1001.</p>
+      <input type="hidden" name="channel" value="form">
+      <input type="hidden" name="source_page" id="lead-page" value="">
+      <input type="hidden" name="lead_source" id="lead-source" value="">
+      <input type="hidden" name="landing_page" id="lead-landing" value="">
+      <div class="field mt-2.5">
+        <label for="message">Your message</label>
+        <textarea name="message" id="message" rows="3" required></textarea>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 pt-2">
+        <button type="submit" id="submitBtn" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+          <i class="fa fa-envelope text-xs"></i> Request a quote
+        </button>
+        <a id="quote-whatsapp" href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-300 text-slate-700 font-display font-semibold text-sm rounded-full hover:border-brand hover:text-[#c2410c] transition-all duration-300">
+          <i class="fab fa-whatsapp"></i> WhatsApp the team
+        </a>
+      </div>
+    </form>
 
-    <div class="info-card fade-up bg-card border border-white/[0.07] rounded-xl p-4 flex items-center gap-3.5 hover:border-orange/40 group">
-      <div class="w-10 h-10 rounded-xl bg-orange/10 border border-orange/20 flex items-center justify-center text-orange text-base flex-shrink-0 group-hover:bg-orange/15 group-hover:border-orange transition-all duration-200">
-        <i class="fa fa-envelope"></i>
+    <aside class="flex flex-col gap-3 min-h-0">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4 space-y-3 shrink-0">
+        <div>
+          <p class="text-[11px] font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-0.5">Address</p>
+          <p class="text-sm text-slate-700 leading-snug">S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041</p>
+        </div>
+        <div>
+          <p class="text-[11px] font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-0.5">Phone</p>
+          <a href="tel:+919730429324" class="text-sm text-slate-800 hover:text-[#c2410c]">+91 97304 29324</a>
+        </div>
+        <div>
+          <p class="text-[11px] font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-0.5">Email</p>
+          <a href="mailto:suryatantraa@gmail.com" class="text-sm text-slate-800 hover:text-[#c2410c] break-all">suryatantraa@gmail.com</a>
+        </div>
       </div>
-      <div>
-        <h4 class="font-display font-bold text-white text-[12.5px] mb-0.5">Email</h4>
-        <a href="mailto:suryatantraa@gmail.com" class="text-slate-400 text-[12.5px] hover:text-orange transition-colors">suryatantraa@gmail.com</a>
+      <div class="min-h-52 flex-1 overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692.6196341568091!2d73.80583848837976!3d18.45719812039949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295e910456581%3A0xdb7ff7323634ca1!2sSuryatantra%20Enterprises%20LLP!5e0!3m2!1sen!2sin!4v1774237502589!5m2!1sen!2sin" class="w-full h-full border-0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Suryatantra Enterprises LLP on the map"></iframe>
       </div>
+    </aside>
     </div>
-
   </div>
 </section>
-
 
 <!-- ═══════════════ FAQ ═══════════════ -->
-<section class="py-12 bg-section-gradient relative overflow-hidden">
-  <div class="absolute inset-0 dot-texture pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6">
-
-    <div class="text-center mb-8 fade-up">
-      <div class="badge" style="margin:0 auto 10px;"><i class="fa fa-circle text-[4px]"></i> Quick Answers</div>
-      <h2 class="font-display font-extrabold text-[26px] md:text-[32px] text-white leading-tight">
-        Frequently Asked <span class="grad-text">Questions</span>
-      </h2>
-      <p class="mt-1.5 text-slate-400 text-[13px] max-w-sm mx-auto leading-relaxed">
-        Common queries about our products, services, and support.
-      </p>
+<section class="py-8 md:py-10 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6">
+    <p class="text-xs font-display font-semibold uppercase tracking-[.14em] text-[#c2410c] mb-2">Questions</p>
+    <div class="flex items-end justify-between gap-4 mb-5">
+      <h2 class="font-display font-extrabold text-[clamp(1.5rem,3vw,2rem)] text-slate-900 leading-tight">Before you send the enquiry</h2>
+      <p id="faqCount" class="shrink-0 text-sm text-slate-500 mb-1">1–4 of 16</p>
+    </div>
+    <div class="faq-scroller">
+      <button type="button" id="faqPrev" class="faq-nav" aria-label="Previous questions">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div id="faqRow" class="faq-row">
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">What types of PCB tools do you supply?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">We supply precision tools including drilling bits, routing blades, V-cut blades, spindles, and other specialised consumables for high-quality PCB manufacturing.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Do you offer custom automation solutions?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes. We design custom automation roadmaps to streamline PCB workflows, improving efficiency and reducing manual errors on the production line.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">What is your delivery timeline?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Standard delivery is 3–5 business days for in-stock items. Custom or bulk orders may take 7–14 business days depending on specifications.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Do you provide technical support?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Our technical team provides support including installation guidance, troubleshooting, and maintenance advice for the products we supply.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">How can I place an order?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Place an order via the enquiry form above, by emailing suryatantraa@gmail.com, or by calling +91 97304 29324.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Where are you located?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041, India. The map is beside the form.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Do you ship internationally?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes, we ship internationally to select countries. Contact the team for rates and availability to your location.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">What payment methods do you accept?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">We accept bank transfers, credit and debit cards, and online payment gateways. Flexible payment terms are available for bulk orders.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">How soon will you reply?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">We reply to a quote request within 24 hours, by email or on the same phone number you send.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">What if the size is not in stock?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">We say so before you plan the run, and tell you the lead time instead of promising the 3–5 day dispatch.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Can the next order match the last one?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes. Send the same diameter, coating, and part code. Each reorder follows that specification.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Do you supply pins, rings, and brushes?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes. Carlson pins, drill rings, brushes, and burr removers are ordered from the same desk as the drills and routers.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Can I send a part code?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes. Put the code in the tool field, for example 39773 or ST1001, along with the quantity.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Which number handles the follow-up?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Call or WhatsApp +91 97304 29324. The same number that raises the quote handles the follow-up.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">What helps you quote a drill?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Diameter, shank, coating, quantity, and the board you are running. A photo of the old tool is useful.</p>
+        </div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden">
+        <button type="button" aria-expanded="false" class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
+          <span class="font-display font-semibold text-slate-900 text-sm">Can I collect from Dhayari?</span>
+          <i class="fas fa-plus text-[#c2410c] flex-shrink-0 text-xs"></i>
+        </button>
+        <div class="faq-content">
+          <p class="px-4 pb-4 text-slate-600 text-sm leading-relaxed">Yes. The store is at S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041. Call before you come so the tool is set aside.</p>
+        </div>
+      </div>
+    </div>
+      <button type="button" id="faqNext" class="faq-nav" aria-label="Next questions">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-2.5">
-
-      <!-- Left -->
-      <div class="space-y-2.5">
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">What types of PCB tools do you supply?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              We supply precision tools including drilling bits, routing blades, V-cut blades, spindles, and other specialised consumables for high-quality PCB manufacturing.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you offer custom automation solutions?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Yes! We design custom automation roadmaps to streamline your PCB workflows, improving efficiency and reducing manual errors in your production line.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">What is your delivery timeline?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Standard delivery is 3–5 business days for in-stock items. Custom or bulk orders may take 7–14 business days depending on specifications.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you provide technical support?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Absolutely! Our technical team provides comprehensive support including installation guidance, troubleshooting, and maintenance advice for all our products.
-            </p>
-          </div>
-        </div>
-
+    <div id="ask-own" class="mt-5 border border-slate-200 rounded-2xl p-4 sm:p-5">
+      <div class="mb-3">
+        <h3 class="font-display font-bold text-lg leading-tight text-slate-900">Ask your own question</h3>
+        <p class="mt-1 text-sm text-slate-600">If it is not in the list, send it here. We reply as soon as possible.</p>
       </div>
-
-      <!-- Right -->
-      <div class="space-y-2.5">
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">How can I place an order?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Place an order via the enquiry form above, by emailing suryatantraa@gmail.com, or by calling our sales team. We'll guide you through every step.
-            </p>
-          </div>
+      <form id="askForm" class="grid sm:grid-cols-2 gap-2.5" action="sendmail.php" method="POST">
+        <div class="field">
+          <label for="ask-name">Your name</label>
+          <input type="text" name="name" id="ask-name" autocomplete="name" required />
         </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">Where are you located?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Our headquarters are at Sinhagad Road, Dhayari, Pune – 411041, India. View our exact location on the map above.
-            </p>
-          </div>
+        <div class="field">
+          <label for="ask-phone">Phone number</label>
+          <input type="tel" name="phone" id="ask-phone" autocomplete="tel" inputmode="numeric" maxlength="10" placeholder="97304 29324" required />
         </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">Do you ship internationally?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
-          </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              Yes, we ship internationally to select countries. Contact our sales team for rates and availability to your location.
-            </p>
-          </div>
+        <div class="field sm:col-span-2">
+          <label for="ask-message">Your question</label>
+          <textarea name="message" id="ask-message" rows="2" required></textarea>
         </div>
-
-        <div class="faq-item fade-up bg-card border border-white/[0.07] rounded-xl overflow-hidden hover:border-orange/25">
-          <button class="faq-btn w-full flex items-center justify-between px-4 py-3.5 text-left gap-3">
-            <span class="font-display font-semibold text-white text-[13px] leading-snug">What payment methods do you accept?</span>
-            <i class="fas fa-plus text-orange flex-shrink-0 text-[10px]"></i>
+        <input type="hidden" name="email" id="ask-email" value="">
+        <input type="hidden" name="channel" value="question">
+        <input type="hidden" name="source_page" value="">
+        <input type="hidden" name="lead_source" value="">
+        <input type="hidden" name="landing_page" value="">
+        <div class="sm:col-span-2 flex flex-wrap items-center gap-2 pt-1">
+          <button type="submit" id="askSubmit" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-gradient text-white font-display font-semibold text-sm rounded-full shadow-brand hover:-translate-y-0.5 transition-all duration-300">
+            Send the question
           </button>
-          <div class="faq-content">
-            <p class="px-4 pb-4 text-slate-400 text-[13px] leading-relaxed border-t border-white/[0.05] pt-3">
-              We accept bank transfers, credit/debit cards, and online payment gateways. Flexible payment terms are available for bulk orders.
-            </p>
-          </div>
+          <a id="ask-whatsapp" href="https://wa.me/919730429324?text=Hello%2C%20I%20have%20a%20question%20about%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-300 text-slate-700 font-display font-semibold text-sm rounded-full hover:border-brand hover:text-[#c2410c] transition-all duration-300">
+            <i class="fab fa-whatsapp"></i> WhatsApp the question
+          </a>
         </div>
-
-      </div>
+      </form>
+      <p id="askStatus" class="mt-3 text-sm font-semibold" hidden></p>
     </div>
   </div>
 </section>
-
-<!-- ═══════════════ CTA ═══════════════ -->
-<section class="relative py-8 md:py-8 bg-mid overflow-hidden">
-  <!-- Background Effects -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-orange/[0.07] animate-pulse-ring pointer-events-none"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-orange/[0.1] pointer-events-none"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-orange/[0.05] blur-3xl pointer-events-none"></div>
-  <!-- Content -->
-  <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 text-center fade-up">
-    <!-- Badge -->
-    <div class="inline-flex items-center gap-1.5 bg-orange/10 border border-orange/25 rounded-full px-4 py-1.5 text-[10px] font-bold text-orange uppercase tracking-wide mb-4">
-      <i class="fa fa-circle text-[4px]"></i>Ready to Order?
-    </div>
-    <!-- Heading -->
-    <h2 class="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3">Need <span class="grad-text">Expert Advice</span> on PCB Tools?</h2>
-    <!-- Description -->
-    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
-      Whether a quick quote or a long-term supply partnership — we’re here to help you choose right.
-    </p>
-    <!-- Buttons -->
-    <div class="flex flex-wrap items-center justify-center gap-3">
-      <a href="https://wa.me/919730429324" class="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-gold text-white font-display font-bold text-sm rounded-full shadow-orange-glow hover:shadow-orange-lg hover:-translate-y-0.5 transition-all duration-200">
-        <i class="fab fa-whatsapp text-sm"></i>Chat on WhatsApp
-      </a>
-      <a href="./product.html" class="inline-flex items-center gap-2 px-6 py-2.5 border border-white/15 text-slate-300 font-display font-bold text-sm rounded-full hover:border-orange hover:text-orange transition-all duration-200">
-        <i class="fa fa-layer-group text-xs"></i>Browse Products
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════ FOOTER ═══════════════ -->
-    <div id="footer-placeholder"></div>
+  <footer id="site-footer" class="text-slate-600">
+     <!-- <div class="h-0.5 bg-[#f97316]"></div> -->
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 py-6 lg:py-10">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-6 lg:grid-cols-12 lg:gap-x-10">
+        <div class="col-span-2 lg:col-span-4">
+          <a href="./index.html" class="inline-flex">
+            <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-11 w-auto" />
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">PCB drills, routers, spindles, V-cut blades, and line consumables. Supplied from Dhayari, Pune.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="footer-kicker">Company</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="footer-kicker">Products</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="./product.html#pcb-drill">PCB drill tools</a></li>
+            <li><a href="./product.html#pcb-routing">PCB routing tools</a></li>
+            <li><a href="./product.html#spindle">Spindles and spares</a></li>
+            <li><a href="./product.html#vcut">V-cut blades</a></li>
+            <li><a href="./product.html#more">Line consumables</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-3">
+          <p class="footer-kicker">Enquire</p>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="tel:+919730429324" class="inline-flex items-center gap-2.5"><i class="fi fa fa-phone" aria-hidden="true"></i>+91 97304 29324</a></li>
+            <li><a href="mailto:suryatantraa@gmail.com" class="inline-flex items-center gap-2.5"><i class="fi fa fa-envelope" aria-hidden="true"></i>suryatantraa@gmail.com</a></li>
+            <li><a href="https://wa.me/919730429324" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5"><i class="fi fab fa-whatsapp" aria-hidden="true"></i>WhatsApp the team</a></li>
+            <li><a href="./contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2.5"><i class="fi fa fa-arrow-right" aria-hidden="true"></i>Request a quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar mt-8 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex gap-2.5 text-slate-600"><i class="fi fa fa-location-dot mt-0.5" aria-hidden="true"></i><span>S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041</span></p>
+        <div class="footer-end">
+          <p>© <span id="year"></span> Suryatantra Enterprises LLP. All rights reserved.</p>
+          <div class="footer-actions">
+            <button type="button" class="footer-action" data-go-top aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="footer-action footer-action-wa" aria-label="WhatsApp us for a quote"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+<script src="./assets/js/leads.js"></script>
 <script src="./assets/js/script.js"  onerror="console.warn('script.js not found')"></script>
 <script src="./assets/js/contact.js" onerror="console.warn('contact.js not found')"></script>
 
