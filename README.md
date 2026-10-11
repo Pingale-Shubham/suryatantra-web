@@ -2,6 +2,28 @@
 
 Static marketing site for the PCB tooling supplier in Dhayari, Pune. Public pages are `index.html`, `about.html`, `product.html`, `blog.html`, and `contact.html`. Shared layout styles live in `styles.css`. Shared spacing and colour utilities live in `assets/css/tailwind.css`.
 
+## Uploading to Hostinger or GoDaddy
+
+Upload the contents of this folder into `public_html`. `index.html` has to sit directly in `public_html`, not inside another `suryatantra-web-main` folder. Include `assets/css/tailwind.css`, `data/config.php`, `data/leads.json`, `data/stats.json`, and `data/.htaccess`.
+
+`.htaccess` tells the host to open `index.html` first. Hostinger and GoDaddy otherwise keep showing their own default page.
+
+The enquiry files stay in `data/`, which Apache blocks from the browser. On this computer they are also read from `suryatantra-private` when that folder is present. Do not rely on a folder above `public_html`; shared hosting often cannot create it.
+
+Quote mail is sent from `noreply@` the site domain. Hostinger and GoDaddy reject mail that claims to come from Gmail. The enquiry is still saved if the email itself is refused.
+
+## Publishing on GitHub
+
+Uploading the files to GitHub does not change [suryatantra.in](https://suryatantra.in/). That address is still serving the older site.
+
+The repository root has to be this folder, the one that contains `index.html`. If GitHub shows another `suryatantra-web-main` folder inside the repository, Pages will not find the homepage.
+
+Turn on GitHub Pages from the repository settings, branch `main`, folder `/` (root). The site address is then `https://YOUR-USERNAME.github.io/YOUR-REPO/`. `.nojekyll` is included so Pages publishes the CSS, JavaScript, and images as they are.
+
+`assets/css/tailwind.css` has to be in that upload. Without it, spacing and dialogs fall apart. If that file is missing, the page loads the Tailwind script from the internet as a backup.
+
+GitHub Pages cannot run PHP. The quote form, question form, and saved enquiries work only on a host that runs PHP, with `suryatantra-private` kept outside the public folder. WhatsApp still opens on GitHub Pages.
+
 ## Changes
 
 ### Layout and colour

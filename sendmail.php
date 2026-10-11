@@ -99,16 +99,24 @@ $body = implode("\n", [
     $message !== '' ? $message : 'Quote request',
 ]);
 
+$hostName = preg_replace('/:\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'suryatantra.in'));
+$hostName = preg_replace('/^www\./i', '', $hostName);
+if (!preg_match('/^[a-z0-9.-]+$/i', $hostName)) {
+    $hostName = 'suryatantra.in';
+}
+$from = 'noreply@' . $hostName;
 $headers = [
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
-    'From: Suryatantra Website <suryatantraa@gmail.com>',
+    'From: Suryatantra Website <' . $from . '>',
 ];
 if ($reply !== '') {
     $headers[] = 'Reply-To: ' . $reply;
+} else {
+    $headers[] = 'Reply-To: suryatantraa@gmail.com';
 }
 
-$sent = mail($to, $subject, $body, implode("\r\n", $headers));
+$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f ' . $from);
 
 $lead = [
     'id' => bin2hex(random_bytes(8)),
@@ -135,6 +143,7 @@ require_once __DIR__ . '/private.php';
 $privateDir = suryatantra_private_dir();
 $leadsFile = $privateDir . '/leads.json';
 $statsFile = $privateDir . '/stats.json';
+$saved = false;
 $handle = fopen($leadsFile, 'c+');
 if ($handle !== false) {
     flock($handle, LOCK_EX);
@@ -153,6 +162,7 @@ if ($handle !== false) {
         ftruncate($handle, 0);
         fwrite($handle, $encoded);
         fflush($handle);
+        $saved = true;
     }
     flock($handle, LOCK_UN);
     fclose($handle);
@@ -188,4 +198,4 @@ if ($statsHandle !== false) {
     fclose($statsHandle);
 }
 
-quote_redirect($sent ? 'sent' : 'failed', $redirectExtra);
+quote_redirect(($sent || $saved) ? 'sent' : 'failed', $redirectExtra . ($sent ? '' : '&mail=0'));

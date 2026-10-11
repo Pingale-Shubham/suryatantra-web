@@ -12,6 +12,13 @@
     content="PCB Manufacturing tools, Precision Tools, Drilling Bits, Routing Blades, Suryatantra Enterprises, PCB tools Supplies" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="./assets/css/tailwind.css" />
+  <script>
+    document.querySelector('link[href$="tailwind.css"]').addEventListener("error", function () {
+      var script = document.createElement("script");
+      script.src = "https://cdn.tailwindcss.com";
+      document.head.appendChild(script);
+    });
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
