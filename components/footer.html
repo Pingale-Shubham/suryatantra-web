@@ -13,159 +13,66 @@
     content="PCB drills, PCB routers, spindle spares, V-cut blades, precision tools Pune, PCB manufacturing tools India" />
   <meta name="author" content="Suryatantra Enterprises LLP" />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['"Outfit"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../assets/css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <style>
-    /* Wave Animation */
-    .wave {
-      position: absolute;
-      bottom: 0;
-      width: 200%;
-      height: 120px;
-      background: url('https://svgshare.com/i/15pZ.svg') repeat-x;
-      animation: wave 12s linear infinite;
-      opacity: 0.15;
-    }
-
-    @keyframes wave {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-slate-100 font-body">
   <main class="flex-grow"></main>
 
-  <footer class="relative overflow-hidden bg-gradient-to-r from-[#081F36] to-[#0B2A4A] text-[#E6EEF6]">
-
-    <!-- Subtle Glow Background -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.15),_transparent_60%)]">
-    </div>
-
-    <div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 py-10 md:py-12">
-
-      <!-- GRID -->
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-12 gap-8 items-start">
-
-        <!-- BRAND -->
-        <div class="col-span-2 sm:col-span-2 md:col-span-5 md:col-start-1">
-
-          <img src="./assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP Logo"
-            class="h-10 md:h-12 mb-5 md:mb-6">
-
-          <p class="text-xs sm:text-sm leading-relaxed text-slate-400">
-            S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel,<br>
-            Sinhagad Road, Dhayari, Pune – 411041, India.
-          </p>
-
-          <div class="mt-4 md:mt-6 space-y-2 text-xs sm:text-sm">
-            <p>
-              <span class="text-white font-semibold">Phone:</span>
-              <a href="tel:+919730429324" class="hover:text-yellow-400 transition ml-1">
-                +91 9730429324
-              </a>
-            </p>
-            <p>
-              <span class="text-white font-semibold">Email:</span>
-              <a href="mailto:suryatantraa@gmail.com" class="hover:text-yellow-400 transition ml-1 break-all">
-                suryatantraa@gmail.com
-              </a>
-            </p>
+  <footer id="site-footer" class="relative overflow-hidden text-slate-600">
+     <!-- <div class="h-0.5 bg-[#f97316]"></div> -->
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 py-6 lg:py-10">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-6 lg:grid-cols-12 lg:gap-x-10">
+        <div class="col-span-2 lg:col-span-4">
+          <a href="../index.html" class="inline-flex">
+            <img src="../assets/Images/Logo/Surytantra Logo-01.png" alt="Suryatantra Enterprises LLP" class="h-11 w-auto" />
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">PCB drills, routers, spindles, V-cut blades, and line consumables. Supplied from Dhayari, Pune.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="footer-kicker">Company</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="footer-kicker">Products</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../product.html#pcb-drill">PCB drill tools</a></li>
+            <li><a href="../product.html#pcb-routing">PCB routing tools</a></li>
+            <li><a href="../product.html#spindle">Spindles and spares</a></li>
+            <li><a href="../product.html#vcut">V-cut blades</a></li>
+            <li><a href="../product.html#more">Line consumables</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 lg:col-span-3">
+          <p class="footer-kicker">Enquire</p>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="tel:+919730429324" class="inline-flex items-center gap-2.5"><i class="fi fa fa-phone" aria-hidden="true"></i>+91 97304 29324</a></li>
+            <li><a href="mailto:suryatantraa@gmail.com" class="inline-flex items-center gap-2.5"><i class="fi fa fa-envelope" aria-hidden="true"></i>suryatantraa@gmail.com</a></li>
+            <li><a href="https://wa.me/919730429324" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5"><i class="fi fab fa-whatsapp" aria-hidden="true"></i>WhatsApp the team</a></li>
+            <li><a href="../contact.html?product=PCB%20tooling" class="inline-flex items-center gap-2.5"><i class="fi fa fa-arrow-right" aria-hidden="true"></i>Request a quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar mt-8 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p class="flex gap-2.5 text-slate-600"><i class="fi fa fa-location-dot mt-0.5" aria-hidden="true"></i><span>S.No. 143, Milkat No. 1094/3, Opp. Green-Field Hotel, Sinhagad Road, Dhayari, Pune 411041</span></p>
+        <div class="footer-end">
+          <p>© <span id="year"></span> Suryatantra Enterprises LLP. All rights reserved.</p>
+          <div class="footer-actions">
+            <button type="button" class="footer-action" data-go-top aria-label="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <a href="https://wa.me/919730429324?text=Hello%2C%20I%20would%20like%20a%20quote%20for%20PCB%20tooling." target="_blank" rel="noopener noreferrer" class="footer-action footer-action-wa" aria-label="WhatsApp us for a quote"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
           </div>
-
         </div>
-
-        <!-- QUICK LINKS -->
-        <div class="col-span-1 md:col-span-2">
-          <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 md:mb-6 text-white">
-            Quick Links
-          </h4>
-          <ul class="space-y-2 md:space-y-3 text-xs sm:text-sm">
-            <li><a href="./index.html" class="hover:text-yellow-400 transition">Home</a></li>
-            <li><a href="./about.html" class="hover:text-yellow-400 transition">About Us</a></li>
-            <li><a href="./product.html" class="hover:text-yellow-400 transition">Products</a></li>
-            <li><a href="./blog.html" class="hover:text-yellow-400 transition">Blogs</a></li>
-            <li><a href="./contact.html" class="hover:text-yellow-400 transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- PRODUCTS -->
-        <div class="col-span-1 md:col-span-2">
-          <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 md:mb-6 text-white">
-            Products
-          </h4>
-          <ul class="space-y-2 md:space-y-3 text-xs sm:text-sm">
-            <li><a href="./product.html#pcb-drill" class="hover:text-yellow-400 transition">Drills</a></li>
-            <li><a href="./product.html#pcb-routing" class="hover:text-yellow-400 transition">Routers</a></li>
-            <li><a href="./product.html#spindle" class="hover:text-yellow-400 transition">Spindles &amp; Spares</a></li>
-            <li><a href="./product.html#vcut" class="hover:text-yellow-400 transition">V-Cut Blades</a></li>
-          </ul>
-        </div>
-
-        <!-- MORE — full width on smallest screens, normal on sm+ -->
-        <div class="col-span-2 sm:col-span-1 md:col-span-2">
-          <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 md:mb-6 text-white">
-            More
-          </h4>
-          <ul class="space-y-2 md:space-y-3 text-xs sm:text-sm">
-            <li><a href="./product.html#more" class="hover:text-yellow-400 transition">Carlson Pins</a></li>
-            <li><a href="./product.html#more" class="hover:text-yellow-400 transition">Drill Rings</a></li>
-            <li><a href="./product.html#more" class="hover:text-yellow-400 transition">Bearings</a></li>
-          </ul>
-        </div>
-
       </div>
-
-      <!-- Divider -->
-      <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-6 md:my-8"></div>
-
-      <!-- Bottom Bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
-
-        <p class="text-slate-400 text-center sm:text-left">
-          © <span id="year"></span>
-          <span class="font-semibold text-white">Suryatantra Enterprises LLP</span>
-          | All Rights Reserved
-        </p>
-
-        <div class="flex items-center gap-5 text-base sm:text-lg">
-          <a href="#" class="hover:text-blue-400 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="mailto:suryatantraa@gmail.com" class="hover:text-yellow-400 transition" aria-label="Email"><i
-              class="fa fa-envelope"></i></a>
-          <a href="https://wa.me/919730429324" class="hover:text-green-400 transition" aria-label="WhatsApp"><i
-              class="fab fa-whatsapp"></i></a>
-          <a href="#" class="hover:text-blue-300 transition" aria-label="LinkedIn"><i
-              class="fab fa-linkedin-in"></i></a>
-        </div>
-
-      </div>
-
     </div>
   </footer>
 
