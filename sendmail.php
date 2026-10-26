@@ -99,24 +99,16 @@ $body = implode("\n", [
     $message !== '' ? $message : 'Quote request',
 ]);
 
-$hostName = preg_replace('/:\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'suryatantra.in'));
-$hostName = preg_replace('/^www\./i', '', $hostName);
-if (!preg_match('/^[a-z0-9.-]+$/i', $hostName)) {
-    $hostName = 'suryatantra.in';
-}
-$from = 'noreply@' . $hostName;
 $headers = [
     'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
-    'From: Suryatantra Website <' . $from . '>',
+    'From: Suryatantra Website <suryatantraa@gmail.com>',
 ];
 if ($reply !== '') {
     $headers[] = 'Reply-To: ' . $reply;
-} else {
-    $headers[] = 'Reply-To: suryatantraa@gmail.com';
 }
 
-$sent = mail($to, $subject, $body, implode("\r\n", $headers), '-f ' . $from);
+$sent = mail($to, $subject, $body, implode("\r\n", $headers));
 
 $lead = [
     'id' => bin2hex(random_bytes(8)),

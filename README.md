@@ -10,7 +10,7 @@ Upload the contents of this folder into `public_html`. `index.html` has to sit d
 
 The enquiry files stay in `data/`, which Apache blocks from the browser. On this computer they are also read from `suryatantra-private` when that folder is present. Do not rely on a folder above `public_html`; shared hosting often cannot create it.
 
-Quote mail is sent from `noreply@` the site domain. Hostinger and GoDaddy reject mail that claims to come from Gmail. The enquiry is still saved if the email itself is refused.
+Quote mail is still sent from suryatantraa@gmail.com. The enquiry is still saved if the email itself is refused.
 
 ## Publishing on GitHub
 
