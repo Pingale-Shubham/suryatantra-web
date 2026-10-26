@@ -17,6 +17,7 @@ const App = {
     NavScroll.init();
     MobileMenu.init();
     FooterLoader.init();
+    GoTop.init();
     ScrollReveal.init();
     CounterAnimation.init();
 
@@ -152,32 +153,19 @@ const MobileMenu = {
 
 const FooterLoader = {
   init() {
-    const footerPlaceholder =
-      document.getElementById('footer-placeholder');
+    const year = document.getElementById('year');
+    if (year) year.textContent = String(new Date().getFullYear());
+  }
+};
 
-    if (!footerPlaceholder) return;
-
-    fetch('./components/footer.html')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Footer file not found');
-        }
-
-        return response.text();
-      })
-      .then(html => {
-        footerPlaceholder.innerHTML = html;
-
-        const year =
-          footerPlaceholder.querySelector('#footer-year');
-
-        if (year) {
-          year.textContent = new Date().getFullYear();
-        }
-      })
-      .catch(error => {
-        console.error('Footer load error:', error);
-      });
+const GoTop = {
+  init() {
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest && event.target.closest('[data-go-top]');
+      if (!button) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
   }
 };
 
@@ -196,6 +184,11 @@ const ScrollReveal = {
       document.querySelectorAll(this.selector);
 
     if (!elements.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      elements.forEach(element => element.classList.add('visible'));
+      return;
+    }
 
     const observer = new IntersectionObserver(
       entries => {
@@ -240,6 +233,17 @@ const CounterAnimation = {
 
     if (!counters.length) return;
 
+    const showFinal = (element) => {
+      const target = element.dataset.count;
+      const suffix = element.dataset.suffix || '';
+      element.textContent = `${target}${suffix}`;
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      counters.forEach(showFinal);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -278,7 +282,76 @@ const CounterAnimation = {
     );
 
     counters.forEach(counter => {
+      showFinal(counter);
       observer.observe(counter);
     });
+  }
+};
+
+/* =========================================================
+   DIALOG FOCUS TRAP
+   ========================================================= */
+
+const DialogFocus = {
+  previous: null,
+  dialog: null,
+  onKeyDown: null,
+
+  focusable(dialog) {
+    return [...dialog.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )];
+  },
+
+  activate(dialog) {
+    this.deactivate(false);
+    this.previous = document.activeElement;
+    this.dialog = dialog;
+
+    if (!dialog.hasAttribute('tabindex')) {
+      dialog.setAttribute('tabindex', '-1');
+    }
+
+    this.onKeyDown = (event) => {
+      if (event.key !== 'Tab' || !this.dialog) return;
+
+      const items = this.focusable(this.dialog);
+      if (!items.length) {
+        event.preventDefault();
+        this.dialog.focus();
+        return;
+      }
+
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && (active === first || active === this.dialog)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && (active === last || active === this.dialog)) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', this.onKeyDown);
+    const items = this.focusable(dialog);
+    (items[0] || dialog).focus();
+  },
+
+  deactivate(restore = true) {
+    if (this.onKeyDown) {
+      document.removeEventListener('keydown', this.onKeyDown);
+      this.onKeyDown = null;
+    }
+
+    const previous = this.previous;
+    this.dialog = null;
+    this.previous = null;
+
+    if (restore && previous && typeof previous.focus === 'function') {
+      previous.focus();
+    }
   }
 };

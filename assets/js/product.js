@@ -14,8 +14,8 @@ const PRODUCTS = {
 
   /* ================= PCB DRILL ================= */
   "pcb-drill": {
-    title: "PCB Drills ",
-    desc: "Industrial-grade PCB drilling solutions",
+    title: "PCB drill tools",
+    desc: "Carbide drills for FR4, aluminium, and multilayer boards.",
     items: [
       {
         name: "FR4 Drills",
@@ -86,8 +86,8 @@ const PRODUCTS = {
 
   /* ================= PCB ROUTING ================= */
   "pcb-routing": {
-    title: "PCB Routers",
-    desc: "Precision routing tools for PCB profiling",
+    title: "PCB routing tools",
+    desc: "Cutters for a clean edge and stable board dimensions.",
     items: [
       {
         name: "FR4 Coated Router",
@@ -184,8 +184,8 @@ const PRODUCTS = {
 
   /* ================= SPINDLES ================= */
 "spindle": {
-  title: "Spindles & Spares",
-  desc: "High-performance spindles and precision spare parts for PCB machinery",
+  title: "Spindles and spares",
+  desc: "High-speed spindles, collets, bearings, and replacement parts.",
   items: [
 
     {
@@ -511,8 +511,8 @@ const PRODUCTS = {
     },
     
     {
-      name: "THURST AIR BEARING",
-      image: "./assets/Images/spindle/THURST AIR BEARING.png",
+      name: "THRUST AIR BEARING",
+      image: "./assets/Images/spindle/THRUST AIR BEARING.png",
       parameters: {
         "Spindle Speed": "100,000 RPM",
         "Voltage": "220V",
@@ -547,8 +547,8 @@ const PRODUCTS = {
 
   /* ================= V-CUT ================= */
 "vcut": {
-  title: "V-Cut Blades",
-  desc: "Precision blades for PCB depaneling",
+  title: "V-cut blades",
+  desc: "Scoring blades for repeatable PCB depaneling.",
   items: [
 
     {
@@ -695,8 +695,8 @@ const PRODUCTS = {
 },
 
 "more": {
-  title: "More Tools",
-  desc: "Additional PCB manufacturing accessories and utilities",
+  title: "Line consumables",
+  desc: "Carlson pins, drill rings, brushes, and burr removers.",
   items: [
 
     {
@@ -734,8 +734,8 @@ const PRODUCTS = {
     },
 
     {
-      name: "Calson Pins",
-      image: "./assets/Images/more/calson-pins.png",
+      name: "Carlson Pins",
+      image: "./assets/Images/more/carlson-pins.png",
       parameters: {
         "Material": "Alloy Steel",
         "Application": "PCB fixing & alignment",
@@ -751,8 +751,8 @@ const PRODUCTS = {
     },
 
     {
-      name: "SILSKSCREEN CARLSON PIN BRASS",
-      image: "./assets/Images/more/SILSKSCREEN PIN.png",
+      name: "SILKSCREEN CARLSON PIN BRASS",
+      image: "./assets/Images/more/SILKSCREEN PIN.png",
       parameters: {
         "Material": "BRASS",
         "Application": "PCB fixing & alignment",
@@ -843,40 +843,162 @@ const PRODUCTS = {
 /* ================= RENDER CATEGORY ================= */
 const container = document.getElementById("category-container");
 
+function cardSummary(item) {
+  const params = item.parameters || {};
+  return params["Component Type"]
+    || params["Application"]
+    || params["Tool Type"]
+    || params["Full Form"]
+    || (item.features && item.features[0])
+    || "";
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function quoteText(name) {
+  return `Hello, I would like a quote for ${name}.`;
+}
+
+function whatsappQuoteUrl(name) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteText(name))}`;
+}
+
+function contactQuoteUrl(name) {
+  return `./contact.html?product=${encodeURIComponent(name)}`;
+}
+
 function renderCategory(key) {
+  if (!container) return;
+  if (!PRODUCTS[key]) {
+    key = "pcb-drill";
+    const nextHash = "#pcb-drill";
+    if (location.hash && location.hash !== nextHash) {
+      history.replaceState(null, "", location.pathname + location.search + nextHash);
+    }
+  }
   const cat = PRODUCTS[key];
-  if (!cat) return;
 
   document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
   const activeBtn = document.querySelector(`[data-cat="${key}"]`);
   if (activeBtn) activeBtn.classList.add("active");
 
-  container.innerHTML = `
-    <h2 class="text-3xl font-bold mb-2">${cat.title}</h2>
-    <p class="text-gray-600 mb-8">${cat.desc}</p>
+  container.classList.remove("rendered");
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      ${cat.items.map(item => `
-        <div class="bg-white rounded-xl shadow border flex flex-col">
-          <div class="h-60 flex items-center justify-center p-4 overflow-hidden">
-            <img src="${item.image}" class="h-full object-contain product-image-hover">
+  const count = cat.items.length;
+  container.innerHTML = `
+    <div class="mb-3 flex items-baseline justify-between gap-4">
+      <p class="cat-desc">${escapeHtml(cat.desc)}</p>
+      <p id="productCount" class="shrink-0 text-sm text-slate-500">${count} ${count === 1 ? "item" : "items"}</p>
+    </div>
+    <div class="product-scroller">
+      <button type="button" class="product-nav" id="productPrev" aria-label="Previous products"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <div class="product-row" id="productRow">
+      ${cat.items.map(item => {
+        const summary = cardSummary(item);
+        return `
+        <article class="product-card-wrap">
+          <div class="product-card-img">
+            <img src="${item.image}" alt="${escapeHtml(item.name)}" loading="lazy">
           </div>
-          <div class="p-5 text-center flex flex-col flex-grow">
-            <h3 class="font-bold mb-4">${item.name}</h3>
-            <button onclick='openModal(${JSON.stringify(item)}, "${cat.title}")'
-              class="inline-block px-6 py-2 font-medium text-white bg-[#c48a1a] border-2 border-[#c48a1a] rounded-md transition-all duration-300 hover:bg-[#a87114] hover:border-[#a87114]">
-              View Details
-            </button>
+          <div class="product-card-body">
+            <h3${summary ? "" : ' class="product-card-title-grow"'}>${escapeHtml(item.name)}</h3>
+            ${summary ? `<p class="product-card-summary">${escapeHtml(summary)}</p>` : ""}
+            <button type="button" onclick='openModal(${JSON.stringify(item).replace(/'/g, "&#39;")}, "${cat.title.replace(/"/g, "")}")'>View details</button>
+            <div class="product-card-quotes">
+              <a href="${contactQuoteUrl(item.name)}">Request a quote</a>
+              <a href="${whatsappQuoteUrl(item.name)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
           </div>
-        </div>
-      `).join("")}
+        </article>
+      `;
+      }).join("")}
+      </div>
+      <button type="button" class="product-nav" id="productNext" aria-label="Next products"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
     </div>
   `;
+
+  requestAnimationFrame(() => {
+    container.classList.add("rendered");
+    bindProductScroller();
+  });
+}
+
+let onProductResize = null;
+
+function bindProductScroller() {
+  const row = document.getElementById("productRow");
+  const prev = document.getElementById("productPrev");
+  const next = document.getElementById("productNext");
+  const countEl = document.getElementById("productCount");
+  const scroller = row && row.parentElement;
+  if (!row || !prev || !next) return;
+
+  if (onProductResize) window.removeEventListener("resize", onProductResize);
+  const items = Array.prototype.slice.call(row.children);
+
+  function pageSize() {
+    if (window.innerWidth >= 1024) return 4;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+  }
+
+  function startIndex() {
+    let start = 0;
+    items.forEach(function (item, index) {
+      if (item.offsetLeft <= row.scrollLeft + 8) start = index;
+    });
+    return start;
+  }
+
+  function update() {
+    const size = pageSize();
+    const max = row.scrollWidth - row.clientWidth;
+    const start = startIndex();
+    const end = Math.min(items.length, start + size);
+    const canScroll = items.length > size;
+    if (scroller) scroller.classList.toggle("has-nav", canScroll);
+    prev.hidden = next.hidden = !canScroll;
+    if (countEl) {
+      countEl.textContent = canScroll
+        // ? (start + 1) + "–" + end + " of " + items.length
+        ? items.length + " items"
+        : items.length + (items.length === 1 ? " item" : " items");
+    }
+    prev.disabled = row.scrollLeft <= 2;
+    next.disabled = row.scrollLeft >= max - 2;
+  }
+
+  function go(direction) {
+    const size = pageSize();
+    const target = Math.max(0, Math.min(items.length - 1, startIndex() + direction * size));
+    row.scrollTo({ left: items[target].offsetLeft, behavior: "smooth" });
+  }
+
+  prev.onclick = function () { go(-1); };
+  next.onclick = function () { go(1); };
+  row.onscroll = update;
+  onProductResize = update;
+  window.addEventListener("resize", onProductResize);
+  update();
 }
 
 /* ================= CATEGORY NAV ================= */
 document.querySelectorAll(".cat-btn").forEach(btn =>
-  btn.addEventListener("click", () => renderCategory(btn.dataset.cat))
+  btn.addEventListener("click", () => {
+    const key = btn.dataset.cat;
+    if (!key || !PRODUCTS[key]) return;
+    if (window.location.hash === `#${key}`) {
+      renderCategory(key);
+      return;
+    }
+    window.location.hash = key;
+  })
 );
 /* ================= HASH CHANGE SUPPORT ================= */
 window.addEventListener("hashchange", () => {
@@ -886,6 +1008,7 @@ window.addEventListener("hashchange", () => {
 /* ================= MODAL ================= */
 function openModal(product, category) {
   document.getElementById("modal-image").src = product.image;
+  document.getElementById("modal-image").alt = product.name;
   document.getElementById("modal-title").innerText = product.name;
   document.getElementById("modal-category").innerText = category;
 
@@ -901,9 +1024,9 @@ function openModal(product, category) {
     ).join("");
 
   document.getElementById("whatsapp-btn").href =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      `Hello, I am interested in ${product.name} (${category}).`
-    )}`;
+    whatsappQuoteUrl(`${product.name} (${category})`);
+  const quoteLink = document.getElementById("modal-quote-link");
+  if (quoteLink) quoteLink.href = contactQuoteUrl(product.name);
 
   const modal = document.getElementById("product-modal");
   modal.classList.remove("hidden");
@@ -915,7 +1038,3 @@ function closeModal() {
   modal.classList.add("hidden");
   modal.classList.remove("flex");
 }
-
-document.getElementById("product-modal").addEventListener("click", e => {
-  if (e.target.id === "product-modal") closeModal();
-});
